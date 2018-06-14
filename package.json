@@ -1,0 +1,42 @@
+{
+  "name": "gulp-template-pug",
+  "version": "1.0.0",
+  "description": "Устанавливаем пакеты: <br> npm i <br> Строим продакшн: <br> gulp build <br> Запускаем сервер: <br> gulp",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.8.11",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "lodash": "^4.17.10",
+    "npm": "^6.0.1",
+    "pug": "^2.0.0-beta11",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-connect": "^5.5.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-filter": "~5.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "~3.0.0",
+    "gulp-watch": "^5.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "main-bower-files": "~2.13.1",
+    "opn": "^5.3.0",
+    "rimraf": "^2.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

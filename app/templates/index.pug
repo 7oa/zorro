@@ -1,0 +1,13 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Главная';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		h1=activeMenu
+
+	//end workarea

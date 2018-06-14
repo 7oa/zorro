@@ -1,0 +1,25 @@
+include ../mixins/_mixins
+
+doctype html
+html
+    block sharedVars
+    head
+        block title
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        //- <!--[if IE 8]>script(src='/ie.js')<![endif]-->
+        include _head_style
+        include _scripts
+    body
+        .wrapper
+            .content
+                include _header
+                //end header
+
+                block content
+            //end content
+
+            include _footer
+            //end footer
+        //end wrapper
