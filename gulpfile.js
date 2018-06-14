@@ -3,7 +3,6 @@ var gulp = require("gulp"),
     opn = require("opn"),
     sass = require("gulp-sass"),
     pug = require("gulp-pug"),
-    gulpFilter = require('gulp-filter'),
     rename = require('gulp-rename'),
     rimraf = require('rimraf'),
     uglify = require('gulp-uglify'),
@@ -13,12 +12,13 @@ var gulp = require("gulp"),
     pngquant = require('imagemin-pngquant'),
     watch = require('gulp-watch'),
     rigger = require('gulp-rigger'),
-    sourcemaps = require('gulp-sourcemaps'),
     cache = require('gulp-cache'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    pugbem = require('gulp-pugbem');
 
 var dest_path = 'public';
 var app_path = 'app';
+pugbem.m = '_';
 
 function log(error) {
     console.log([
@@ -34,7 +34,7 @@ function log(error) {
 // Работа с pug
 gulp.task('pug', function() {
     gulp.src('app/templates/*.pug')
-        .pipe(pug({pretty: true}))
+        .pipe(pug({pretty: true,plugins: [pugbem]}))
         .on('error', log)
         .pipe(gulp.dest(dest_path + '/'))
         .pipe(browserSync.stream());

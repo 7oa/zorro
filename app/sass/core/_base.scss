@@ -6,6 +6,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: 'ProximaNova', sans-serif;
+  font-size: 20px;
+  line-height: 1.375;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+  }
 }
 .content {
   flex: 1 0 auto;
@@ -21,6 +27,15 @@ textarea{
   resize: vertical;
 }
 .container{
-  width: 1260px;
+  width: 100%;
+  max-width: $w-desktop;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.container2{
+  width: 100%;
+  max-width: $w-desktop;
+  margin: 0 auto;
+  box-sizing: border-box;
 }

@@ -1,5 +1,10 @@
 .header {
-    background: $white;
-    height: 100px;
-    background: cadetblue;
+    background: $pink;
+    color: $white;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
 }

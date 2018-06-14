@@ -140,7 +140,7 @@ $retina-suffix: '@2x';
 // Font Face
 // =============================================================================
 
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
   $src: null;
 
   $extmods: (
