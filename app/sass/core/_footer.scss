@@ -14,10 +14,141 @@
   &__r1{
     border-top: 1px solid $gray-ec;
     border-bottom: 1px solid $gray-ec;
+    .container{
+      @media screen and (min-width: $w-desktop) {
+        position: relative;
+      }
+    }
+  }
+}
+.footer-line{
+  text-align: center;
+  padding-top: 35px;
+  @media screen and (min-width: $w-desktop) {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 45px;
+  }
+  &__r1{
+    @media screen and (min-width: $w-desktop) {
+      width: 320px;
+      flex: 0 0 auto;
+      margin-right: 78px;
+    }
+  }
+  &__r2{
+    @media screen and (min-width: $w-desktop) {
+      width: 220px;
+      flex: 0 0 auto;
+      margin-right: 110px;
+    }
   }
   &__r3{
     @media screen and (min-width: $w-desktop) {
+      flex: 1 1 auto;
+    }
+  }
+  &__r4{
+    @media screen and (min-width: $w-desktop) {
+      width: 173px;
+      margin-left: 100px;
+      flex: 0 0 auto;
+    }
+  }
+  &__name{
+    @media screen and (min-width: $w-desktop) {
       display: flex;
+    }
+  }
+  &__logo{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      background-image: url('images/pinkzorro_logo.svg');
+      @include bg-img(contain);
+      width: 80px;
+      height: 80px;
+      margin-right: 35px;
+      flex: 0 0 auto;
+    }
+  }
+  &__ttl{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 40px;
+      padding-top: 4px;
+      line-height: 1.2;
+    }
+  }
+  &__copyright{
+    font-size: 16px;
+    color: $gray99;
+    margin-bottom: 26px;
+    font-weight: $light;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+  &__contacts{
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: $gray22;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 15px;
+      margin-bottom: 39px;
+      padding-top: 4px;
+      line-height: 1.2;
+    }
+  }
+  &__contact-link{
+    color: $gray22;
+    display: block;
+  }
+  &__feedback{
+    margin-bottom: 70px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__feedback-link{
+    font-size: 16px;
+    color: $gray99;
+    font-weight: $light;
+    text-decoration: underline;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__ss{
+    padding-bottom: 35px;
+    border-bottom: 1px solid $gray-ec;
+    margin-bottom: 39px;
+    @media screen and (min-width: $w-desktop) {
+      border-bottom: none;
+      padding-bottom: 0;
+      padding-top: 19px;
+      margin-bottom: 24px;
+    }
+  }
+  &__developers{
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 62px;
+      margin-bottom: 0;
+    }
+  }
+  &__ps{
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
     }
   }
 }
@@ -25,25 +156,100 @@
   display: none;
   @media screen and (min-width: $w-desktop) {
     display: block;
+    position: absolute;
+    right: 10px;
+    top: 23px;
+  }
+  &__btn{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 .footer-menu{
-  padding: 10px 0;
+  padding: 12px 0;
+  @media screen and (min-width: $w-desktop) {
+    padding: 0;
+    max-width: 650px;
+    margin: 0 auto;
+  }
   &__list{
     @include uldev();
     text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__item{
     display: block;
     align-items: center;
+    line-height: 71px;
+    @media screen and (min-width: $w-desktop) {
+      line-height: 58px;
+    }
   }
   &__link{
     text-transform: uppercase;
     font-size: 16px;
-    line-height: 60px;
     color: $gray72;
     @media screen and (min-width: $w-desktop) {
       font-size: 13px;
+    }
+  }
+}
+.footer-developers{
+  display: block;
+  background-image: url('images/f5_logo.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 27px;
+  padding-left: 60px;
+  color: $pink;
+  font-size: 16px;
+  width: 150px;
+  margin: 0 auto;
+  text-align: left;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 14px;
+    padding-left: 45px;
+  }
+  span{
+    text-decoration: underline;
+  }
+}
+.footer-ss{
+  display: flex;
+  justify-content: space-between;
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+  &__item{
+    display: block;
+    width: 30px;
+    height: 30px;
+    @include bg-img(contain);
+    @media screen and (min-width: $w-desktop) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.footer-ps{
+  display: flex;
+  justify-content: space-between;
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+  &__item{
+    width: 90px;
+    height: 45px;
+    @include bg-img(contain);
+    @media screen and (min-width: $w-desktop) {
+      width: 60px;
+      height: 30px;
     }
   }
 }
