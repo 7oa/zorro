@@ -31,11 +31,24 @@ textarea{
   max-width: $w-desktop;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 0 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 50px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 0 10px;
+  }
 }
 .container2{
   width: 100%;
   max-width: $w-desktop;
   margin: 0 auto;
   box-sizing: border-box;
+  padding: 0 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 50px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 0;
+  }
 }

@@ -1,10 +1,158 @@
 .header {
+  @media screen and (min-width: $w-tablet) {
+
+  }
+  @media screen and (min-width: $w-desktop) {
+
+  }
+  &__r1{
     background: $pink;
     color: $white;
-    @media screen and (min-width: $w-tablet) {
-
-    }
+  }
+  &__r2{
+    background: $white;
+    border-bottom: 1px solid $gray-ec;
+  }
+  &__r3{
+    display: none;
     @media screen and (min-width: $w-desktop) {
-
+      display: block;
+      background-color: $white;
     }
+  }
+}
+.header-mobile-r1{
+  display: block;
+  position: relative;
+  height: 110px;
+  @media screen and (min-width: $w-desktop) {
+    display: none;
+  }
+  &__menu-btn{
+    position: absolute;
+    top: 47px;
+    left: 0;
+  }
+  &__logo{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    width: 70px;
+    margin: 0 auto;
+  }
+  &__icons{
+    position: absolute;
+    top: 43px;
+    right: 0;
+  }
+}
+.header-desktop-r1{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    height: 60px;
+  }
+}
+.header-mobile-logo{
+  @include bg-img(contain);
+  background-image: url('images/pinkzorro_logo-white.svg');
+  width: 70px;
+  height: 70px;
+}
+.header-mobile-icons{
+  display: flex;
+}
+.header-backet{
+  width: 22px;
+  flex: 0 0 auto;
+  &__icon{
+    width: 22px;
+    height: 22px;
+    margin-bottom: 10px;
+  }
+  &__counter{
+    color: $pink2;
+    font-size: 16px;
+    font-weight: $light;
+    text-align: center;
+  }
+}
+.header-search{
+  width: 22px;
+  height: 22px;
+  margin-left: 25px;
+  flex: 0 0 auto;
+  @media screen and (min-width: $w-mobile) {
+    margin-left: 65px;
+  }
+}
+.header-line2{
+  &__logo{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__btns{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+}
+.header-filtr{
+  &__list{
+    @include uldev();
+    display: flex;
+    justify-content: space-between;
+  }
+  &__opt{
+    border-top: 3px solid transparent;
+    transition: .5s;
+  }
+  &__item{
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    &:before{
+      content: '';
+      width: 25px;
+      height: 25px;
+      display: block;
+      @include bg-img(contain);
+      margin-right: 10px;
+      flex: 0 0 auto;
+    }
+    &_him{
+      &:before{
+        background-image: url('images/icons/filter_him.svg');
+        transform: rotate(30deg);
+      }
+    }
+    &_her{
+      &:before{
+        background-image: url('images/icons/filter_her.svg');
+        transform: rotate(210deg);
+      }
+    }
+    &_they{
+      &:before{
+        background-image: url('images/icons/filter_they.svg');
+      }
+    }
+    &.active,
+    &:hover{
+      .header-filtr__opt{
+        font-weight: $semi-bold;
+        border-color: $pink;
+      }
+    }
+  }
+  &__link{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $pink;
+    font-weight: $regular;
+  }
 }

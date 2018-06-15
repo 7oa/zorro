@@ -2,6 +2,7 @@
   flex: 0 0 auto;
   width: 100%;
   background: $white;
+  color: $gray22;
   &__wrapper{
     padding: 0 30px;
     @media screen and (min-width: $w-tablet) {
@@ -9,6 +10,12 @@
     }
     @media screen and (min-width: $w-desktop) {
       padding: 0;
+    }
+    .container{
+      padding: 0;
+      @media screen and (min-width: $w-desktop) {
+        padding: 0 10px;
+      }
     }
   }
   &__r1{

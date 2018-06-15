@@ -1,21 +1,67 @@
 header.header
-    .header__r1
+    ._r1
         .container
-            div
-                div Остались вопросы?
-                div +7 (960) 006-57-76
-                div i
-            div
-                div
-                    div Вы вошли как
-                    div Фдучфтвук Зуекулуум
-                div img
-    .header__r2
+            .header-mobile-r1
+                ._menu-btn
+                    .burger-icon.js-menu
+                        - for (i=0;i<=3;i++)
+                            span
+                ._logo
+                    .header-mobile-logo
+                ._icons
+                    .header-mobile-icons
+                        a.header-backet(href="#")
+                            ._icon.
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.87 64.65">
+                                    <path class="icon-backet" d="M16.77,18a15.16,15.16,0,0,1,30.32,0"/>
+                                    <path class="icon-backet-2" d="M5.67,59H58.2V18.74h0V15.93h0v0A2.81,2.81,0,0,1,61,13.07h.07a2.83,2.83,0,0,1,2.78,2.83V61.82A2.83,2.83,0,0,1,61,64.65H2.83A2.83,2.83,0,0,1,0,61.82V15.9H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0V15.4H0v-.07h0l0-.07h0l0-.07h0l0-.13h0l0-.07h0l0-.06h0l0-.06h0l0-.06h0l.09-.19h0l0-.06h0l0-.06h0a2.85,2.85,0,0,1,.19-.28h0a2.89,2.89,0,0,1,.22-.26h0l.1-.1h0l.26-.22h0l.28-.19h0l.06,0h0l.06,0h0l.19-.09h0l.06,0h0l.06,0h0l.06,0h0l.07,0H2l.13,0h0l.07,0h0l.07,0h.57a2.84,2.84,0,0,1,2.81,3.2v9.48h0V59Z"/>
+                                </svg>
+                            ._counter 3
+                        .header-search.
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.29 76.56">
+                                <path class="icon-search-header" d="M47.67,10.53a26.26,26.26,0,1,0,0,37.14,26.26,26.26,0,0,0,0-37.14Zm9.14,46.84L73.46,73.72"/>
+                            </svg>
+            .header-desktop-r1
+                ._call
+                    .header-call
+                        div
+                            div Остались вопросы?
+                            div +7 (960) 006-57-76
+                        div i
+                ._auth
+                    .header-auth
+                        ._inf
+                            ._label Вы вошли как
+                            ._name Фдучфтвук Зуекулуум
+                        ._avatar img
+    ._r2
         .container2
-            div
-                div Для нее Для него Для пар
-                div Лого
-                div
-    .header__r3
+            .header-line2
+                ._filtr
+                    .header-filtr
+                        ul._list
+                            li._item.-him.active
+                                ._opt
+                                    a._link(href="#") Для него
+                            li._item.-her
+                                ._opt
+                                    a._link(href="#") Для нее
+                            li._item.-they
+                                ._opt
+                                    a._link(href="#") Для пар
+                ._logo Лого
+                ._btns
+    ._r3
         .container
-            include ../blocks/_header-menu
+            .header-menu
+                ul._list
+                    li._item
+                        a._link(href="#") Секс-игрушки
+                    li._item
+                        a._link(href="#") интимная косметика
+                    li._item
+                        a._link(href="#") белье
+                    li._item
+                        a._link.active(href="#") бдсм и фетиш
+                    li._item
+                        a._link(href="#") sale
