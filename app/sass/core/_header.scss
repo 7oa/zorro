@@ -11,7 +11,6 @@
   }
   &__r2{
     background: $white;
-    border-bottom: 1px solid $gray-ec;
   }
   &__r3{
     display: none;
@@ -88,6 +87,7 @@
   }
 }
 .header-line2{
+  border-bottom: 1px solid $gray-ec;
   &__logo{
     display: none;
     @media screen and (min-width: $w-desktop) {
@@ -101,6 +101,7 @@
     }
   }
 }
+
 .header-filtr{
   &__list{
     @include uldev();
@@ -110,6 +111,13 @@
   &__opt{
     border-top: 3px solid transparent;
     transition: .5s;
+    padding: 10px 0;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $pink;
+    font-weight: $regular;
   }
   &__item{
     line-height: 80px;
@@ -144,15 +152,12 @@
     &.active,
     &:hover{
       .header-filtr__opt{
-        font-weight: $semi-bold;
         border-color: $pink;
+      }
+      .header-filtr__link{
+        font-weight: $semi-bold;
       }
     }
   }
-  &__link{
-    text-transform: uppercase;
-    font-size: 16px;
-    color: $pink;
-    font-weight: $regular;
-  }
+
 }

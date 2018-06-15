@@ -4,7 +4,10 @@
   background: $white;
   color: $gray22;
   &__wrapper{
-    padding: 0 30px;
+    padding: 0 10px;
+    @media screen and (min-width: $w-mobile) {
+      padding: 0 30px;
+    }
     @media screen and (min-width: $w-tablet) {
       padding: 0 50px;
     }
