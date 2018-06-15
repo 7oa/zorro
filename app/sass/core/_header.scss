@@ -111,7 +111,7 @@
   &__opt{
     border-top: 3px solid transparent;
     transition: .5s;
-    padding: 10px 0;
+    padding: 25px 0;
   }
   &__link{
     text-transform: uppercase;
@@ -120,7 +120,6 @@
     font-weight: $regular;
   }
   &__item{
-    line-height: 80px;
     display: flex;
     align-items: center;
     &:before{
