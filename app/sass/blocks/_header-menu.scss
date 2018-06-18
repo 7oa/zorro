@@ -1,14 +1,40 @@
 .header-menu{
-  display: flex;
-  margin: 0;
-  padding: 0;
-  &__items{
-    margin-right: 10px;
+  text-align: center;
+  @media screen and (min-width: $w-desktop) {
+    text-align: left;
   }
-  &__links{
+  &__list{
+    @include uldev();
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+    }
+  }
+  &__item{
+    padding: 22px 0;
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 47px;
+      padding: 17px 0;
+    }
+  }
+  &__link{
     color: $white;
-    &_active{
-      color: red;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .5s;
+    @media screen and (min-width: $w-desktop) {
+      color: $gray72;
+      font-size: 13px;
+    }
+    &.active{
+      font-weight: $semi-bold;
+      @media screen and (min-width: $w-desktop) {
+        color: $pink;
+      }
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        color: $pink;
+      }
     }
   }
 }

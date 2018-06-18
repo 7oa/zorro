@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   @media screen and (min-width: $w-tablet) {
 
   }
@@ -17,6 +18,18 @@
     @media screen and (min-width: $w-desktop) {
       display: block;
       background-color: $white;
+    }
+  }
+  &__dd{
+    position: absolute;
+    top: 110px;
+    right: 0;
+    left: 0;
+    background-color: rgba(247,89,169,0.9);
+    color: $white;
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: none !important;
     }
   }
 }
@@ -49,8 +62,15 @@
 .header-desktop-r1{
   display: none;
   @media screen and (min-width: $w-desktop) {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     height: 60px;
+  }
+  &__call{
+    padding-top: 11px;
+  }
+  &__auth{
+    padding-top: 10px;
   }
 }
 .header-mobile-logo{
@@ -62,47 +82,76 @@
 .header-mobile-icons{
   display: flex;
 }
-.header-backet{
-  width: 22px;
-  flex: 0 0 auto;
-  &__icon{
-    width: 22px;
-    height: 22px;
-    margin-bottom: 10px;
-  }
-  &__counter{
-    color: $pink2;
-    font-size: 16px;
-    font-weight: $light;
-    text-align: center;
-  }
-}
 .header-search{
   width: 22px;
   height: 22px;
   margin-left: 25px;
   flex: 0 0 auto;
+  cursor: pointer;
   @media screen and (min-width: $w-mobile) {
     margin-left: 65px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 20px;
+    width: 18px;
+    height: 18px;
+    margin-left: 0;
+  }
+  .icon-search-header{
+    @media screen and (min-width: $w-desktop) {
+      stroke: $pink;
+    }
   }
 }
 .header-line2{
   border-bottom: 1px solid $gray-ec;
+  @media screen and (min-width: $w-desktop) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
   &__logo{
     display: none;
     @media screen and (min-width: $w-desktop) {
       display: block;
+      position: absolute;
+      top: 15px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      @include bg-img(contain);
+      background-image: url('images/pinkzorro_logo.svg');
     }
   }
   &__btns{
     display: none;
     @media screen and (min-width: $w-desktop) {
-      display: block;
+      display: flex;
+      padding-top: 44px;
     }
+  }
+  &__filtr{
+    @media screen and (min-width: $w-desktop) {
+      width: 380px;
+    }
+  }
+  &__fav{
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 55px;
+    }
+  }
+  &__backet{
+
   }
 }
 
 .header-filtr{
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 10px;
+  }
   &__list{
     @include uldev();
     display: flex;
@@ -111,13 +160,23 @@
   &__opt{
     border-top: 3px solid transparent;
     transition: .5s;
-    padding: 25px 0;
+    padding: 24px 0;
+    @media screen and (min-width: $w-desktop) {
+      border-top: none;
+      border-bottom: 3px solid transparent;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 32px 0;
+    }
   }
   &__link{
     text-transform: uppercase;
     font-size: 16px;
     color: $pink;
     font-weight: $regular;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 13px;
+    }
   }
   &__item{
     display: flex;
@@ -158,5 +217,275 @@
       }
     }
   }
-
+}
+.dd-panel{
+  &__r1{
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding-top: 30px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__r2{
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+  &__r3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.header-tren{
+  text-align: center;
+  padding: 22px 0;
+  @media screen and (min-width: $w-desktop) {
+    padding: 17px 0;
+    margin-right: 26px;
+    background-image: url('images/icons/filter_edu3.svg');
+    background-size: 26px 20px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  }
+  &__link{
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    @media screen and (min-width: $w-desktop) {
+      color: $pink;
+      font-size: 13px;
+      line-height: 1;
+    }
+    &.active{
+      font-weight: $bold;
+    }
+  }
+}
+.header-call{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: $w-desktop) {
+    width: 183px;
+  }
+  &__icon{
+    width: 25px;
+    height: 25px;
+    @media screen and (min-width: $w-desktop) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__label{
+    color: $white;
+    opacity: .5;
+    font-size: 16px;
+    font-weight: $light;
+    margin-bottom: 10px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+  &__tel{
+    color: $white;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+}
+.header-backet{
+  width: 22px;
+  flex: 0 0 auto;
+  @media screen and (min-width: $w-desktop) {
+    width: auto;
+  }
+  &__icon{
+    width: 22px;
+    height: 22px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 0;
+      margin-right: 7px;
+      width: 18px;
+      height: 18px;
+      margin-bottom: 0;
+    }
+    .icon-backet{
+      @media screen and (min-width: $w-desktop) {
+        stroke: $pink;
+      }
+    }
+    .icon-backet-2{
+      @media screen and (min-width: $w-desktop) {
+        fill: $pink;
+      }
+    }
+  }
+  &__counter{
+    color: $pink2;
+    font-size: 16px;
+    font-weight: $light;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 1;
+      text-align: left;
+      padding-left: 28px;
+    }
+    span{
+      display: none;
+      @media screen and (min-width: $w-desktop) {
+        display: inline-block;
+        margin-left: 3px;
+      }
+    }
+  }
+  &__ttl{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+  }
+  &__label{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      text-transform: uppercase;
+      color: $pink;
+      font-size: 13px;
+    }
+  }
+}
+.header-fav{
+  width: 22px;
+  flex: 0 0 auto;
+  @media screen and (min-width: $w-desktop) {
+    width: 120px;
+  }
+  &__icon{
+    width: 26px;
+    height: 22px;
+    padding-top: 17px;
+    margin-bottom: 12px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 0;
+      margin-right: 7px;
+      width: 20px;
+      height: 16px;
+      margin-bottom: 0;
+    }
+    .icon-favorite{
+      @media screen and (min-width: $w-desktop) {
+        fill: $pink;
+      }
+    }
+  }
+  &__counter{
+    color: $pink2;
+    font-size: 16px;
+    font-weight: $light;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 1;
+      text-align: left;
+      padding-left: 28px;
+    }
+    span{
+      display: none;
+      @media screen and (min-width: $w-desktop) {
+        display: inline-block;
+        margin-left: 3px;
+      }
+    }
+  }
+  &__ttl{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+  }
+  &__label{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      text-transform: uppercase;
+      color: $pink;
+      font-size: 13px;
+    }
+  }
+}
+.header-auth{
+  display: flex;
+  &__avatar{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 18px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background-color: $white;
+    @include bg-img(cover);
+    overflow: hidden;
+    @media screen and (min-width: $w-desktop) {
+      width: 40px;
+      height: 40px;
+      order: 1;
+      margin-left: 20px;
+      margin-right: 0;
+    }
+  }
+  &__noavatar{
+    background-image: url('images/icons/userpic.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 38px;
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: $w-desktop) {
+      background-size: 26px;
+    }
+  }
+  &__inf{
+    padding-top: 2px;
+    @media screen and (min-width: $w-desktop) {
+      text-align: right;
+    }
+  }
+  &__label{
+    font-size: 16px;
+    font-weight: $light;
+    color: $pink2;
+    margin-bottom: 4px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      margin-bottom: 0;
+      line-height: 1;
+    }
+  }
+  &__name{
+    font-size: 20px;
+    color: $white;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+}
+.header-line3{
+  @media screen and (min-width: $w-desktop) {
+    border-bottom: 1px solid $gray-ec;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__r{
+    display: flex;
+  }
 }
