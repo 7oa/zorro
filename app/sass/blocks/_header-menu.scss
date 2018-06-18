@@ -52,14 +52,15 @@
   }
   &__list{
     @include uldev();
-    padding: 22px 0;
     @media screen and (min-width: $w-desktop) {
       display: flex;
       padding: 17px 0;
     }
   }
   &__item{
+    padding: 22px 0;
     @media screen and (min-width: $w-desktop) {
+      padding: 0;
       margin-right: 47px;
     }
     &:hover{

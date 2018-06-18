@@ -19,24 +19,25 @@ $(document).ready(function() {
     $('.header-tren').clone().appendTo('.header-tren-desktop');
     $('.header-search').clone().appendTo('.header-search-desktop');
 
-
-
-    if (isDesktop) {
-        //закрепляем меню
-        $(window).scroll(function () {
+    //закрепляем меню
+    $(window).scroll(function () {
+        if (isDesktop) {
             var headerHeight = $('.header__r1').height() + $('.header__r2').height();
             if ($(this).scrollTop() > headerHeight) {
                 $('.header').addClass('fixed');
             } else {
                 $('.header').removeClass('fixed');
             }
-        });
+        }
+    });
 
-        //покажем строку поиска для десктопа
-        $('.header-search').click(function(){
+    //покажем строку поиска для десктопа
+    $('.header-search').click(function(){
+        if (isDesktop) {
             $('.header-search-line').fadeIn();
-        });
-    }
+        }
+    });
+
 });
 //скроем скроку поиска при клике вне элемента
 $(document).mouseup(function (e){
