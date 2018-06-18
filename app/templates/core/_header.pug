@@ -53,6 +53,30 @@ header.header
                 ._r
                     .header-tren-desktop
                     .header-search-desktop
+                ._search-line
+                    .header-search-line
+                        ._wrapper
+                            form._form
+                                input._input(type="text" placeholder="Поиск...")
+                                input._submit(type="submit" value="")
+                            //добавить класс open для .header-search-result - чтобы отобразить список результатов поиска
+                            .header-search-result
+                                ._list
+                                    - for(i=0;i<3;i++)
+                                        a._item(href="#")
+                                            ._l
+                                                ._ttl Очищающие средства для секс-игрушек
+                                                ._model Satisfyer Partner Plus. Electronic edition. Purplemodel, FX-180
+                                            ._r
+                                                ._price 483 руб.
+                                        a._item(href="#")
+                                            ._l
+                                                ._ttl Вибромассажёр
+                                                ._model Satisfyer G-Sport Rabbit
+                                            ._r
+                                                ._price 33 483 руб.
+                                ._count
+                                    a._count-link(href="#") Результатов поиска: 173
     ._dd.js-dd
         .container
             .dd-panel
@@ -77,8 +101,34 @@ header.header
                         ul._list
                             li._item
                                 a._link(href="#") Секс-игрушки
+                                .menu-drop-wrapper
+                                    .container
+                                        .menu-drop
+                                            ul._list
+                                                - for(i=0;i<3;i++)
+                                                    li._item
+                                                        a._link(href="#") Плетки и стеки
+                                                    li._item
+                                                        a._link(href="#") Наручники и фиксация
+                                                    li._item
+                                                        a._link(href="#") Ошейники и поводки
+                                                    li._item
+                                                        a._link(href="#") Кляпы
                             li._item
                                 a._link(href="#") интимная косметика
+                                .menu-drop-wrapper
+                                    .container
+                                        .menu-drop
+                                            ul._list
+                                                - for(i=0;i<3;i++)
+                                                    li._item
+                                                        a._link(href="#") Плетки и стеки
+                                                    li._item
+                                                        a._link(href="#") Наручники и фиксация
+                                                    li._item
+                                                        a._link(href="#") Ошейники и поводки
+                                                    li._item
+                                                        a._link(href="#") Кляпы
                             li._item
                                 a._link(href="#") белье
                             li._item

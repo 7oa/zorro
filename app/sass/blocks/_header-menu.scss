@@ -1,3 +1,50 @@
+.menu-drop-wrapper{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 57px;
+    background-color: rgba(255,255,255,0.95);
+    height: 300px;
+    box-sizing: border-box;
+    margin-left: calc((100vw - 1217px) / -2);
+    margin-right: calc((100vw - 1217px) / -2);
+  }
+}
+.menu-drop{
+  &__list{
+    @media screen and (min-width: $w-desktop) {
+      @include uldev();
+      column-count: 3;
+      column-width: 240px;
+      column-gap: 0;
+      margin-top: 28px;
+      max-width: 720px;
+    }
+  }
+  &__item{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 22px;
+    }
+  }
+  &__link{
+    @media screen and (min-width: $w-desktop) {
+      color: $gray72;
+      font-size: 16px;
+      transition: .5s;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        color: $pink;
+      }
+    }
+  }
+}
 .header-menu{
   text-align: center;
   @media screen and (min-width: $w-desktop) {
@@ -5,15 +52,23 @@
   }
   &__list{
     @include uldev();
+    padding: 22px 0;
     @media screen and (min-width: $w-desktop) {
       display: flex;
+      padding: 17px 0;
     }
   }
   &__item{
-    padding: 22px 0;
     @media screen and (min-width: $w-desktop) {
       margin-right: 47px;
-      padding: 17px 0;
+    }
+    &:hover{
+      .menu-drop-wrapper{
+        @media screen and (min-width: $w-desktop) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
     }
   }
   &__link{

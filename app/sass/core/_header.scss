@@ -1,11 +1,5 @@
 .header {
   position: relative;
-  @media screen and (min-width: $w-tablet) {
-
-  }
-  @media screen and (min-width: $w-desktop) {
-
-  }
   &__r1{
     background: $pink;
     color: $white;
@@ -243,20 +237,21 @@
   @media screen and (min-width: $w-desktop) {
     padding: 17px 0;
     margin-right: 26px;
-    background-image: url('images/icons/filter_edu3.svg');
-    background-size: 26px 20px;
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 35px;
   }
   &__link{
     color: $white;
     text-transform: uppercase;
     font-size: 16px;
     @media screen and (min-width: $w-desktop) {
+      display: inline-block;
       color: $pink;
       font-size: 13px;
-      line-height: 1;
+      line-height: 20px;
+      background-image: url('images/icons/filter_edu3.svg');
+      background-size: 26px 20px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-left: 35px;
     }
     &.active{
       font-weight: $bold;
@@ -480,6 +475,7 @@
 }
 .header-line3{
   @media screen and (min-width: $w-desktop) {
+    position: relative;
     border-bottom: 1px solid $gray-ec;
     padding: 0 10px;
     display: flex;
@@ -487,5 +483,143 @@
   }
   &__r{
     display: flex;
+  }
+  &__search-line{
+    //display: none;
+    @media screen and (min-width: $w-desktop) {
+      //display: none;
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      left: 10px;
+    }
+  }
+}
+.fixed{
+  .header__r3{
+    @media screen and (min-width: $w-desktop) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+
+    }
+  }
+}
+.header-search-line{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    width: 100%;
+  }
+  &.open{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__wrapper{
+    @media screen and (min-width: $w-desktop) {
+      position: relative;
+    }
+  }
+  &__form{
+    @media screen and (min-width: $w-desktop) {
+      padding: 0 50px 0 20px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: $pink5;
+      color: $gray72;
+      height: 46px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__input{
+    @media screen and (min-width: $w-desktop) {
+      border: none;
+      padding: 0;
+      box-sizing: border-box;
+      color: $gray72;
+      background-color: transparent;
+      width: 100%;
+      line-height: 46px;
+      flex: 0 0 auto;
+      font-weight: $semi-bold;
+      font-size: 16px;
+    }
+  }
+  &__submit{
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      background-color: transparent;
+      border: none;
+      width: 18px;
+      height: 18px;
+      background-image: url('images/icons/icon_search.svg');
+      @include bg-img(contain);
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}
+.header-search-result{
+  @media screen and (min-width: $w-desktop) {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(242,89,169,0.8);
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 28px;
+    padding-top: 40px;
+  }
+  &.open{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__list{
+    padding: 0 20px;
+  }
+  &__item{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+      color: $white;
+      margin-bottom: 20px;
+    }
+  }
+  &__ttl{
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      font-weight: $light;
+    }
+  }
+  &__model{
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      font-weight: $semi-bold;
+    }
+  }
+  &__price{
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      font-weight: $semi-bold;
+    }
+  }
+  &__count{
+    text-align: center;
+  }
+  &__count-link{
+    @media screen and (min-width: $w-desktop) {
+      color: $white;
+      font-size: 14px;
+      font-width: $light;
+    }
   }
 }
