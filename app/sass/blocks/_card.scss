@@ -7,27 +7,86 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
   @media screen and (min-width: $w-desktop) {
     width: 220px;
     height: 399px;
   }
   &__cnt{
-    padding: 20px 30px;
+    padding: 50px 30px 20px;
+    @media screen and (min-width: $w-desktop) {
+      padding: 40px 15px 15px;
+    }
   }
   &__img{
     @include bg-img(contain);
     width: 100%;
-    height: 250px;
+    height: 210px;
+    margin-bottom: 25px;
+    @media screen and (min-width: $w-desktop) {
+      height: 160px;
+      margin-bottom: 18px;
+    }
+  }
+  &__txt{
+    border-top: 1px solid $gray-ec;
+    padding-top: 20px;
   }
   &__prev{
     color: $gray99;
     font-size: 16px;
+    line-height: 1;
     font-weight: $light;
     margin-bottom: 10px;
+    height: 36px;
+    overflow: hidden;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      height: 30px;
+    }
   }
   &__ttl{
     font-size: 22px;
+    line-height: 1;
     font-weight: $semi-bold;
     color: $gray22;
+    height: 67px;
+    overflow: hidden;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      height: 56px;
+    }
+  }
+  &__bottom{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media screen and (min-width: $w-desktop) {
+      bottom: 15px;
+      right: 15px;
+      left: 15px;
+    }
+  }
+  &__price-old{
+    font-size: 16px;
+    font-weight: $light;
+    text-decoration: line-through;
+    color: $gray99;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__price{
+    color: $pink;
+    font-size: 22px;
+    font-weight: $semi-bold;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
   }
 }

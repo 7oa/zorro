@@ -11,7 +11,7 @@ block content
 		.page
 			.big-slider-wrapper
 				.big-slider
-					- for(i=0;i<3;i++)
+					- for(var i=0;i<3;i++)
 						a._item(href="#" style="background-image:url('images/TEMP/slide1.jpg')")
 							._container.container
 								._date до 31 мая
@@ -50,25 +50,60 @@ block content
 					.prev-line
 						._h.h Товары со скидкой
 						._list.prev-slider
-							- for(i=0;i<8;i++)
-								._item
-									include blocks/_card
-						._more
-							a._more-link(href="#") Смотреть все товары
+							._swiper.swiper-wrapper
+								- for(var i=0;i<8;i++)
+									._item.swiper-slide
+										include blocks/_card
+						._all
+							a._all-link(href="#") Смотреть все товары
 						._nav
+							._prev
+							._next
+
 			//end .sale-prev
 			.hits-prev
-				.h Хиты продаж
+				.container3
+					.prev-line
+						._h.h Хиты продаж
+						._list.prev-slider
+							._swiper.swiper-wrapper
+								- for(var i=0;i<8;i++)
+									._item.swiper-slide
+										include blocks/_card
+						._all
+							a._all-link(href="#") Смотреть все товары
+						._nav
+							._prev
+							._next
 			//end .hits-prev
 			.what-is-zorro
-				.h Что такое зорро
+				._h.h Что такое зорро
+				._container.container
+					._img(style="background-image:url('images/pinkzorro_logo_mask.svg')")
+					._text
+						p Это интернет-магазин, где вы сможете найти секс игрушки, способные сделать вашу сексуальную жизнь более яркой и разнообразной! Проводите эксперименты и не бойтесь своих самых смелых желаний. Вы найдете великолепные игрушки от самых известных мировых производителей, как для мужчин, так и для женщин.
+
+						p Великолепная подборка высококачественных вибраторов, массажеров, страпонов, помп, кукол, наручников, насадок и плеток. Невероятный ассортимент для ценителей секса.
 			//end .what-is-zorro
 			.new-prev
 				.h Новинки
 			//end .new-prev
-			.news-prev
-				.h Новости и статьи
-			//end .news-prev
+			.news-prev-wrapper
+				.container
+					.news-prev
+						._h.h Новости и статьи
+						._list
+							- for(var i=0;i<3;i++)
+								a._item(href="#" style="background-image:url('https://picsum.photos/300')")
+									._cnt
+										._ttl Конкурс эротической истории
+										._prev Мы объявляем конкурс Эротической истории. Она может быть любой, но главное — сногсшибательной!
+										._bottom
+											._date 4 марта 2017
+											._more Читать полностью
+						._all
+							a._all-link(href="#") Смотреть все новости
+			//end .news-prev-wrapper
 			.brands-list-wrapper
 				.container
 					.brands-list

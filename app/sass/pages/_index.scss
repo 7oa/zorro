@@ -1,3 +1,41 @@
 .sale-prev{
   margin-bottom: 50px;
 }
+.hits-prev{
+  margin-bottom: 50px;
+}
+.what-is-zorro{
+  text-align: center;
+  margin-bottom: 65px;
+  @media screen and (min-width: $w-desktop) {
+    width: 680px;
+    margin: 0 auto 75px;
+  }
+  &__h{
+    margin-bottom: 25px;
+  }
+  &__img{
+    width: 70px;
+    height: 30px;
+    margin: 0 auto 30px;
+    @include bg-img(contain);
+    @media screen and (min-width: $w-desktop) {
+      width: 60px;
+      height: 20px;
+    }
+  }
+  &__text{
+    color: $gray72;
+    font-size: 20px;
+    line-height: 1.125;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    p{
+      margin-bottom: 30px;
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

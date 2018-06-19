@@ -54,7 +54,25 @@ $(document).ready(function() {
     });
 
     //слайдер товаров
-    $('.prev-slider').slick({
+    var prev = new Swiper('.prev-slider', {
+        slidesPerView: 5,
+        spaceBetween: 0,
+        watchOverflow: true,
+        navigation: {
+            nextEl: '.prev-line__next',
+            prevEl: '.prev-line__prev'
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 'auto'
+
+            },
+            425: {
+                centeredSlides: true
+            }
+        }
+    });
+    /*$('.prev-slider').slick({
         appendArrows: '.prev-line__nav',
         slidesToShow: 5,
         slidesToScroll: 5,
@@ -70,7 +88,7 @@ $(document).ready(function() {
                 }
             }
         ]
-    });
+    });*/
 
 
 });

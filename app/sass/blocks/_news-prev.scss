@@ -1,0 +1,112 @@
+.news-prev{
+  @media screen and (min-width: $w-desktop) {
+    position: relative;
+  }
+  &__h{
+    margin-bottom: 35px;
+  }
+  &__list{
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+  &__item{
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 280px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    @include bg-img(cover);
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $gray22;
+      opacity: .8;
+    }
+  }
+  &__cnt{
+    position: relative;
+    padding: 60px 30px 25px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__ttl{
+    color: $pink;
+    font-size: 22px;
+    font-weight: $semi-bold;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
+  }
+  &__prev{
+    color: $white;
+    opacity: .7;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    left: 30px;
+  }
+  &__date{
+    color: $gray99;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+  &__more{
+    color: $pink;
+    text-decoration: underline;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__all{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  }
+  &__all-link{
+    font-size: 20px;
+    color: $pink;
+    text-decoration: underline;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.news-prev-wrapper{
+  margin-bottom: 40px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 100px;
+  }
+}

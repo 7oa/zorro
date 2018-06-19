@@ -1,11 +1,12 @@
 .prev-line{
+  overflow: hidden;
   @media screen and (min-width: $w-desktop) {
     position: relative;
   }
   &__h{
     margin-bottom: 30px;
   }
-  &__more{
+  &__all{
     text-align: center;
     @media screen and (min-width: $w-desktop) {
       position: absolute;
@@ -13,7 +14,7 @@
       right: 10px;
     }
   }
-  &__more-link{
+  &__all-link{
     font-size: 20px;
     color: $pink;
     text-decoration: underline;
@@ -28,8 +29,10 @@
     margin-bottom: 30px;
   }
   &__item{
-    padding: 10px;
-    box-sizing: border-box;
+    width: 310px;
+    @media screen and (min-width: $w-desktop) {
+      width: 240px;
+    }
     &:focus{
       outline: none;
     }
@@ -37,7 +40,38 @@
   &__nav{
     display: none;
     @media screen and (min-width: $w-desktop) {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
+  }
+  &__next,
+  &__prev{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background-image: url('images/slider-arr.png');
+    width: 97px;
+    height: 12px;
+    cursor: pointer;
+    background-position-y: -12px;
+    background-position-x: 0;
+    &:focus{
+      outline: none;
+    }
+    &.swiper-button-disabled{
+      background-position-y: 0;
+    }
+  }
+  &__prev{
+
+    margin-right: 10px;
+
+  }
+  &__next{
+    transform: rotate(180deg);
+    margin-left: 10px;
   }
 }
