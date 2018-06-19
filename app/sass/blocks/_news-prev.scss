@@ -36,7 +36,7 @@
   }
   &__cnt{
     position: relative;
-    padding: 60px 30px 25px;
+    padding: 30px 30px 25px;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -88,7 +88,7 @@
     text-align: center;
     @media screen and (min-width: $w-desktop) {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 10px;
     }
   }
@@ -109,4 +109,7 @@
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 100px;
   }
+}
+.news-prev-slider{
+  overflow: hidden;
 }

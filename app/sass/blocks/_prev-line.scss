@@ -10,7 +10,7 @@
     text-align: center;
     @media screen and (min-width: $w-desktop) {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 10px;
     }
   }
@@ -27,6 +27,9 @@
   }
   &__list{
     margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 25px;
+    }
   }
   &__item{
     width: 310px;
@@ -66,9 +69,7 @@
     }
   }
   &__prev{
-
     margin-right: 10px;
-
   }
   &__next{
     transform: rotate(180deg);

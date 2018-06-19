@@ -54,42 +54,46 @@ $(document).ready(function() {
     });
 
     //слайдер товаров
-    var prev = new Swiper('.prev-slider', {
-        slidesPerView: 5,
-        spaceBetween: 0,
+    var prevSliders = [];
+    $('.prev-slider').each(function(index, element){
+        $(this).addClass('s'+index);
+        $(this).parent().find('.prev-line__next').addClass('next'+index);
+        $(this).parent().find('.prev-line__prev').addClass('prev'+index);
+        var slider = new Swiper('.s'+index, {
+            slidesPerView: 5,
+            spaceBetween: 0,
+            watchOverflow: true,
+            navigation: {
+                nextEl: '.next'+index,
+                prevEl: '.prev'+index
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 'auto'
+
+                },
+                425: {
+                    centeredSlides: true
+                }
+            }
+        });
+        prevSliders.push(slider);
+    });
+
+    //слайдер новостей
+    var newsSlider = new Swiper('.news-prev-slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
         watchOverflow: true,
-        navigation: {
-            nextEl: '.prev-line__next',
-            prevEl: '.prev-line__prev'
-        },
         breakpoints: {
             1200: {
                 slidesPerView: 'auto'
-
             },
             425: {
                 centeredSlides: true
             }
         }
     });
-    /*$('.prev-slider').slick({
-        appendArrows: '.prev-line__nav',
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                }
-            }
-        ]
-    });*/
-
 
 });
 //скроем скроку поиска при клике вне элемента

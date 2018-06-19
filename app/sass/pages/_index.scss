@@ -4,6 +4,9 @@
 .hits-prev{
   margin-bottom: 50px;
 }
+.new-prev{
+  margin-bottom: 50px;
+}
 .what-is-zorro{
   text-align: center;
   margin-bottom: 65px;
@@ -37,5 +40,15 @@
         margin-bottom: 20px;
       }
     }
+  }
+}
+.line{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    height: 1px;
+    background-color: $gray-ec;
+    width: 1200px;
+    margin: 0 auto 55px;
   }
 }

@@ -53,7 +53,7 @@ block content
 							._swiper.swiper-wrapper
 								- for(var i=0;i<8;i++)
 									._item.swiper-slide
-										include blocks/_card
+										include blocks/_card-sale
 						._all
 							a._all-link(href="#") Смотреть все товары
 						._nav
@@ -69,7 +69,7 @@ block content
 							._swiper.swiper-wrapper
 								- for(var i=0;i<8;i++)
 									._item.swiper-slide
-										include blocks/_card
+										include blocks/_card-hit
 						._all
 							a._all-link(href="#") Смотреть все товары
 						._nav
@@ -86,21 +86,35 @@ block content
 						p Великолепная подборка высококачественных вибраторов, массажеров, страпонов, помп, кукол, наручников, насадок и плеток. Невероятный ассортимент для ценителей секса.
 			//end .what-is-zorro
 			.new-prev
-				.h Новинки
+				.container3
+					.prev-line
+						._h.h Новинки
+						._list.prev-slider
+							._swiper.swiper-wrapper
+								- for(var i=0;i<8;i++)
+									._item.swiper-slide
+										include blocks/_card-new
+						._all
+							a._all-link(href="#") Смотреть все товары
+						._nav
+							._prev
+							._next
 			//end .new-prev
+			.line
 			.news-prev-wrapper
 				.container
 					.news-prev
 						._h.h Новости и статьи
-						._list
-							- for(var i=0;i<3;i++)
-								a._item(href="#" style="background-image:url('https://picsum.photos/300')")
-									._cnt
-										._ttl Конкурс эротической истории
-										._prev Мы объявляем конкурс Эротической истории. Она может быть любой, но главное — сногсшибательной!
-										._bottom
-											._date 4 марта 2017
-											._more Читать полностью
+						._slider.news-prev-slider
+							._list.swiper-wrapper
+								- for(var i=0;i<3;i++)
+									a._item.swiper-slide(href="#" style="background-image:url('https://picsum.photos/300')")
+										._cnt
+											._ttl Конкурс эротической истории
+											._prev Мы объявляем конкурс Эротической истории. Она может быть любой, но главное — сногсшибательной!
+											._bottom
+												._date 4 марта 2017
+												._more Читать полностью
 						._all
 							a._all-link(href="#") Смотреть все новости
 			//end .news-prev-wrapper

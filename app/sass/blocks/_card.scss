@@ -8,7 +8,6 @@
   overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto;
-  position: relative;
   @media screen and (min-width: $w-desktop) {
     width: 220px;
     height: 399px;
@@ -16,7 +15,7 @@
   &__cnt{
     padding: 50px 30px 20px;
     @media screen and (min-width: $w-desktop) {
-      padding: 40px 15px 15px;
+      padding: 50px 15px 15px;
     }
   }
   &__img{
@@ -25,18 +24,18 @@
     height: 210px;
     margin-bottom: 25px;
     @media screen and (min-width: $w-desktop) {
-      height: 160px;
-      margin-bottom: 18px;
+      height: 150px;
+      margin-bottom: 20px;
     }
   }
   &__txt{
     border-top: 1px solid $gray-ec;
-    padding-top: 20px;
+    padding-top: 18px;
   }
   &__prev{
     color: $gray99;
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: $light;
     margin-bottom: 10px;
     height: 36px;
@@ -44,6 +43,7 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
       height: 30px;
+      margin-bottom: 17px;
     }
   }
   &__ttl{
@@ -87,6 +87,47 @@
     font-weight: $semi-bold;
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
+    }
+  }
+  &__angle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background-color: $pink;
+    border-radius: 0 0 100% 0;
+    &_sale{
+      background-image: url('images/icons/category_discount.svg');
+      background-size: 18px;
+      background-position: 20px 20px;
+      background-repeat: no-repeat;
+    }
+    &_hit{
+      background-image: url('images/icons/category_hit.svg');
+      background-size: 22px;
+      background-position: 20px 20px;
+      background-repeat: no-repeat;
+    }
+    &_new{
+      background-image: url('images/icons/category_new_2.svg');
+      background-size: 24px;
+      background-position: 20px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__fav{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    width: 22px;
+    height: 22px;
+    background-image: url('images/icons/icon_favorite.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    &.active{
+      background-image: url('images/icons/icon_favorite_fill.svg');
     }
   }
 }
