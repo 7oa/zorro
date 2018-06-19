@@ -1,0 +1,33 @@
+.card{
+  width: 290px;
+  height: 506px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadow-pink;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  @media screen and (min-width: $w-desktop) {
+    width: 220px;
+    height: 399px;
+  }
+  &__cnt{
+    padding: 20px 30px;
+  }
+  &__img{
+    @include bg-img(contain);
+    width: 100%;
+    height: 250px;
+  }
+  &__prev{
+    color: $gray99;
+    font-size: 16px;
+    font-weight: $light;
+    margin-bottom: 10px;
+  }
+  &__ttl{
+    font-size: 22px;
+    font-weight: $semi-bold;
+    color: $gray22;
+  }
+}

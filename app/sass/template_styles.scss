@@ -3,14 +3,20 @@
 @import "core/normalize";
 @import "core/fonts";
 @import "core/grid";
-
 @import "core/base";
 @import "core/header";
 @import "core/footer";
 @import "core/buttons";
 @import "core/icons";
 
+@import "plugins/slick";
+
 @import "blocks/header-menu";
 @import "blocks/burger-icon";
+@import "blocks/advantages";
+@import "blocks/big-slider";
+@import "blocks/brands-list";
+@import "blocks/prev-line";
+@import "blocks/card";
 
 @import "pages/index";

@@ -1,0 +1,46 @@
+.advantages-wrapper{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    margin-bottom: 75px;
+  }
+}
+.advantages{
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    @media screen and (min-width: $w-desktop) {
+      text-align: center;
+      width: 20%;
+      flex: 0 0 auto;
+    }
+  }
+  &__img{
+    @media screen and (min-width: $w-desktop) {
+      width: 70px;
+      height: 50px;
+      @include bg-img(contain);
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  &__ttl{
+    @media screen and (min-width: $w-desktop) {
+      text-transform: uppercase;
+      color: $pink;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+  }
+  &__prev{
+    @media screen and (min-width: $w-desktop) {
+      color: $pink;
+      opacity: .5;
+      font-size: 12px;
+      font-weight: $light;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.prev-line{
+  @media screen and (min-width: $w-desktop) {
+    position: relative;
+  }
+  &__h{
+    margin-bottom: 30px;
+  }
+  &__more{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  }
+  &__more-link{
+    font-size: 20px;
+    color: $pink;
+    text-decoration: underline;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__list{
+    margin-bottom: 30px;
+  }
+  &__item{
+    padding: 10px;
+    box-sizing: border-box;
+    &:focus{
+      outline: none;
+    }
+  }
+  &__nav{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+}

@@ -11,6 +11,73 @@ block content
 		.page
 			.big-slider-wrapper
 				.big-slider
-					._item
-						- for (i=1;i<20;i++)
-							p Таким образом сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что консультация с широким активом требуют от нас анализа форм развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции в значительной степени обуславливает создание форм развития. Товарищи! реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.
+					- for(i=0;i<3;i++)
+						a._item(href="#" style="background-image:url('images/TEMP/slide1.jpg')")
+							._container.container
+								._date до 31 мая
+								._ttl Обжигающие скидки на охлаждающие лубриканты!
+								._prev.
+									Скидки на лубриканты фирмы Satisfyre до 35% В акции участвуют лубриканты: Satisfyer Men Neutral, Satisfyer Men Warming, Satisfyer Men Cooling
+								._link Подробнее
+				.big-slider-pagination
+			//end .big-slider-wrapper
+			.advantages-wrapper
+				.container
+					.advantages
+						._item
+							._img(style="background-image:url('images/plus1.svg')")
+							._ttl БЕСПЛАТНАЯ<br>ДОСТАВКА
+							._prev При заказе от 3000 рублей
+						._item
+							._img(style="background-image:url('images/plus2.svg')")
+							._ttl 100% БЕЗОПАСНОСТЬ<br>ТОВАРОВ
+							._prev Сертификаты и гарантии
+						._item
+							._img(style="background-image:url('images/plus3.svg')")
+							._ttl АНОНИМНОСТЬ<br>И КОНФИДЕНЦИАЛНОСТЬ
+							._prev При заказе и получении
+						._item
+							._img(style="background-image:url('images/plus4.svg')")
+							._ttl 100% ГАРАНТИЯ<br>ВОЗВРАТА ТОВАРА
+							._prev Бесплатно заменим на новый
+						._item
+							._img(style="background-image:url('images/plus5.svg')")
+							._ttl Оперативная помощь<br>консультантов
+							._prev В выборе или вопросах
+			//end .advantages-wrapper
+			.sale-prev
+				.container3
+					.prev-line
+						._h.h Товары со скидкой
+						._list.prev-slider
+							- for(i=0;i<8;i++)
+								._item
+									include blocks/_card
+						._more
+							a._more-link(href="#") Смотреть все товары
+						._nav
+			//end .sale-prev
+			.hits-prev
+				.h Хиты продаж
+			//end .hits-prev
+			.what-is-zorro
+				.h Что такое зорро
+			//end .what-is-zorro
+			.new-prev
+				.h Новинки
+			//end .new-prev
+			.news-prev
+				.h Новости и статьи
+			//end .news-prev
+			.brands-list-wrapper
+				.container
+					.brands-list
+						._h.h Популярные бренды
+						._list
+							a._item(href="#" style="background-image:url('images/TEMP/brend1.png')")
+							a._item(href="#" style="background-image:url('images/TEMP/brend2.png')")
+							a._item(href="#" style="background-image:url('images/TEMP/brend3.png')")
+							a._item(href="#" style="background-image:url('images/TEMP/brend4.png')")
+							a._item(href="#" style="background-image:url('images/TEMP/brend5.png')")
+							a._item(href="#" style="background-image:url('images/TEMP/brend6.png')")
+			//end .brands-list-wrapper

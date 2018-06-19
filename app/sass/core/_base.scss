@@ -28,7 +28,6 @@ textarea{
 }
 .container{
   width: 100%;
-  max-width: $w-desktop;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 30px;
@@ -36,12 +35,12 @@ textarea{
     padding: 0 50px;
   }
   @media screen and (min-width: $w-desktop) {
+    max-width: $w-desktop;
     padding: 0 10px;
   }
 }
 .container2{
   width: 100%;
-  max-width: $w-desktop;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 10px;
@@ -52,6 +51,65 @@ textarea{
     padding: 0 50px;
   }
   @media screen and (min-width: $w-desktop) {
+    max-width: $w-desktop;
     padding: 0;
   }
+}
+.container3{
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  @media screen and (min-width: $w-mobile) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 50px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    max-width: $w-desktop;
+    margin: 0 auto;
+  }
+}
+.h{
+  color: $gray72;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'TrajanPro3', serif;
+  text-transform: uppercase;
+}
+.slick-dots{
+  @include uldev();
+  button{
+    border: none;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+.slick-arrow{
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  background-image: url('images/slider-arr.png');
+  width: 97px;
+  height: 12px;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+}
+.slick-prev{
+  background-position: 0 -12px;
+}
+.slick-next{
+  background-position: 0 -12px;
+  transform: rotate(180deg);
 }

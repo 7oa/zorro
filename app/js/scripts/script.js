@@ -38,6 +38,41 @@ $(document).ready(function() {
         }
     });
 
+    //слайдер на главной
+    $('.big-slider').slick({
+        dots: true,
+        appendArrows: '.big-slider-pagination',
+        appendDots: '.big-slider-pagination',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+    //слайдер товаров
+    $('.prev-slider').slick({
+        appendArrows: '.prev-line__nav',
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                }
+            }
+        ]
+    });
+
+
 });
 //скроем скроку поиска при клике вне элемента
 $(document).mouseup(function (e){

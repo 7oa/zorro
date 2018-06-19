@@ -1,0 +1,28 @@
+.brands-list-wrapper{
+  margin-bottom: 50px;
+}
+.brands-list{
+  &__h{
+    margin-bottom: 50px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item{
+    display: block;
+    @include bg-img(contain);
+    opacity: .4;
+    width: 40%;
+    height: 50px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    @media screen and (min-width: $w-tablet) {
+      width: 30%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 15%;
+    }
+  }
+}
