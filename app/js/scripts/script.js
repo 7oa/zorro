@@ -73,6 +73,7 @@ $(document).ready(function() {
 
                 },
                 425: {
+                    slidesPerView: 1,
                     centeredSlides: true
                 }
             }
@@ -90,6 +91,7 @@ $(document).ready(function() {
                 slidesPerView: 'auto'
             },
             425: {
+                slidesPerView: 1,
                 centeredSlides: true
             }
         }
@@ -100,6 +102,10 @@ $(document).ready(function() {
         $(this).parent().fadeOut()
             .next('.js-props').fadeIn();
     });
+
+    if($('.popup').hasClass('open')){
+        $('.wrapper').addClass('fixed');
+    }
 
 });
 //скроем скроку поиска при клике вне элемента

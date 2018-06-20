@@ -1,0 +1,58 @@
+.popup{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.4);
+  &.open{
+    display: block;
+  }
+  &__w{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+  &__w2{
+    position: relative;
+    height: 100%;
+  }
+}
+.cookies-wrapper{
+  position: relative;
+}
+.cookies{
+  background-color: $pink;
+  &__wrapper{
+    @media screen and (min-width: $w-desktop) {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+  &__text{
+    font-size: 20px;
+    padding: 30px;
+    color: $white;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    p{
+      margin-top: 0;
+      margin-bottom: 25px;
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

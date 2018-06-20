@@ -9,8 +9,12 @@ body {
   font-family: 'ProximaNova', sans-serif;
   font-size: 20px;
   line-height: 1.375;
+  position: relative;
   @media screen and (min-width: $w-desktop) {
     font-size: 16px;
+  }
+  &.fixed{
+    overflow: hidden;
   }
 }
 .content {
