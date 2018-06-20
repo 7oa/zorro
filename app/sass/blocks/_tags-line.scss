@@ -1,0 +1,28 @@
+.tags-line{
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      text-transform: uppercase;
+      color: $pink;
+      line-height: 47px;
+      border: 2px solid $pink;
+      border-radius: 25px;
+      padding: 0 40px;
+      font-size: 14px;
+      font-weight: $semi-bold;
+      transition: .5s;
+    }
+    &.active,
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        box-shadow: $shadow-pink;
+        background-color: $pink;
+        color: $white;
+      }
+    }
+  }
+}

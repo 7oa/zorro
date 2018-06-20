@@ -78,39 +78,9 @@ textarea{
   font-family: 'TrajanPro3', serif;
   text-transform: uppercase;
 }
-.slick-dots{
-  @include uldev();
-  button{
-    border: none;
-    display: block;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    cursor: pointer;
-    &:focus{
-      outline: none;
-    }
-  }
-}
-.slick-arrow{
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  line-height: 0;
-  border: none;
-  background-image: url('images/slider-arr.png');
-  width: 97px;
-  height: 12px;
-  cursor: pointer;
+.swiper-pagination-bullet{
+  opacity: 1;
   &:focus{
     outline: none;
   }
-}
-.slick-prev{
-  background-position: 0 -12px;
-}
-.slick-next{
-  background-position: 0 -12px;
-  transform: rotate(180deg);
 }

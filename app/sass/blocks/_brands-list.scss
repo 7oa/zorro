@@ -1,5 +1,8 @@
 .brands-list-wrapper{
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 120px;
+  }
 }
 .brands-list{
   &__h{
@@ -16,13 +19,14 @@
     opacity: .4;
     width: 40%;
     height: 50px;
-    margin: 10px 0;
+    margin: 15px 0;
     box-sizing: border-box;
     @media screen and (min-width: $w-tablet) {
       width: 30%;
     }
     @media screen and (min-width: $w-desktop) {
       width: 15%;
+      margin: 0;
     }
   }
 }

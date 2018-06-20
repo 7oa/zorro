@@ -11,15 +11,20 @@ block content
 		.page
 			.big-slider-wrapper
 				.big-slider
-					- for(var i=0;i<3;i++)
-						a._item(href="#" style="background-image:url('images/TEMP/slide1.jpg')")
-							._container.container
-								._date до 31 мая
-								._ttl Обжигающие скидки на охлаждающие лубриканты!
-								._prev.
-									Скидки на лубриканты фирмы Satisfyre до 35% В акции участвуют лубриканты: Satisfyer Men Neutral, Satisfyer Men Warming, Satisfyer Men Cooling
-								._link Подробнее
-				.big-slider-pagination
+					._swiper.swiper-wrapper
+						- for(var i=0;i<3;i++)
+							._slide.swiper-slide
+								a._item(href="#" style="background-image:url('images/TEMP/slide1.jpg')")
+									._container.container
+										._date до 31 мая
+										._ttl Обжигающие скидки на охлаждающие лубриканты!
+										._txt.
+											Скидки на лубриканты фирмы Satisfyre до 35% В акции участвуют лубриканты: Satisfyer Men Neutral, Satisfyer Men Warming, Satisfyer Men Cooling
+										._link Подробнее
+					._pagination
+						._prev
+						._bull
+						._next
 			//end .big-slider-wrapper
 			.advantages-wrapper
 				.container
@@ -61,6 +66,16 @@ block content
 							._next
 
 			//end .sale-prev
+			.tags-line-wrapper
+				.container
+					.tags-line
+						a._item(href="#") Секс-игрушки
+						a._item.active(href="#") БДСМ и фетиш
+						a._item(href="#") Интимная косметика
+						a._item(href="#") Белье
+						a._item(href="#") SALE
+						a._item(href="#") Тренинги
+			//end .tags-line-wrapper
 			.hits-prev
 				.container3
 					.prev-line
@@ -110,11 +125,11 @@ block content
 								- for(var i=0;i<3;i++)
 									a._item.swiper-slide(href="#" style="background-image:url('https://picsum.photos/300')")
 										._cnt
-											._ttl Конкурс эротической истории
+											._ttl Розовый ZORRO приглашает на ежегожную выставку для взрослых X'Show 2013!
 											._prev Мы объявляем конкурс Эротической истории. Она может быть любой, но главное — сногсшибательной!
-											._bottom
-												._date 4 марта 2017
-												._more Читать полностью
+										._bottom
+											._date 4 марта 2017
+											._more Читать полностью
 						._all
 							a._all-link(href="#") Смотреть все новости
 			//end .news-prev-wrapper

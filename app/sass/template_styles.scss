@@ -3,14 +3,15 @@
 @import "core/normalize";
 @import "core/fonts";
 @import "core/grid";
+
+@import "plugins/slick";
+@import "plugins/swiper.min";
+
 @import "core/base";
 @import "core/header";
 @import "core/footer";
 @import "core/buttons";
 @import "core/icons";
-
-@import "plugins/slick";
-@import "plugins/swiper.min";
 
 @import "blocks/header-menu";
 @import "blocks/burger-icon";
@@ -20,5 +21,6 @@
 @import "blocks/prev-line";
 @import "blocks/card";
 @import "blocks/news-prev";
+@import "blocks/tags-line";
 
 @import "pages/index";

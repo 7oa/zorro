@@ -39,7 +39,20 @@ $(document).ready(function() {
     });
 
     //слайдер на главной
-    $('.big-slider').slick({
+    var newsSlider = new Swiper('.big-slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        watchOverflow: true,
+        navigation: {
+            nextEl: '.big-slider__next',
+            prevEl: '.big-slider__prev'
+        },
+        pagination: {
+            el: '.big-slider__bull',
+            clickable: true
+        }
+    });
+    /*$('.big-slider').slick({
         dots: true,
         appendArrows: '.big-slider-pagination',
         appendDots: '.big-slider-pagination',
@@ -51,7 +64,7 @@ $(document).ready(function() {
                 }
             }
         ]
-    });
+    });*/
 
     //слайдер товаров
     var prevSliders = [];

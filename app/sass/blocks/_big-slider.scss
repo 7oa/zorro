@@ -7,7 +7,7 @@
   &__container{
     padding-top: 40px;
     @media screen and (min-width: $w-desktop) {
-      padding-left: 400px;
+      padding-left: 410px;
       padding-right: 190px;
     }
   }
@@ -27,7 +27,7 @@
       line-height: 30px;
       padding: 0 20px;
       border-radius: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
   }
   &__ttl{
@@ -40,10 +40,10 @@
       font-size: 30px;
     }
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
-  &__prev{
+  &__txt{
     display: none;
     @media screen and (min-width: $w-desktop) {
       display: block;
@@ -65,31 +65,22 @@
       }
     }
   }
-}
-.big-slider-wrapper{
-  margin-bottom: 35px;
-  overflow: hidden;
-  position: relative;
-}
-.big-slider-pagination{
-  position: absolute;
-  bottom: 27px;
-  right: 0;
-  left: 0;
-  @media screen and (min-width: $w-desktop) {
-    position: relative;
-    bottom: unset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-  }
-  .slick-list{
+  &__pagination{
+    position: absolute;
+    bottom: 27px;
+    right: 0;
+    left: 0;
+    z-index: 2;
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 20px;
+      position: relative;
+      bottom: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 23px;
     }
   }
-  .slick-dots{
+  &__bull{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,27 +88,61 @@
     @media screen and (min-width: $w-desktop) {
       margin: 0 10px;
     }
-    button{
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: $pink4;
-      margin: 0 3px;
-      transition: .5s;
-      border: 2px solid transparent;
+  }
+  .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $pink4;
+    margin: 0 3px;
+    transition: .5s;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+  }
+  .swiper-pagination-bullet-active{
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid $pink;
+  }
+  &__next,
+  &__prev{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+      line-height: 0;
+      border: none;
+      background-image: url('images/slider-arr.png');
+      width: 97px;
+      height: 12px;
+      cursor: pointer;
+      background-position-y: -12px;
+      background-position-x: 0;
     }
-    .slick-active{
-      button{
-        width: 14px;
-        height: 14px;
-        background-color: transparent;
-        border: 2px solid $pink;
-      }
+    &:focus{
+      outline: none;
+    }
+    &.swiper-button-disabled{
+      background-position-y: 0;
     }
   }
-  .slick-next{
-    @media screen and (min-width: $w-desktop) {
-      order: 1;
-    }
+  &__prev{
+    margin-right: 10px;
+  }
+  &__next{
+    transform: rotate(180deg);
+    margin-left: 10px;
+  }
+}
+.big-slider-wrapper{
+  margin-bottom: 76px;
+  overflow: hidden;
+  position: relative;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 70px;
   }
 }
