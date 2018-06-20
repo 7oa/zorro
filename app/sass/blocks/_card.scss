@@ -1,7 +1,7 @@
 .card{
   width: 290px;
   height: 506px;
-  background-color: white;
+  background-color: $white;
   border-radius: 10px;
   box-shadow: $shadow-pink;
   position: relative;
@@ -11,6 +11,136 @@
   @media screen and (min-width: $w-desktop) {
     width: 220px;
     height: 399px;
+  }
+  &__hover{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(242, 89, 169, .8);
+      @include anim();
+      color: $white;
+    }
+  }
+  &__hover2{
+    display: none;
+  }
+  &__to-fav{
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      background-image: url('images/icons/icon_favorite-white.svg');
+      background-position: right center;
+      background-repeat: no-repeat;
+      padding-right: 30px;
+      background-size: 22px;
+    }
+    span{
+      @media screen and (min-width: $w-desktop) {
+        text-decoration: underline;
+        color: $white;
+        font-size: 16px;
+      }
+    }
+    &:hover{
+      span{
+        @media screen and (min-width: $w-desktop) {
+          text-decoration: none;
+        }
+      }
+    }
+    &.active{
+      @media screen and (min-width: $w-desktop) {
+        background-image: url('images/icons/icon_favorite_fill-white.svg');
+      }
+    }
+  }
+  &__to-basket{
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 170px;
+      background-color: $white;
+      font-size: 13px;
+      font-weight: $semi-bold;
+      text-transform: uppercase;
+      color: $pink;
+      line-height: 50px;
+      display: block;
+      border: none;
+      border-radius: 25px;
+      width: 180px;
+      margin: 0 auto;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
+  &__one-click{
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 240px;
+      color: $white;
+      text-decoration: underline;
+      font-size: 16px;
+      line-height: 1;
+      text-align: center;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__link{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &__select-props{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(242, 89, 169, .8);
+    }
+  }
+  &__sp-label{
+    @media screen and (min-width: $w-desktop) {
+      text-align: center;
+      color: $white;
+      font-size: 16px;
+      padding-top: 18px;
+      margin-bottom: 45px;
+    }
+  }
+  &__sp-list{}
+  &__sp-item{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      width: 65px;
+      margin: 0 auto 10px;
+      line-height: 40px;
+      border-radius: 20px;
+      background-color: $gray-ec;
+      font-size: 16px;
+      text-align: center;
+      color: $gray72;
+      text-transform: uppercase;
+    }
   }
   &__cnt{
     padding: 60px 30px 20px;
@@ -106,14 +236,14 @@
     }
     &_hit{
       background-image: url('images/icons/category_hit.svg');
-      background-size: 18px;
-      background-position: 20px 20px;
+      background-size: 20px;
+      background-position: 19px 17px;
       background-repeat: no-repeat;
     }
     &_new{
       background-image: url('images/icons/category_new_2.svg');
-      background-size: 24px;
-      background-position: 20px 20px;
+      background-size: 23px;
+      background-position: 17px 19px;
       background-repeat: no-repeat;
     }
   }
@@ -131,4 +261,12 @@
       background-image: url('images/icons/icon_favorite_fill.svg');
     }
   }
+  &:hover{
+    .card__hover{
+      @media screen and (min-width: $w-desktop) {
+        display: block;
+      }
+    }
+  }
+
 }

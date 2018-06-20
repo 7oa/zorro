@@ -532,7 +532,7 @@
       height: 46px;
       box-sizing: border-box;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
   }
   &__input{
@@ -582,6 +582,7 @@
   &.open{
     @media screen and (min-width: $w-desktop) {
       display: block;
+      z-index: 2;
     }
   }
   &__list{

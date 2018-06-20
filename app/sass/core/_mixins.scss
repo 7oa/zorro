@@ -6,14 +6,6 @@
 
 //@include anim(); Плавное появлении при display: none; to display: block;
 @mixin anim() {
-  -moz-animation-name: dropHeader;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: ease-in-out;
-  -moz-animation-duration: 0.3s;
-  -webkit-animation-name: dropHeader;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 0.3s;
   animation-name: dropHeader;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
@@ -42,8 +34,6 @@
 
 //@include boxsize();
 @mixin boxsize() {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 

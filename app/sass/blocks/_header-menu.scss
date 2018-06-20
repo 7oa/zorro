@@ -8,12 +8,13 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 57px;
+    top: 60px;
     background-color: rgba(255,255,255,0.95);
-    height: 300px;
+    height: 301px;
     box-sizing: border-box;
     margin-left: calc((100vw - 1217px) / -2);
     margin-right: calc((100vw - 1217px) / -2);
+    z-index: 8;
   }
 }
 .menu-drop{
@@ -54,13 +55,12 @@
     @include uldev();
     @media screen and (min-width: $w-desktop) {
       display: flex;
-      padding: 19px 0;
     }
   }
   &__item{
     padding: 22px 0;
     @media screen and (min-width: $w-desktop) {
-      padding: 0;
+      padding: 19px 0;
       margin-right: 47px;
     }
     &:hover{

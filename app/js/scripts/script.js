@@ -52,19 +52,6 @@ $(document).ready(function() {
             clickable: true
         }
     });
-    /*$('.big-slider').slick({
-        dots: true,
-        appendArrows: '.big-slider-pagination',
-        appendDots: '.big-slider-pagination',
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    arrows: false
-                }
-            }
-        ]
-    });*/
 
     //слайдер товаров
     var prevSliders = [];
@@ -106,6 +93,12 @@ $(document).ready(function() {
                 centeredSlides: true
             }
         }
+    });
+
+    //выбор размеров
+    $('.js-tobasket').click(function(){
+        $(this).parent().fadeOut()
+            .next('.js-props').fadeIn();
     });
 
 });

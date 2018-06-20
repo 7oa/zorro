@@ -1,4 +1,5 @@
 .card
+    a._link(href="#")
     ._cnt
         ._img(style="background-image:url('images/TEMP/item1.jpg')")
         ._txt
@@ -9,3 +10,17 @@
             ._price 11 135 руб.
     ._angle.-new
     a._fav.active(href="#")
+    ._hover
+        ._hover1.js-hover
+            a._link(href="#")
+            a._to-fav.active(href="#fav")
+                span В избранное
+            button._to-basket.js-tobasket(type="button") в корзину
+            a._one-click(href="#click") Купить в один клик
+        ._hover2.js-props
+            ._sp-label Выберите<br>размер или цвет
+            ._sp-list
+                a._sp-item(href="#") S
+                a._sp-item(href="#") M
+                a._sp-item(href="#") L
+                a._sp-item(href="#") XL
