@@ -4,8 +4,8 @@
 @import "core/fonts";
 @import "core/grid";
 
-@import "plugins/slick";
 @import "plugins/swiper.min";
+@import "plugins/iziModal";
 
 @import "core/base";
 @import "core/header";
@@ -23,5 +23,6 @@
 @import "blocks/news-prev";
 @import "blocks/tags-line";
 @import "blocks/cookies";
+@import "blocks/notification";
 
 @import "pages/index";

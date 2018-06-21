@@ -31,6 +31,13 @@ textarea:focus{
 textarea{
   resize: vertical;
 }
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
 .container{
   width: 100%;
   margin: 0 auto;
@@ -88,4 +95,8 @@ textarea{
   &:focus{
     outline: none;
   }
+}
+.modal{
+  display: none;
+  font-family: 'ProximaNova', sans-serif;
 }

@@ -107,6 +107,32 @@ $(document).ready(function() {
         $('.wrapper').addClass('fixed');
     }
 
+    //iziModal
+    //popup куки
+    var cookiesModal =  $('#cookies').iziModal({
+        radius: 0,
+        width: '100%',
+        bottom: 0,
+        overlayColor: 'rgba(0, 0, 0, 0.8)',
+        transitionIn: 'fadeInUp',
+        transitionOut: 'fadeOutDown',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut'
+    });
+    //cookiesModal.iziModal('open');
+
+    //popup добавление в корзину
+    var notificationModal =  $('#notification').iziModal({
+        radius: 0,
+        width: '100%',
+        bottom: 0,
+        overlayColor: 'rgba(0, 0, 0, 0.8)',
+        transitionIn: 'fadeInUp',
+        transitionOut: 'fadeOutDown',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut'
+    });
+    //notificationModal.iziModal('open');
 });
 //скроем скроку поиска при клике вне элемента
 $(document).mouseup(function (e){
