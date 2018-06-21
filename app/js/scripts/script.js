@@ -103,11 +103,6 @@ $(document).ready(function() {
             .next('.js-props').fadeIn();
     });
 
-    if($('.popup').hasClass('open')){
-        $('.wrapper').addClass('fixed');
-    }
-
-    //iziModal
 
     //popup куки
     var cookiesModal =  $('#cookies').iziModal({
@@ -136,9 +131,6 @@ $(document).ready(function() {
     //notificationModal.iziModal('open');
 
     //feedback
-    var modalWidth;
-
-
     var feedbackModal =  $('#feedback').iziModal({
         radius: 0,
         overlayColor: 'rgba(0, 0, 0, 0.8)',
@@ -153,7 +145,7 @@ $(document).ready(function() {
             else feedbackModal.iziModal('setWidth', '100%');
         }
     });
-    feedbackModal.iziModal('open');
+    //feedbackModal.iziModal('open');
 
 
 });
