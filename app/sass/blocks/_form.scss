@@ -125,6 +125,11 @@
       display: flex;
       justify-content: space-between;
     }
+    &_end{
+      @media screen and (min-width: $w-desktop) {
+        justify-content: flex-end;
+      }
+    }
   }
   &__confirm{
     margin-bottom: 50px;

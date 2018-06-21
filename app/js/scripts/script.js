@@ -131,7 +131,7 @@ $(document).ready(function() {
     //notificationModal.iziModal('open');
 
     //feedback
-    var feedbackModal =  $('#feedback').iziModal({
+    var formModal =  $('.modal-form').iziModal({
         radius: 0,
         overlayColor: 'rgba(0, 0, 0, 0.8)',
         transitionIn: 'comingIn',
@@ -140,9 +140,9 @@ $(document).ready(function() {
         transitionOutOverlay: 'fadeOut',
         onOpening: function(){
             if(isDesktop) {
-                feedbackModal.iziModal('setWidth', 700);
+                formModal.iziModal('setWidth', 700);
             }
-            else feedbackModal.iziModal('setWidth', '100%');
+            else formModal.iziModal('setWidth', '100%');
         }
     });
     //feedbackModal.iziModal('open');

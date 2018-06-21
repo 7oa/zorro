@@ -135,11 +135,24 @@
       margin: 0 auto 10px;
       line-height: 40px;
       border-radius: 20px;
-      background-color: $gray-ec;
+      background-color: $pink5;
       font-size: 16px;
       text-align: center;
       color: $gray72;
       text-transform: uppercase;
+      transition: .5s;
+    }
+    &.disabled{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $gray-ec;
+      }
+    }
+    &.selected,
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $pink;
+        color: $white;
+      }
     }
   }
   &__cnt{

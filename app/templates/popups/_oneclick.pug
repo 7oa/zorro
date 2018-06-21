@@ -1,23 +1,15 @@
-.modal-form.modal#feedback
+.modal-form.modal#oneclick
     .form
-        ._ttl Обратная связь
+        ._ttl Покупка в один клик!
         ._form
             ._fields
-                ._row.-w50
+                ._row
                     ._label Имя
                     input._input(type="text")
-                ._row.-w50
-                    ._label E-mail
-                    input._input(type="email")
                 ._row
-                    ._label Текст сообщения
-                    textarea._textarea
-            ._bottom
-                ._confirm
-                    ._checkbox-wrapper
-                        input._checkbox(type="checkbox" id="confirm" checked)
-                        label._checkbox-label(for="confirm")
-                            span Согласен (-на) с политикой <a href="#">конфиденциальности компании</a>
+                    ._label Телефон
+                    input._input(type="tel")
+            ._bottom.-end
                 ._btn-wrap
                     input._submit(type="submit" value="Отправить")
         button._close(type="button" data-izimodal-close="").
