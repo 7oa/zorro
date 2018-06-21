@@ -1,0 +1,204 @@
+.form{
+  background-color: $white;
+  position: relative;
+  padding: 40px 30px 0;
+  @media screen and (min-width: $w-desktop) {
+    border-radius: 10px;
+  }
+  &__ttl{
+    font-family: 'TrajanPro3', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $gray72;
+    margin-bottom: 16px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 40px;
+    }
+  }
+  &__row{
+    border: 1px solid $pink4;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    &_w50{
+      @media screen and (min-width: $w-desktop) {
+        width: 49%;
+      }
+    }
+  }
+  &__label{
+    background-color: $white;
+    color: $gray99;
+    font-size: 16px;
+    font-weight: $light;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 0 8px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__input{
+    line-height: 64px;
+    width: 100%;
+    border: none;
+    //background-color: pink;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 10px;
+  }
+  &__textarea{
+    height: 130px;
+    width: 100%;
+    //background-color: pink;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: none;
+    border-radius: 10px;
+    padding-top: 15px;
+  }
+  &__btn-wrap{
+    text-align: center;
+  }
+  &__submit{
+    border: none;
+    background-color: $pink;
+    color: $white;
+    line-height: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    padding: 0 55px;
+    border-radius: 30px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 50px;
+      padding: 0 45px;
+    }
+  }
+  &__close{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    @media screen and (min-width: $w-mobile) {
+      right: 30px;
+    }
+    @media screen and (min-width: $w-tablet) {
+      right: 50px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 16px;
+      height: 16px;
+      right: 40px;
+      top: 40px;
+    }
+    .modal-close{
+      fill: $gray72
+    }
+  }
+  &__fields{
+    margin-bottom: 40px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &__bottom{
+    padding-bottom: 40px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__confirm{
+    margin-bottom: 50px;
+    @media screen and (min-width: $w-desktop) {
+      flex: 0 0 auto;
+      width: 300px;
+      padding-left: 15px;
+      margin-bottom: 0;
+    }
+  }
+  &__checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    &+label{
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      padding: 0 0 0 30px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        background: $white;
+        transition: .2s;
+        flex: 0 0 auto;
+        margin-right: 20px;
+        border: 2px solid $pink;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 3px;
+      }
+    }
+    &:checked + label:before{
+      content: '✔';
+      background: $pink;
+      color: $white;
+    }
+  }
+  &__checkbox-label{
+    color: $pink;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    a{
+      color: $pink;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.mess-fail,
+.mess-success{
+  border-top: 1px solid $gray-ec;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 20px;
+  padding-left: 70px;
+  background-position: left center;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $w-desktop) {
+    background-size: 30px;
+    padding-left: 50px;
+    font-size: 16px;
+  }
+}
+.mess-fail{
+  color: $pink;
+  background-image: url("images/icons/emotion_sad.svg");
+}
+.mess-success{
+  color: $green;
+  background-image: url("images/icons/emotion_happy.svg");
+}

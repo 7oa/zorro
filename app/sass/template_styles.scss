@@ -22,7 +22,9 @@
 @import "blocks/card";
 @import "blocks/news-prev";
 @import "blocks/tags-line";
-@import "blocks/cookies";
-@import "blocks/notification";
+@import "blocks/form";
+
+@import "popups/cookies";
+@import "popups/notification";
 
 @import "pages/index";

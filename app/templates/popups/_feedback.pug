@@ -1,0 +1,31 @@
+.feedback.modal#feedback
+    .form
+        ._ttl Обратная связь
+        ._form
+            ._fields
+                ._row.-w50
+                    ._label Имя
+                    input._input(type="text")
+                ._row.-w50
+                    ._label E-mail
+                    input._input(type="email")
+                ._row
+                    ._label Текст сообщения
+                    textarea._textarea
+            ._bottom
+                ._confirm
+                    ._checkbox-wrapper
+                        input._checkbox(type="checkbox" id="confirm" checked)
+                        label._checkbox-label(for="confirm")
+                            span Согласен (-на) с политикой <a href="#">конфиденциальности компании</a>
+                ._btn-wrap
+                    input._submit(type="submit")
+        button._close(type="button" data-izimodal-close="").
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
+
+        .mess-fail(style="display:none").
+            К сожалению, такого email нет.<br>
+            Возможно вы некорректно ввели адрес электронной почты или пароль.
+        .mess-success(style="display:none").
+            Спасибо за обращение!<br>
+            Совсем скоро мы ответим на Ваш запрос

@@ -108,6 +108,7 @@ $(document).ready(function() {
     }
 
     //iziModal
+
     //popup куки
     var cookiesModal =  $('#cookies').iziModal({
         radius: 0,
@@ -121,7 +122,7 @@ $(document).ready(function() {
     });
     //cookiesModal.iziModal('open');
 
-    //popup добавление в корзину
+    //popup -диалоги
     var notificationModal =  $('#notification').iziModal({
         radius: 0,
         width: '100%',
@@ -133,6 +134,28 @@ $(document).ready(function() {
         transitionOutOverlay: 'fadeOut'
     });
     //notificationModal.iziModal('open');
+
+    //feedback
+    var modalWidth;
+
+
+    var feedbackModal =  $('#feedback').iziModal({
+        radius: 0,
+        overlayColor: 'rgba(0, 0, 0, 0.8)',
+        transitionIn: 'comingIn',
+        transitionOut: 'comingOut',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        onOpening: function(){
+            if(isDesktop) {
+                feedbackModal.iziModal('setWidth', 700);
+            }
+            else feedbackModal.iziModal('setWidth', '100%');
+        }
+    });
+    feedbackModal.iziModal('open');
+
+
 });
 //скроем скроку поиска при клике вне элемента
 $(document).mouseup(function (e){
