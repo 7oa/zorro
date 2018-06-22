@@ -102,7 +102,10 @@ $(document).ready(function() {
         $(this).parent().fadeOut()
             .next('.js-props').fadeIn();
     });
-
+    $('.card').mouseleave(function(){
+        $(this).find('.js-hover').css('display', '');
+        $(this).find('.js-props').css('display', '');
+    });
 
     //popup куки
     var cookiesModal =  $('#cookies').iziModal({
