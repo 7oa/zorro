@@ -103,8 +103,8 @@ $(document).ready(function() {
             .next('.js-props').fadeIn();
     });
     $('.card').mouseleave(function(){
-        $(this).find('.js-hover').css('display', '');
-        $(this).find('.js-props').css('display', '');
+        $(this).children('.js-hover').css('display', '');
+        $(this).children('.js-props').css('display', '');
     });
 
     //popup куки
@@ -158,13 +158,26 @@ $(document).ready(function() {
         popup.slideToggle();
         if (display=='none') $('.wrapper').addClass('dark');
         if (display=='block') $('.wrapper').removeClass('dark');
-        console.log(display);
         return false;
     });
 
     $('.js-popup-close').click(function(){
         $(this).parents('.popup-bl').slideUp();
         $('.wrapper').removeClass('dark')
+    });
+
+    //
+    $('.js-plus').click(function(){
+        var countEl = $(this).siblings().children('.js-count');
+        var count = parseInt(countEl.text());
+        countEl.text(++count);
+        if(count>1) $(this).siblings('.js-minus').removeClass('disabled');
+    });
+    $('.js-minus').click(function(){
+        var countEl = $(this).siblings().children('.js-count');
+        var count = parseInt(countEl.text());
+        if(count>1) countEl.text(--count);
+        if(count==1) $(this).addClass('disabled');
     });
 
 });

@@ -190,11 +190,25 @@ header.header
                 ._full
                     .prev-line
                         ._h.h Корзина
+                        a.header-popup__clear-basket(href="#") Очистить корзину
                         ._list.prev-slider
                             ._swiper.swiper-wrapper
                                 - for(var i=0;i<8;i++)
                                     ._item.swiper-slide
                                         include ../blocks/_card-basket
+                        ._nav
+                            ._prev
+                            ._next
 
                 button._close.js-popup-close(type="button" data-izimodal-close="").
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
+        ._full-footer
+            ._full-footer-cnt.container2
+                ._promo
+                    input._promo-input(type="text" placeholder="Введите промокод")
+                ._fin
+                    ._itog
+                        ._itog-label Сумма за 12 товаров:
+                        ._itog-sum 113 499 руб.
+                    ._checkout
+                        input._order-submit(type="submit" value="Оформить заказ")
