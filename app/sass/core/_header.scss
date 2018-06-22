@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  z-index: 5;
   &__r1{
     background: $pink;
     color: $white;
@@ -672,6 +673,9 @@
     top: 220px;
   }
 }
+.popup-basket{
+  display: block;
+}
 .header-popup{
   position: relative;
   padding: 60px 0;
@@ -734,6 +738,9 @@
       line-height: 50px;
       padding: 0 45px;
     }
+  }
+  &__list{
+    overflow: hidden;
   }
 
 }

@@ -152,13 +152,19 @@ $(document).ready(function() {
     //popup Корзина/Избранное
     $('.js-header-popup').click(function(){
         var link = $(this).data('open');
-        $('.popup-'+link).siblings('.popup-bl').slideUp();
-        $('.popup-'+link).slideToggle();
+        var popup = $('.popup-'+link);
+        var display = popup.css('display');
+        popup.siblings('.popup-bl').slideUp();
+        popup.slideToggle();
+        if (display=='none') $('.wrapper').addClass('dark');
+        if (display=='block') $('.wrapper').removeClass('dark');
+        console.log(display);
         return false;
     });
 
     $('.js-popup-close').click(function(){
         $(this).parents('.popup-bl').slideUp();
+        $('.wrapper').removeClass('dark')
     });
 
 });

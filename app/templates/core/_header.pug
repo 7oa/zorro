@@ -154,7 +154,7 @@ header.header
     .popup-bl.popup-favorites
         .container2
             .header-popup
-                ._empty
+                ._empty(style="display:none")
                     ._ttl Избранного нет
                     ._empty-text.
                         В данном разделе отображаются товары, которые Вам приглянулись.<br>
@@ -163,21 +163,38 @@ header.header
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.45 65.62"><path d="M61.56,1.63a20.86,20.86,0,0,1,6.78,4.54h0a20.93,20.93,0,0,1,0,29.61L50,54a3.16,3.16,0,0,1-2.2,1,2.77,2.77,0,0,1-2.77-2.77,3,3,0,0,1,1-2.14L64.37,31.82A15.33,15.33,0,1,0,42.69,10.14l-3.47,3.47a2.79,2.79,0,0,1-3.91,0c-1.21-1.11-2.34-2.42-3.55-3.54a15.29,15.29,0,0,0-21.68,0A15.1,15.1,0,0,0,6.75,15,15.31,15.31,0,0,0,10.1,31.78l21.8,21.8,5.31,5.31,1.9,1.9a2.77,2.77,0,0,1-1.85,4.84H37.2a2.75,2.75,0,0,1-1.07-.22,2.84,2.84,0,0,1-.86-.56L6.15,35.72a21,21,0,0,1-4.56-6.8A20.92,20.92,0,0,1,28.92,1.59a21,21,0,0,1,6.8,4.56l1.53,1.53,1.5-1.5A21,21,0,0,1,61.56,1.63Z" fill="#f259a9"/></svg>
                     ._to-catalog
                         a._to-catalog-link(href="catalog.html") Каталог
-                ._full(style="display:none")
+                ._full
+                    .prev-line
+                        ._h.h Избранное
+                        ._list.prev-slider
+                            ._swiper.swiper-wrapper
+                                - for(var i=0;i<8;i++)
+                                    ._item.swiper-slide
+                                        include ../blocks/_card-new
+                        ._nav
+                            ._prev
+                            ._next
 
                 button._close.js-popup-close(type="button" data-izimodal-close="").
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
     .popup-bl.popup-basket
         .container2
             .header-popup
-                ._empty
-                    ._ttl корзина
+                ._empty(style="display:none")
+                    ._ttl Корзина
                     ._empty-text.
                         Пока Вы ничего не добавили корзину.<br>
                         Скорее перейдите в каталог и исправьте это.
                     ._to-catalog
                         a._to-catalog-link(href="catalog.html") Каталог
-                ._full(style="display:none")
+                ._full
+                    .prev-line
+                        ._h.h Корзина
+                        ._list.prev-slider
+                            ._swiper.swiper-wrapper
+                                - for(var i=0;i<8;i++)
+                                    ._item.swiper-slide
+                                        include ../blocks/_card-basket
 
                 button._close.js-popup-close(type="button" data-izimodal-close="").
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
