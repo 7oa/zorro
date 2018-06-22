@@ -148,11 +148,11 @@ $(document).ready(function() {
             else formModal.iziModal('setWidth', '100%');
         }
     });
-    //feedbackModal.iziModal('open');
+
 
 
 });
-//скроем скроку поиска при клике вне элемента
+//скроем строку поиска при клике вне элемента
 $(document).mouseup(function (e){
     if (isDesktop) {
         var div = $('.header-search-line');
