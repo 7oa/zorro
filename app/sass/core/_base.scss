@@ -16,6 +16,24 @@ body {
   &.fixed{
     overflow: hidden;
   }
+  /*&.dark{
+    .workarea,
+    .footer{
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 8;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }*/
 }
 .content {
   flex: 1 0 auto;

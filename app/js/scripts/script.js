@@ -149,7 +149,17 @@ $(document).ready(function() {
         }
     });
 
+    //popup Корзина/Избранное
+    $('.js-header-popup').click(function(){
+        var link = $(this).data('open');
+        $('.popup-'+link).siblings('.popup-bl').slideUp();
+        $('.popup-'+link).slideToggle();
+        return false;
+    });
 
+    $('.js-popup-close').click(function(){
+        $(this).parents('.popup-bl').slideUp();
+    });
 
 });
 //скроем строку поиска при клике вне элемента
