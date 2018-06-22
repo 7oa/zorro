@@ -417,6 +417,41 @@
     }
   }
 }
+.header-enter{
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $w-desktop) {
+    flex-direction: row;
+    align-items: center;
+  }
+  &__login{
+    background-color: $white;
+    color: $pink;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    padding: 0 35px;
+    font-weight: $semi-bold;
+    margin-bottom: 5px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 13px;
+      margin-bottom: 0;
+      order: 1;
+      margin-left: 25px;
+      line-height: 40px;
+      border-radius: 20px;
+    }
+  }
+  &__reg{
+    color: $white;
+    font-size: 16px;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
 .header-auth{
   display: flex;
   &__avatar{

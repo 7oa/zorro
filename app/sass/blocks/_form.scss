@@ -24,6 +24,27 @@
       margin-bottom: 40px;
     }
   }
+  &__ttl2{
+    font-family: 'TrajanPro3', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $gray72;
+    margin-bottom: 15px;
+  }
+  &__subttl{
+    font-size: 20px;
+    text-align: center;
+    color: $gray72;
+    margin-bottom: 45px;
+    a{
+      color: $pink;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
   &__row{
     border: 1px solid $pink4;
     border-radius: 10px;
@@ -70,6 +91,14 @@
   }
   &__btn-wrap{
     text-align: center;
+  }
+  &__btn-wrap2{
+    text-align: center;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      order: 1;
+    }
   }
   &__submit{
     border: none;
@@ -129,6 +158,35 @@
       @media screen and (min-width: $w-desktop) {
         justify-content: flex-end;
       }
+    }
+  }
+  &__bottom2{
+    padding-bottom: 40px;
+  }
+  &__forgot{
+    background-image: url('images/icons/lock.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px 24px;
+    padding-left: 30px;
+    height: 24px;
+    line-height: 24px;
+    width: 165px;
+    margin: 0 auto;
+    @media screen and (min-width: $w-desktop) {
+      margin: 0;
+      align-self: center;
+    }
+  }
+  &__forgot-link{
+    color: $pink;
+    text-decoration: underline;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
     }
   }
   &__confirm{

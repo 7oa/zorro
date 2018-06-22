@@ -81,13 +81,17 @@ header.header
         .container
             .dd-panel
                 ._r1
-                    .header-auth
-                        a._avatar(href="#" style="background-image: url('https://skuchno.net/uploads/posts/2016-08/1470990273_beautiful_girls_06.jpg');")
-                            //если нет аватара - вставляем .header-auth__noavatar
-                            ._noavatar
-                        ._inf
-                            ._label Вы вошли как
-                            a._name(href="#") Фдучфтвук Зуекулуум
+                    .header-reg
+                        .header-enter
+                            button._login(type='button' data-izimodal-open="#login") Войти
+                            a._reg(href="#" data-izimodal-open="#registration") Зарегистрироваться
+                        .header-auth(style="display:none")
+                            a._avatar(href="#" style="background-image: url('https://skuchno.net/uploads/posts/2016-08/1470990273_beautiful_girls_06.jpg');")
+                                //если нет аватара - вставляем .header-auth__noavatar
+                                ._noavatar
+                            ._inf
+                                ._label Вы вошли как
+                                a._name(href="#") Фдучфтвук Зуекулуум
                     a.header-fav(href="#")
                         ._ttl
                             ._icon.

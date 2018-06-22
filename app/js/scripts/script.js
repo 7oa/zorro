@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     //клонируем элементы из мобильной для десктопа
     $('.header-menu').clone().appendTo('.header-menu-desktop');
-    $('.header-auth').clone().appendTo('.header-desktop-r1__auth');
+    $('.header-reg').clone().appendTo('.header-desktop-r1__auth');
     $('.header-call').clone().appendTo('.header-desktop-r1__call');
     $('.header-fav').clone().appendTo('.header-line2__fav');
     $('.header-backet').clone().appendTo('.header-line2__backet');
