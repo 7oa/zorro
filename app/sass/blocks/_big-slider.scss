@@ -1,4 +1,6 @@
 .big-slider{
+  overflow: hidden;
+  position: relative;
   &__item{
     display: block;
     @include bg-img(cover);
@@ -140,8 +142,6 @@
 }
 .big-slider-wrapper{
   margin-bottom: 76px;
-  overflow: hidden;
-  position: relative;
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 70px;
   }

@@ -18,6 +18,7 @@ $(document).ready(function() {
     $('.header-backet').clone().appendTo('.header-line2__backet');
     $('.header-tren').clone().appendTo('.header-tren-desktop');
     $('.header-search').clone().appendTo('.header-search-desktop');
+    $('.catalog-menu').clone().appendTo('.desktop-catalog-menu');
 
     //закрепляем меню
     $(window).scroll(function () {
@@ -178,6 +179,11 @@ $(document).ready(function() {
         var count = parseInt(countEl.text());
         if(count>1) countEl.text(--count);
         if(count==1) $(this).addClass('disabled');
+    });
+
+    //меню каталог
+    $('.js-catalog-menu').click(function(){
+        $(this).next().slideToggle();
     });
 
 });

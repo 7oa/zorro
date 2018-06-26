@@ -10,42 +10,28 @@ block content
 	.workarea
 		.page
 			.big-slider-wrapper
-				.big-slider
-					._swiper.swiper-wrapper
-						- for(var i=0;i<3;i++)
-							._slide.swiper-slide
-								a._item(href="#" style="background-image:url('images/TEMP/slide1.jpg')")
-									._container.container
-										._date до 31 мая
-										._ttl Обжигающие скидки на охлаждающие лубриканты!
-										._txt.
-											Скидки на лубриканты фирмы Satisfyre до 35% В акции участвуют лубриканты: Satisfyer Men Neutral, Satisfyer Men Warming, Satisfyer Men Cooling
-										._link Подробнее
-					._pagination
-						._prev
-						._bull
-						._next
+				include blocks/_big-slider
 			//end .big-slider-wrapper
 			.advantages-wrapper
 				.container
 					.advantages
-						._item
+						a._item(href="#")
 							._img(style="background-image:url('images/plus1.svg')")
 							._ttl БЕСПЛАТНАЯ<br>ДОСТАВКА
 							._prev При заказе от 3000 рублей
-						._item
+						a._item(href="#")
 							._img(style="background-image:url('images/plus2.svg')")
 							._ttl 100% БЕЗОПАСНОСТЬ<br>ТОВАРОВ
 							._prev Сертификаты и гарантии
-						._item
+						a._item(href="#")
 							._img(style="background-image:url('images/plus3.svg')")
 							._ttl АНОНИМНОСТЬ<br>И КОНФИДЕНЦИАЛНОСТЬ
 							._prev При заказе и получении
-						._item
+						a._item(href="#")
 							._img(style="background-image:url('images/plus4.svg')")
 							._ttl 100% ГАРАНТИЯ<br>ВОЗВРАТА ТОВАРА
 							._prev Бесплатно заменим на новый
-						._item
+						a._item(href="#")
 							._img(style="background-image:url('images/plus5.svg')")
 							._ttl Оперативная помощь<br>консультантов
 							._prev В выборе или вопросах

@@ -117,3 +117,8 @@ button{
   display: none;
   font-family: 'ProximaNova', sans-serif;
 }
+.column{
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+  }
+}

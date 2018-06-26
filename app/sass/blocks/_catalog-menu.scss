@@ -1,0 +1,60 @@
+.catalog-menu{
+  &__list{
+    @include uldev();
+  }
+  &__item{
+    text-align: center;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+  &__link{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $gray99;
+    transition: .5s;
+    @media screen and (min-width: $w-desktop) {
+      text-transform: none;
+    }
+    &.active,
+    &:hover{
+      color: $pink;
+    }
+  }
+}
+.desktop-catalog-menu{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+  }
+}
+.catalog-menu-select{
+  margin-bottom: 55px;
+  text-align: center;
+  &__h {
+    cursor: pointer;
+    display: inline-block;
+    background-image: url('images/icons/expand-more.svg');
+    background-repeat: no-repeat;
+    padding-right: 25px;
+    background-position-x: right;
+    background-position-y: 0;
+    background-size: 25px;
+    @media screen and (min-width: $w-desktop) {
+      cursor: text;
+      background-image: none;
+      padding-right: 0;
+    }
+  }
+  &__mobile{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: none;
+    border-bottom: 1px solid $gray-ec;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.catalog-slider-wrapper{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+.catalog-page{
+  padding-top: 60px;
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 0;
+  }
+}
+.catalog-container{
+
+}
+.catalog{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+}

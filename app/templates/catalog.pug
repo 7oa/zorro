@@ -1,0 +1,42 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Каталог';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page.catalog-page
+			.catalog-slider-wrapper
+				include blocks/_big-slider
+			//end .catalog-slider-wrapper
+			.container
+				.catalog-container
+
+					.catalog-menu-select
+						._h.h.js-catalog-menu БДСМ и фетиш
+						._mobile
+							include blocks/_catalog-menu
+					.catalog-filter
+						._container
+							._filter фильтр
+							._sort сортировка
+						._clean
+					.column
+						.column-l
+							.desktop-catalog-menu
+
+						.column-r каталог
+							.catalog
+								._list
+									- for(var i=0;i<8;i++)
+										._item
+											include blocks/_card-sale
+										._item
+											include blocks/_card
+										._item
+											include blocks/_card-hit
+										._item
+											include blocks/_card-new
