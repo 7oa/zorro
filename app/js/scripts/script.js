@@ -183,6 +183,21 @@ $(document).ready(function() {
 
     //меню каталог
     $('.js-catalog-menu').click(function(){
+        if (!isDesktop) {
+            $(this).next().slideToggle();
+        }
+    });
+
+    //фильтр
+    $('.js-open-filtr-btn').click(function(){
+        $(this).next().slideToggle();
+    });
+    $('.js-open-filtr').click(function(){
+        $(this).parents('.catalog-filter__item-body').next().slideToggle();
+    });
+
+    //сортировка
+    $('.js-sort-open').click(function(){
         $(this).next().slideToggle();
     });
 

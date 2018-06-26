@@ -117,8 +117,20 @@ button{
   display: none;
   font-family: 'ProximaNova', sans-serif;
 }
-.column{
+.columns{
   @media screen and (min-width: $w-desktop) {
     display: flex;
+  }
+}
+.column-l{
+  @media screen and (min-width: $w-desktop) {
+    width: 230px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+  }
+}
+.column-r{
+  @media screen and (min-width: $w-desktop) {
+    flex: 1 1 auto;
   }
 }

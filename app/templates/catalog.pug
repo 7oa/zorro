@@ -20,23 +20,164 @@ block content
 						._mobile
 							include blocks/_catalog-menu
 					.catalog-filter
+						._button.js-open-filtr-btn Фильтры
 						._container
-							._filter фильтр
-							._sort сортировка
+							._filter
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_brand.svg')")
+											._item-type.js-open-filtr Материал
+											a._item-del(href="#")
+										._item-r
+											._item-selected Латекс + 2
+
+									._item-dd
+										.filtr-checklist
+											._item
+												input._checkbox(type="checkbox" id="m1")
+												label._checkbox-label(for="m1") SuperSkin
+											._item
+												input._checkbox(type="checkbox" id="m2")
+												label._checkbox-label(for="m2") Спандекс
+											._item
+												input._checkbox(type="checkbox" id="m3")
+												label._checkbox-label(for="m3") Натуральная кожа
+											._item
+												input._checkbox(type="checkbox" id="m4" checked)
+												label._checkbox-label(for="m4") Латекс
+											._item
+												input._checkbox(type="checkbox" id="m5")
+												label._checkbox-label(for="m5") Резина
+											._item
+												input._checkbox(type="checkbox" id="m6")
+												label._checkbox-label(for="m6") Пластик
+											._item
+												input._checkbox(type="checkbox" id="m7" checked)
+												label._checkbox-label(for="m7") Полиуретан
+											._item
+												input._checkbox(type="checkbox" id="m8")
+												label._checkbox-label(for="m8") Силикон
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_material.svg')")
+											._item-type.js-open-filtr Цвет
+											a._item-del(href="#")
+										._item-r
+											._item-selected Зеленый + 6
+
+									._item-dd
+										.filtr-checklist
+											._item
+												input._checkbox(type="checkbox" id="color1")
+												label._checkbox-label(for="color1") Красный
+											._item
+												input._checkbox(type="checkbox" id="color2")
+												label._checkbox-label(for="color2") Оранжевый
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_charge.svg')")
+											._item-type.js-open-filtr Тип питания
+											._item-select
+										._item-r
+											._item-selected
+
+									._item-dd
+										.filtr-checklist
+											._item
+												input._checkbox(type="checkbox" id="type1")
+												label._checkbox-label(for="type1") Тип1
+											._item
+												input._checkbox(type="checkbox" id="type2")
+												label._checkbox-label(for="type2") Тип2
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_size-2.svg')")
+											._item-type.js-open-filtr Размер
+											a._item-del(href="#")
+										._item-r
+											._item-selected Диаметр 5 + 1
+									._item-dd(style="display:block")
+										.filtr-size
+											._item
+												label._label Диаметр: 5
+												input._range(type="range" min="3" max="10" value="5")
+											._item
+												label._label Длина: 10-15
+												input._range(type="range" min="10" max="35" value="10,15" multiple)
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_price.svg')")
+											._item-type.js-open-filtr Цена
+											._item-select
+										._item-r
+											._item-selected
+
+									._item-dd
+										.filtr-price
+											._from
+												label._label От
+												input._input(type="number" value="290")
+											._sep —
+											._to
+												label._label До
+												input._input(type="number" value="12490")
+								._item
+									._item-body
+										._item-l
+											._item-i(style="background-image:url('images/icons/filter_user_availability.svg')")
+											._item-type.js-open-filtr Наличие
+											a._item-del(href="#")
+										._item-r
+											._item-selected Северодвинск
+									._item-dd
+										.filtr-checklist
+											._item
+												input._checkbox(type="checkbox" id="sklad1")
+												label._checkbox-label(for="sklad1")
+													span Архангельск<br>
+													span.sm Троицкий, 20
+											._item
+												input._checkbox(type="checkbox" id="sklad2")
+												label._checkbox-label(for="sklad2")
+													span Северодвинск<br>
+													span.sm Карла Маркса, 14
+							._sort
+								._sort-body.js-sort-open По возрастанию цены
+								._sort-dd
+									._sort-list
+										a._sort-item(href="#") По возрастанию цены
+										a._sort-item(href="#") По убыванию цены
+										a._sort-item(href="#") Скидки
+										a._sort-item(href="#") Сначала новинки
+										a._sort-item(href="#") Сначала актуальные
 						._clean
-					.column
+							a._clean-label(href="#") Сбросить все фильтры: 4
+					//end .catalog-filter
+					.columns
 						.column-l
 							.desktop-catalog-menu
-
-						.column-r каталог
+						//end .column-l
+						.column-r
 							.catalog
 								._list
-									- for(var i=0;i<8;i++)
+									- for(var i=0;i<4;i++)
 										._item
 											include blocks/_card-sale
 										._item
 											include blocks/_card
 										._item
 											include blocks/_card-hit
-										._item
-											include blocks/_card-new
+								._footer
+									._show
+										include blocks/_show-counter
+									._pagination
+										include blocks/_pagination
+							//end .catalog
+						//end .column-r
+					//end .columns
+				//end .catalog-container

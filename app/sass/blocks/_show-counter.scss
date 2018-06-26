@@ -1,0 +1,18 @@
+@media screen and (min-width: $w-desktop) {
+  .show-counter{
+    &__label{
+      color: $pink;
+      margin-right: 15px;
+    }
+    &__link{
+      color: $pink2;
+      text-decoration: underline;
+      margin-right: 15px;
+      transition: .5s;
+      &.active,
+      &:hover{
+        color: $pink;
+      }
+    }
+  }
+}

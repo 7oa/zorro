@@ -1,0 +1,83 @@
+.pagination{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: $w-desktop) {
+    flex-direction: row;
+  }
+  &__label{
+    font-size: 16px;
+    font-weight: $light;
+    color: $pink;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      font-weight: $regular;
+      margin-right: 17px;
+    }
+  }
+  &__body{
+    display: flex;
+    @media screen and (min-width: $w-desktop) {
+      align-items: center;
+    }
+  }
+  &__sum-page{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      font-size: 16px;
+      color: $pink;
+      margin-right: 20px;
+    }
+  }
+  &__cur-page{
+    border: 1.5px solid $pink;
+    height: 70px;
+    width: 150px;
+    font-size: 20px;
+    color: $gray72;
+    text-align: center;
+    line-height: 66px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    margin: 0 10px;
+    @media screen and (min-width: $w-desktop) {
+      height: 50px;
+      line-height: 46px;
+      border-radius: 25px;
+      width: 110px;
+      margin-left: 0;
+      margin-right: 18px;
+    }
+  }
+  &__btn-prev,
+  &__btn-next{
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $pink;
+    @media screen and (min-width: $w-desktop) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__btn-prev{
+    background-image: url('images/icons/chevron_left.svg');
+    @include bg-img(40px);
+    @media screen and (min-width: $w-desktop) {
+      order: 1;
+      margin-right: 10px;
+    }
+  }
+  &__btn-next{
+    background-image: url('images/icons/chevron_left.svg');
+    @include bg-img(40px);
+    transform: rotate(180deg);
+    @media screen and (min-width: $w-desktop) {
+      order: 2;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .card{
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
   height: 506px;
   background-color: $white;
   border-radius: 10px;
@@ -8,6 +9,9 @@
   overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto;
+  @media screen and (min-width: $w-mobile) {
+    width: 290px;
+  }
   @media screen and (min-width: $w-desktop) {
     width: 220px;
     height: 399px;
