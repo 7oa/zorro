@@ -2,11 +2,11 @@
   display: none;
   @media screen and (min-width: $w-desktop) {
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 }
 .catalog-page{
-  padding-top: 60px;
+  padding-top: 55px;
   @media screen and (min-width: $w-desktop) {
     padding-top: 0;
   }
@@ -15,14 +15,16 @@
 
 }
 .catalog-filter{
-
   margin-bottom: 70px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 30px;
+  }
   &__container{
     display: none;
     @media screen and (min-width: $w-desktop) {
       display: flex !important;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
   &__clean{
@@ -75,13 +77,30 @@
     @media screen and (min-width: $w-desktop) {
       display: none;
     }
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after{
+        content: '';
+        background-image: url('images/icons/filtr-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+      }
+    }
+    &.open{
+      span:after{
+        transform: rotate(180deg);
+      }
+    }
   }
   &__filter{
-    padding-top: 35px;
     @media screen and (min-width: $w-desktop) {
       display: flex;
-      align-items: baseline;
-      padding-top: 0;
+      align-items: flex-start;
     }
   }
   &__item{
@@ -106,6 +125,9 @@
   &__item-l{
     display: flex;
     align-items: center;
+    @media screen and (min-width: $w-desktop) {
+      height: 20px;
+    }
   }
   &__item-r{
     display: flex;
@@ -242,11 +264,14 @@
 }
 .catalog{
   padding-bottom: 85px;
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 135px;
+  }
   &__list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 0;
     }
@@ -319,9 +344,20 @@
     }
   }
   &__checkbox-label{
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
     span.sm{
       font-size: 12px;
-      padding-left: 30px;
+    }
+    span.color{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 3px;
     }
   }
 }
@@ -333,6 +369,8 @@
     font-weight: $light;
     color: $white;
     line-height: 1;
+    display:block;
+    margin-bottom: 5px;
   }
   &__input{
     width: 85px;
@@ -346,13 +384,65 @@
   }
   &__sep{
     color: $white;
-    padding: 30px 3px 0;
+    padding: 25px 3px 0;
   }
 }
 .filtr-size{
+  &__item{
+    margin-bottom: 30px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+  }
+  &__min,
+  &__max{
+    width: 20px;
+    flex: 0 0 auto;
+    color: $white;
+    font-size: 12px;
+    font-weight: $light;
+  }
+  &__max{
+    text-align: right;
+  }
+  &__rng{
+    flex: 1 1 auto;
+  }
   &__label{
     font-size: 16px;
     color: $white;
     line-height: 1;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  &__range{
+    height: 6px;
+    border: 0 !important;
+    background: $pink2;
+    @media screen and (min-width: $w-desktop) {
+      height: 3px;
+    }
+    .ui-slider-range{
+      background: $pink;
+    }
+    .ui-slider-handle{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $white;
+      opacity: 1;
+      border: 0;
+      @media screen and (min-width: $w-desktop) {
+        width: 15px;
+        height: 15px;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
   }
 }

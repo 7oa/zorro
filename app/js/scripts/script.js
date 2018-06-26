@@ -44,6 +44,12 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 0,
         watchOverflow: true,
+        speed: 500,
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 7000
+        },
         navigation: {
             nextEl: '.big-slider__next',
             prevEl: '.big-slider__prev'
@@ -190,7 +196,8 @@ $(document).ready(function() {
 
     //фильтр
     $('.js-open-filtr-btn').click(function(){
-        $(this).next().slideToggle();
+        $(this).toggleClass('open')
+            .next().slideToggle();
     });
     $('.js-open-filtr').click(function(){
         $(this).parents('.catalog-filter__item-body').next().slideToggle();
@@ -200,6 +207,47 @@ $(document).ready(function() {
     $('.js-sort-open').click(function(){
         $(this).next().slideToggle();
     });
+
+    //input type="range"
+    var range1 = $("#slider-range-diam");
+    var range2 = $("#slider-range-length");
+
+    range1.slider({
+        range: "min",
+        min: range1.data('min'),
+        max: range1.data('max'),
+        value: range1.data('val'),
+        create: function(){
+            changeVal("range-diam",false);
+        },
+        slide: function(){
+            changeVal("range-diam",false);
+        }
+    });
+
+    range2.slider({
+        range: true,
+        min: range2.data('min'),
+        max: range2.data('max'),
+        values: [ range2.data('val1'), range2.data('val2') ],
+        create: function(){
+            changeVal("range-length",true);
+        },
+        slide: function() {
+            changeVal("range-length",true);
+        }
+    });
+    function changeVal(param,multiple){
+        var value;
+        if (multiple){
+            value = $("#slider-"+param).slider("values", 0) + " - " + $("#slider-"+param).slider( "values", 1 )
+        }
+        else{
+            value = $("#slider-"+param).slider("value");
+        }
+        $("#"+param).val( value );
+        $("label[for="+param+"] span").text(value);
+    }
 
 });
 //скроем строку поиска при клике вне элемента

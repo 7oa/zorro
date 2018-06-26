@@ -19,8 +19,10 @@ block content
 						._h.h.js-catalog-menu БДСМ и фетиш
 						._mobile
 							include blocks/_catalog-menu
+					//end .catalog-menu-select
 					.catalog-filter
-						._button.js-open-filtr-btn Фильтры
+						._button.js-open-filtr-btn
+							span Фильтры
 						._container
 							._filter
 								._item
@@ -71,10 +73,54 @@ block content
 										.filtr-checklist
 											._item
 												input._checkbox(type="checkbox" id="color1")
-												label._checkbox-label(for="color1") Красный
+												label._checkbox-label(for="color1")
+													span.color(style="background-color:#f51a4e")
+													span Красный
 											._item
 												input._checkbox(type="checkbox" id="color2")
-												label._checkbox-label(for="color2") Оранжевый
+												label._checkbox-label(for="color2")
+													span.color(style="background-color:#ff8400")
+													span Оранжевый
+											._item
+												input._checkbox(type="checkbox" id="color3")
+												label._checkbox-label(for="color3")
+													span.color(style="background-color:#ffd800")
+													span Желтый
+											._item
+												input._checkbox(type="checkbox" id="color4")
+												label._checkbox-label(for="color4")
+													span.color(style="background-color:#32cc56")
+													span Зеленый
+											._item
+												input._checkbox(type="checkbox" id="color5")
+												label._checkbox-label(for="color5")
+													span.color(style="background-color:#8dd1f1")
+													span Голубой
+											._item
+												input._checkbox(type="checkbox" id="color6" checked)
+												label._checkbox-label(for="color6")
+													span.color(style="background-color:#2c87ce")
+													span Синий
+											._item
+												input._checkbox(type="checkbox" id="color7")
+												label._checkbox-label(for="color7")
+													span.color(style="background-color:#e075f0")
+													span Фиолетовый
+											._item
+												input._checkbox(type="checkbox" id="color8")
+												label._checkbox-label(for="color8")
+													span.color(style="background-color:#ff4ea5")
+													span Розовый
+											._item
+												input._checkbox(type="checkbox" id="color9")
+												label._checkbox-label(for="color9")
+													span.color(style="background-color:#fff")
+													span Белый
+											._item
+												input._checkbox(type="checkbox" id="color10")
+												label._checkbox-label(for="color10")
+													span.color(style="background-color:#bfbfbf")
+													span Серый
 								._item
 									._item-body
 										._item-l
@@ -100,14 +146,30 @@ block content
 											a._item-del(href="#")
 										._item-r
 											._item-selected Диаметр 5 + 1
-									._item-dd(style="display:block")
+									._item-dd
 										.filtr-size
 											._item
-												label._label Диаметр: 5
-												input._range(type="range" min="3" max="10" value="5")
+												label._label(for="range-diam") Диаметр:
+													|
+													|
+													span
+												input#range-diam(type="hidden")
+												._row
+													._min 3
+													._rng
+														#slider-range-diam._range(data-min="3" data-max="10" data-val="5")
+													._max 10
 											._item
-												label._label Длина: 10-15
-												input._range(type="range" min="10" max="35" value="10,15" multiple)
+												label._label(for="range-length") Длина:
+													|
+													|
+													span
+												input#range-length(type="hidden")
+												._row
+													._min 3
+													._rng
+														#slider-range-length._range(data-min="3" data-max="55" data-val1="15" data-val2="30")
+													._max 55
 								._item
 									._item-body
 										._item-l
@@ -139,13 +201,15 @@ block content
 											._item
 												input._checkbox(type="checkbox" id="sklad1")
 												label._checkbox-label(for="sklad1")
-													span Архангельск<br>
-													span.sm Троицкий, 20
+													span
+														span Архангельск<br>
+														span.sm Троицкий, 20
 											._item
 												input._checkbox(type="checkbox" id="sklad2")
 												label._checkbox-label(for="sklad2")
-													span Северодвинск<br>
-													span.sm Карла Маркса, 14
+													span
+														span Северодвинск<br>
+														span.sm Карла Маркса, 14
 							._sort
 								._sort-body.js-sort-open По возрастанию цены
 								._sort-dd

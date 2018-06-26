@@ -59,14 +59,15 @@
     height: 70px;
     border-radius: 50%;
     background-color: $pink;
+    @include bg-img(40px);
     @media screen and (min-width: $w-desktop) {
       width: 50px;
       height: 50px;
+      background-size: 30px;
     }
   }
   &__btn-prev{
     background-image: url('images/icons/chevron_left.svg');
-    @include bg-img(40px);
     @media screen and (min-width: $w-desktop) {
       order: 1;
       margin-right: 10px;
@@ -74,7 +75,6 @@
   }
   &__btn-next{
     background-image: url('images/icons/chevron_left.svg');
-    @include bg-img(40px);
     transform: rotate(180deg);
     @media screen and (min-width: $w-desktop) {
       order: 2;

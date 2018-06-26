@@ -4,16 +4,16 @@
   }
   &__item{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     @media screen and (min-width: $w-desktop) {
       text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
   }
   &__link{
     font-size: 16px;
     text-transform: uppercase;
-    color: $gray99;
+    color: $gray72;
     transition: .5s;
     @media screen and (min-width: $w-desktop) {
       text-transform: none;
