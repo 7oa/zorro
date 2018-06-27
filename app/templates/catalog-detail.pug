@@ -1,0 +1,145 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Каталог';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.catalog-detail-page.page
+			._container.container
+				._breadcrumbs
+					.breadcrumbs
+						a._link(href="#") Секс-игрушки
+						a._link(href="#") Вибромассажеры
+				.catalog-detail
+					._l
+						._h.h Вакуумный стимулятор клитора SATISFYER PRO 2
+						._big-img.js-big-img(style="background-image:url('images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png')")
+							._mark.-sale
+							//<div class="catalog-detail__mark catalog-detail__mark_hit"></div>
+							//<div class="catalog-detail__mark catalog-detail__mark_new"></div>
+							a._fav(href="#")
+							//<a class="catalog-detail__fav active" href="#"></a>
+						._small-img-list.catalog-detail-gallery
+							._swiper-wrapper.swiper-wrapper
+								._small-img.swiper-slide.js-small-img.active(style="background-image:url('images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png')")
+								- for (i=1;i<15;i++)
+									._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/satisfyer-pro-2_1_1280x1280@2x.png')")
+									._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/012916SF_1280x1280@2x.png')")
+					._r
+						._desktop-h
+						._prev.
+							Излюбленная классика. Модель, от которой в восторге все любительницы Сатисфаеров. Новый PRO2 из серии Next Generation – один из трёх еще более мощный бесконтактных стимуляторов клитора.<br>
+							Стимулятор не вибрирует, а издает вакуумные волны, которые всасывают клитор и дарят взрывное удовольствие.
+						._select-size
+							._select-size-label Выберите размер:
+							._select-size-body
+								include blocks/_select-size
+
+						._buy-wrapper
+							._buy
+								._price
+									._price-old 6 099
+									._price-current 3 499 руб.
+								._to-basket
+									a.btn-to-basket(href="#" data-izimodal-open="#notification") В корзину
+							a._one-click(href="#click" data-izimodal-open="#oneclick") Купить в один клик
+
+					._description
+						._tag-selected.js-description-tag
+							span О товаре
+						._tag-list
+							._tag.selected.js-tag(data-tag="d-about") О товаре
+							._tag.js-tag(data-tag="d-chr") Характеристики
+							._tag.js-tag(data-tag="d-video") Видео
+							._tag.js-tag(data-tag="d-cmpl") Комплектация
+						._tag-description
+							._tag-content#d-about
+								.mobile-center
+									p Излюбленная классика. Модель, от которой в восторге все любительницы Сатисфаеров. Новый PRO2 из серии Next Generation – один из трёх еще более мощный бесконтактных стимуляторов клитора. <br> Стимулятор не вибрирует, а издает вакуумные волны, которые всасывают клитор и дарят взрывное удовольствие.
+
+									p Скиннер выдвинул концепцию "оперантного", подкрепляемого научения, в которой психическая саморегуляция вероятна.
+
+									p Стресс, согласно традиционным представлениям, осознаёт когнитивный гендер. Бессознательное, в первом приближении, представляет собой институциональный стресс. Инсайт конфронтально отталкивает понимающий конформизм. Сублимация наблюдаема. Архетип, как справедливо считает Ф.Энгельс, разрушаем.
+							._tag-content#d-chr
+								.charact-table
+									._row
+										._col1 Бренд:
+										._col2 Satisfyer, Германия
+									._row
+										._col1 Модель:
+										._col2 Pro 2 Next Generation
+									._row
+										._col1 Страна производства:
+										._col2 Китай
+									._row
+										._col1 Материал:
+										._col2 Пластик (ABS), силикон
+									._row
+										._col1 Длина, см:
+										._col2 16.5
+									._row
+										._col1 Вес, гр:
+										._col2 202
+									._row
+										._col1 Водонепроницаемость:
+										._col2 Да
+									._row
+										._col1 Элементы питания:
+										._col2 Встроенный аккумулятор
+									._row
+										._col1 Упаковка:
+										._col2 Картонная коробка
+									._row
+										._col1 Цвет:
+										._col2 Коричневый
+									._row
+										._col1 Наличие в магазинах:
+										._col2 Да
+							._tag-content#d-video
+								._video
+									video(controls)
+										source(src="images/TEMP/movie.mp4" type="video/mp4")
+							._tag-content#d-cmpl
+								p.semibold Комплектация товара:
+
+								p.
+									Вибратор Satisfyer Pro 2 Next Generation — 1 шт.<br>
+									Вибронасадки — 4 шт.<br>
+									Гель смазка Satisfyer Woman — 1 шт.<br>
+									Зарядное устройство — 1 шт.<br>
+									Инструкция по эксплуатации — 1 шт.<br>
+									Гарантийный талон — 1 шт.<br>
+
+			.buy-with
+				.container3
+					.prev-line
+						._h.h С этим товаром покупают
+						._list.prev-slider
+							._swiper.swiper-wrapper
+								- for (var i=0;i<8;i++)
+									._item.swiper-slide
+										include blocks/_card-sale
+						._all
+							a._all-link(href="#") Смотреть все товары
+						._nav
+							._prev
+							._next
+			.watched
+				.container3
+					.prev-line
+						._h.h Вы недавно смотрели
+						._list.prev-slider
+							._swiper.swiper-wrapper
+								- for (var i=0;i<8;i++)
+									._item.swiper-slide
+										include blocks/_card-hit
+						._all
+							a._all-link(href="#") Смотреть все товары
+						._nav
+							._prev
+							._next
+

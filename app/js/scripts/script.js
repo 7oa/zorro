@@ -104,6 +104,13 @@ $(document).ready(function() {
         }
     });
 
+    //слайдер на детальной
+
+    var detailSlider = new Swiper('.catalog-detail-gallery', {
+        slidesPerView: 'auto',
+        spaceBetween: 5,
+    });
+
     //выбор размеров
     $('.js-tobasket').click(function(){
         $(this).parent().fadeOut()
@@ -248,6 +255,26 @@ $(document).ready(function() {
         $("#"+param).val( value );
         $("label[for="+param+"] span").text(value);
     }
+
+    //смена картинки в детальной каталога
+    $('.js-small-img').click(function(){
+        var smImg = $(this).css('background-image');
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.js-big-img').css('background-image',smImg);
+    });
+
+    //тэги
+    $('.js-tag').click(function(){
+        var tag = $(this);
+        var tagID = tag.data("tag");
+        $('#'+tagID).show().siblings().hide();
+        tag.parent().slideUp().removeClass('open');
+        $('.js-description-tag span').text(tag.text());
+    });
+    $('.js-description-tag').click(function(){
+        $(this).toggleClass('open')
+            .next().slideToggle();
+    });
 
 });
 //скроем строку поиска при клике вне элемента

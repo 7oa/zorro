@@ -28,9 +28,11 @@
 @import "blocks/catalog-menu";
 @import "blocks/pagination";
 @import "blocks/show-counter";
+@import "blocks/breadcrumbs";
 
 @import "popups/cookies";
 @import "popups/notification";
 
 @import "pages/index";
 @import "pages/catalog";
+@import "pages/catalog-detail";

@@ -1,0 +1,302 @@
+.catalog-detail-page{
+  padding-top: 55px;
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 0;
+  }
+  &__breadcrumbs{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      margin-bottom: 60px;
+    }
+  }
+
+}
+.catalog-detail{
+  &__h{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 30px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      max-width: none;
+    }
+  }
+  &__big-img{
+    width: 100%;
+    height: 410px;
+    max-width: 420px;
+    margin: 0 auto 17px;
+    @include bg-img(contain);
+    position: relative;
+    @media screen and (min-width: $w-desktop) {
+      width: 460px;
+      max-width: none;
+      height: 460px;
+      margin: 0 0 10px;
+    }
+  }
+  &__mark{
+    background-color: $pink;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    background-position: center;
+    background-repeat: no-repeat;
+    &_sale{
+      background-image: url('images/icons/category_discount.svg');
+      background-size: 18px;
+    }
+    &_hit{
+      background-image: url('images/icons/category_hit.svg');
+      background-size: 20px;
+    }
+    &_new{
+      background-image: url('images/icons/category_new_2.svg');
+      background-size: 23px;
+    }
+  }
+  &__fav{
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 19px;
+    width: 22px;
+    height: 22px;
+    background-image: url('images/icons/icon_favorite.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    &.active{
+      background-image: url('images/icons/icon_favorite_fill.svg');
+    }
+  }
+  &__small-img-list{
+    overflow: hidden;
+    margin-bottom: 35px;
+  }
+  &__small-img{
+    width: 75px;
+    height: 75px;
+    background-color: $white;
+    border: 1px solid $pink5;
+    border-radius: 4px;
+    @include bg-img(contain);
+    cursor: pointer;
+    transition: .5s;
+    box-sizing: border-box;
+    &.active{
+      border-color: $pink;
+    }
+  }
+  &__select-size{
+    margin-bottom: 70px;
+  }
+  &__select-size-label{
+    opacity: .5;
+    color: $gray72;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+  &__select-size-body{
+    display: flex;
+    justify-content: center;
+  }
+  &__desktop-h{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__prev{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__buy-wrapper{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 75px;
+    text-align: center;
+  }
+  &__buy{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__price{
+    width: 50%;
+    text-align: right;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+  &__price-old{
+    font-size: 20px;
+    line-height: 1;
+    color: $gray72;
+    text-decoration: line-through;
+    padding-right: 10px;
+  }
+  &__price-current{
+    font-size: 30px;
+    line-height: 1;
+    color: $gray72;
+  }
+  &__to-basket{
+    width: 50%;
+  }
+  &__one-click{
+    color: $pink;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__description{
+    max-width: 830px;
+    margin: 0 auto 60px;
+  }
+  &__tag-list{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 55px;
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      width: 100%;
+      display: flex !important;
+      justify-content: space-between;
+    }
+  }
+  &__tag{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1;
+    color: $gray72;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__tag-selected{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 55px;
+    line-height: 60px;
+    background-color: $pink;
+    color: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    border-radius: 30px;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after{
+        content: '';
+        background-image: url('images/icons/filtr-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+      }
+    }
+    &.open{
+      span:after{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__tag-content{
+    color: $gray72;
+    font-size: 20px;
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:first-of-type{
+      display: block;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+      &.semibold{
+        font-weight: $semi-bold;
+      }
+    }
+  }
+  &__video{
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+    video{
+      width: 100%;
+    }
+  }
+}
+.btn-to-basket{
+  width: 100%;
+  display: inline-block;
+  line-height: 60px;
+  background-color: $pink;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: $semi-bold;
+  border-radius: 30px;
+  text-align: center;
+}
+.mobile-center{
+  text-align: center;
+  @media screen and (min-width: $w-desktop) {
+    text-align: left;
+  }
+}
+.charact-table{
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  @media screen and (min-width: $w-desktop) {
+    max-width: none;
+  }
+  &__row{
+    margin-bottom: 23px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      margin-bottom: 15px;
+    }
+  }
+  &__col1{
+    font-weight: $semi-bold;
+    display: inline-block;
+    @media screen and (min-width: $w-desktop) {
+      width: 415px;
+      margin-right: 0;
+    }
+  }
+  &__col2{
+    display: inline-block;
+  }
+}
+.buy-with{
+  margin-bottom: 65px;
+}
+.watched{
+  margin-bottom: 65px;
+}

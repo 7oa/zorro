@@ -1,0 +1,22 @@
+.breadcrumbs{
+  padding: 25px 0;
+  &__link{
+    display: inline-block;
+    color: $pink;
+    text-decoration: underline;
+    margin-right: 15px;
+    background-image: url('images/icons/chevron_right-pink.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-right: 20px;
+    &:hover{
+      text-decoration: none;
+    }
+    &:last-of-type{
+      background-image: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+}

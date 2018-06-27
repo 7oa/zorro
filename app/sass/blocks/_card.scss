@@ -243,23 +243,21 @@
     height: 70px;
     background-color: $pink;
     border-radius: 0 0 100% 0;
+    background-repeat: no-repeat;
     &_sale{
       background-image: url('images/icons/category_discount.svg');
       background-size: 18px;
       background-position: 20px 20px;
-      background-repeat: no-repeat;
     }
     &_hit{
       background-image: url('images/icons/category_hit.svg');
       background-size: 20px;
       background-position: 19px 17px;
-      background-repeat: no-repeat;
     }
     &_new{
       background-image: url('images/icons/category_new_2.svg');
       background-size: 23px;
       background-position: 17px 19px;
-      background-repeat: no-repeat;
     }
   }
   &__fav{

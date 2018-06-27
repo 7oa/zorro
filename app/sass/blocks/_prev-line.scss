@@ -5,6 +5,10 @@
   }
   &__h{
     margin-bottom: 30px;
+    padding: 0 10px;
+    @media screen and (min-width: $w-desktop) {
+      padding: 0;
+    }
   }
   &__all{
     text-align: center;
