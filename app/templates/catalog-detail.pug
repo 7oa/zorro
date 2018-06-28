@@ -15,38 +15,43 @@ block content
 						a._link(href="#") Секс-игрушки
 						a._link(href="#") Вибромассажеры
 				.catalog-detail
-					._l
-						._h.h Вакуумный стимулятор клитора SATISFYER PRO 2
-						._big-img.js-big-img(style="background-image:url('images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png')")
-							._mark.-sale
-							//<div class="catalog-detail__mark catalog-detail__mark_hit"></div>
-							//<div class="catalog-detail__mark catalog-detail__mark_new"></div>
-							a._fav(href="#")
-							//<a class="catalog-detail__fav active" href="#"></a>
-						._small-img-list.catalog-detail-gallery
-							._swiper-wrapper.swiper-wrapper
-								._small-img.swiper-slide.js-small-img.active(style="background-image:url('images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png')")
-								- for (i=1;i<15;i++)
-									._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/satisfyer-pro-2_1_1280x1280@2x.png')")
-									._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/012916SF_1280x1280@2x.png')")
-					._r
-						._desktop-h
-						._prev.
-							Излюбленная классика. Модель, от которой в восторге все любительницы Сатисфаеров. Новый PRO2 из серии Next Generation – один из трёх еще более мощный бесконтактных стимуляторов клитора.<br>
-							Стимулятор не вибрирует, а издает вакуумные волны, которые всасывают клитор и дарят взрывное удовольствие.
-						._select-size
-							._select-size-label Выберите размер:
-							._select-size-body
-								include blocks/_select-size
+					._row
+						._desktop-fav
+						._l
+							._mobile-h
+								._h.h Вакуумный стимулятор клитора SATISFYER PRO 2
+							._big-img
+								img._img.js-big-img(src="images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png" data-zoom-image="images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png")
+								._mark.-sale
+								//<div class="catalog-detail__mark catalog-detail__mark_hit"></div>
+								//<div class="catalog-detail__mark catalog-detail__mark_new"></div>
+								._mobile-fav
+									a._fav(href="#")
+								//<a class="catalog-detail__fav active" href="#"></a>
+							._small-img-list.catalog-detail-gallery
+								._swiper-wrapper.swiper-wrapper
+									._small-img.swiper-slide.js-small-img.active(style="background-image:url('images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png')" data-img="images/TEMP/satisfyer-pro-2_5_1280x1280@2x.png")
+									- for (i=1;i<15;i++)
+										._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/satisfyer-pro-2_1_1280x1280@2x.png')" data-img="images/TEMP/satisfyer-pro-2_1_1280x1280@2x.png")
+										._small-img.swiper-slide.js-small-img(style="background-image:url('images/TEMP/012916SF_1280x1280@2x.png')" data-img="images/TEMP/012916SF_1280x1280@2x.png")
+						._r
+							._desktop-h
+							._prev.
+								Излюбленная классика. Модель, от которой в восторге все любительницы Сатисфаеров. Новый PRO2 из серии Next Generation – один из трёх еще более мощный бесконтактных стимуляторов клитора.<br>
+								Стимулятор не вибрирует, а издает вакуумные волны, которые всасывают клитор и дарят взрывное удовольствие.
+							._select-size
+								._select-size-label Выберите размер:
+								._select-size-body
+									include blocks/_select-size
 
-						._buy-wrapper
-							._buy
-								._price
-									._price-old 6 099
-									._price-current 3 499 руб.
-								._to-basket
-									a.btn-to-basket(href="#" data-izimodal-open="#notification") В корзину
-							a._one-click(href="#click" data-izimodal-open="#oneclick") Купить в один клик
+							._buy-wrapper
+								._buy
+									._price
+										._price-old 6 099
+										._price-current 3 499 руб.
+									._to-basket
+										a.btn-to-basket(href="#" data-izimodal-open="#notification") В корзину
+								a._one-click(href="#click" data-izimodal-open="#oneclick") Купить в один клик
 
 					._description
 						._tag-selected.js-description-tag

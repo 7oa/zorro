@@ -3,6 +3,7 @@
 //= plugins/_swiper.min.js
 //= plugins/_iziModal.min.js
 //= plugins/_jquery-ui.min.js
+//= plugins/_jquery.elevateZoom-3.0.8.min.js
 
 //Scripts
 //= scripts/script.js

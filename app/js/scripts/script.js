@@ -19,6 +19,8 @@ $(document).ready(function() {
     $('.header-tren').clone().appendTo('.header-tren-desktop');
     $('.header-search').clone().appendTo('.header-search-desktop');
     $('.catalog-menu').clone().appendTo('.desktop-catalog-menu');
+    $('.catalog-detail__h').clone().appendTo('.catalog-detail__desktop-h');
+    $('.catalog-detail__fav').clone().appendTo('.catalog-detail__desktop-fav');
 
     //закрепляем меню
     $(window).scroll(function () {
@@ -104,11 +106,12 @@ $(document).ready(function() {
         }
     });
 
-    //слайдер на детальной
-
+    //слайдер картинок на детальной
     var detailSlider = new Swiper('.catalog-detail-gallery', {
         slidesPerView: 'auto',
         spaceBetween: 5,
+        preventClicks: false,
+        preventClicksPropagation: false
     });
 
     //выбор размеров
@@ -258,9 +261,9 @@ $(document).ready(function() {
 
     //смена картинки в детальной каталога
     $('.js-small-img').click(function(){
-        var smImg = $(this).css('background-image');
+        var smImg = $(this).data('img');
         $(this).addClass('active').siblings().removeClass('active');
-        $('.js-big-img').css('background-image',smImg);
+        $('.js-big-img').attr('src',smImg).attr('data-zoom-image',smImg);
     });
 
     //тэги
@@ -268,14 +271,28 @@ $(document).ready(function() {
         var tag = $(this);
         var tagID = tag.data("tag");
         $('#'+tagID).show().siblings().hide();
-        tag.parent().slideUp().removeClass('open');
-        $('.js-description-tag span').text(tag.text());
+        $(tag).addClass('selected').siblings().removeClass('selected');
+        if (!isDesktop) {
+            tag.parent().slideUp().removeClass('open');
+            $('.js-description-tag span').text(tag.text());
+        }
     });
     $('.js-description-tag').click(function(){
         $(this).toggleClass('open')
             .next().slideToggle();
     });
-
+    if (isDesktop) {
+        $('.js-big-img').elevateZoom({
+            zoomWindowWidth: 640,
+            zoomWindowHeight: 460,
+            zoomWindowOffetx: 100,
+            zoomWindowOffety: 0,
+            borderSize: 0,
+            lensColour: '#f259a9',
+            lensOpacity: 0.2,
+            lensBorderSize: 0
+        });
+    }
 });
 //скроем строку поиска при клике вне элемента
 $(document).mouseup(function (e){
