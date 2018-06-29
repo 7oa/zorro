@@ -260,11 +260,30 @@ $(document).ready(function() {
     }
 
     //смена картинки в детальной каталога
-    $('.js-small-img').click(function(){
-        var smImg = $(this).data('img');
+    $(document).on('click', '.js-small-img', function(){
+        var smImg = $(this).data('image');
+        var zoomImg = $(this).data('zoom-image');
         $(this).addClass('active').siblings().removeClass('active');
-        $('.js-big-img').attr('src',smImg).attr('data-zoom-image',smImg);
+        $('.js-big-img').attr('src',smImg).attr('data-zoom-image',zoomImg);
+        $('.zoomWindow').css('background-image','url('+zoomImg+')');
     });
+    //зумер
+    if (isDesktop) {
+        $('.js-big-img').elevateZoom({
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500,
+            zoomWindowWidth: 640,
+            zoomWindowHeight: 460,
+            zoomWindowOffetx: 100,
+            zoomWindowOffety: 0,
+            borderSize: 0,
+            lensColour: '#f259a9',
+            lensOpacity: 0.2,
+            lensBorderSize: 0
+        });
+    }
 
     //тэги
     $('.js-tag').click(function(){
@@ -281,18 +300,7 @@ $(document).ready(function() {
         $(this).toggleClass('open')
             .next().slideToggle();
     });
-    if (isDesktop) {
-        $('.js-big-img').elevateZoom({
-            zoomWindowWidth: 640,
-            zoomWindowHeight: 460,
-            zoomWindowOffetx: 100,
-            zoomWindowOffety: 0,
-            borderSize: 0,
-            lensColour: '#f259a9',
-            lensOpacity: 0.2,
-            lensBorderSize: 0
-        });
-    }
+
 });
 //скроем строку поиска при клике вне элемента
 $(document).mouseup(function (e){
