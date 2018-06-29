@@ -1,0 +1,50 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Поиск';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .search-page.page
+            ._container.container
+                ._search-line
+                    form._form
+                        ._form-label Введите слово или фразу для поиска
+                        input._input(type="text" value="Satisfyer")
+                        input._submit(type="submit" value="")
+                    //добавить класс open для .header-search-result - чтобы отобразить список результатов поиска
+                    .header-search-result
+                        ._list
+                            - for(i=0;i<3;i++)
+                                a._item(href="#")
+                                    ._l
+                                        ._ttl Очищающие средства для секс-игрушек
+                                        ._model Satisfyer Partner Plus. Electronic edition. Purplemodel, FX-180
+                                    ._r
+                                        ._price 483 руб.
+                                a._item(href="#")
+                                    ._l
+                                        ._ttl Вибромассажёр
+                                        ._model Satisfyer G-Sport Rabbit
+                                    ._r
+                                        ._price 33 483 руб.
+                        ._count
+                            a._count-link(href="#") Результатов поиска: 173
+                ._h.h Результаты поиска для: satisfyer
+                ._count Результатов поиска: 173
+                ._list
+                    - for (i=0;i<4;i++)
+                        ._item
+                            include blocks/_card-sale
+                        ._item
+                            include blocks/_card
+                        ._item
+                            include blocks/_card-hit
+                ._footer
+                    ._show
+                        include blocks/_show-counter
+                    ._pagination
+                        include blocks/_pagination

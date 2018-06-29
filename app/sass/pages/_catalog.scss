@@ -274,6 +274,7 @@
     margin-bottom: 15px;
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 0;
+      justify-content: flex-start;
     }
   }
   &__item{
@@ -284,6 +285,13 @@
     }
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 40px;
+      width: 50%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 33.33%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 25%;
     }
   }
   &__footer{
