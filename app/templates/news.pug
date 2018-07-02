@@ -1,0 +1,64 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Новости';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.news-page
+            .news-slider-wrapper
+                include blocks/_big-slider
+            //end .news-slider-wrapper
+            .container
+                .columns
+                    .column-l
+                        .news-filtr
+                            ._button.js-open-filtr-btn
+                                span Фильтры
+                            ._container
+                                ._filter
+                                    ._bl
+                                        ._ttl Новости
+                                        a._item(href="#") Показать все новости
+                                    ._bl
+                                        ._ttl Статьи
+                                        ._item
+                                            input._checkbox(type="checkbox" id="n1" checked)
+                                            label._checkbox-label(for="n1") Образовательные <span>статьи</span>
+                                        ._item
+                                            input._checkbox(type="checkbox" id="n2")
+                                            label._checkbox-label(for="n2") Информационные <span>статьи</span>
+
+                    //end .column-l
+                    .column-r
+                        .news
+                            ._list
+                                - for (i=0;i<2;i++)
+                                    ._item
+                                        a._img(href="#" style="background-image:url('https://picsum.photos/1000')")
+                                            ._tag Информационная статья
+                                        ._prev
+                                            a._h(href="#") Конкурс эротической истории
+                                            ._txt.
+                                                Мы объявляем конкурс Эротической истории. Она может быть любой, но главное — сногсшибательной! Великолепная подборка высококачественных вибраторов, массажеров, страпонов, помп, кукол, наручников, насадок и плеток. Невероятный ассортимент для ценителей секса.
+                                            ._footer
+                                                ._date 4 мая 2017
+                                                a._more(href="#") Читать полностью
+                                    ._item
+                                        ._prev
+                                            a._h(href="#") Розовый ZORRO приглашает на ежегожную выставку для взрослых X'Show 2013!
+                                            ._txt.
+                                                В 2002м году в Москве впервые состоялась Международная  эротическая
+                                                выставка для взрослых.  Великолепная подборка высококачественных вибраторов, массажеров, страпонов, помп, кукол, наручников, насадок и плеток. Невероятный ассортимент для ценителей секса. Для участия просто напишите нам!
+                                            ._footer
+                                                ._date 31 января
+                            ._pagination
+                                include blocks/_pagination
+                        //end .news
+                    //end .column-r
+                //end .columns
+
+        //end .page

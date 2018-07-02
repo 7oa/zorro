@@ -1,0 +1,240 @@
+.news-slider-wrapper{
+  margin-bottom: 40px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 50px;
+  }
+}
+.news-filtr{
+
+}
+.news{
+  padding-bottom: 80px;
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 135px;
+    max-width: 700px;
+  }
+  &__item{
+    margin-bottom: 68px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 75px;
+    }
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    @include bg-img(cover);
+    position: relative;
+    margin-bottom: 40px;
+    @media screen and (min-width: $w-desktop) {
+      height: 400px;
+      box-shadow: $shadow-pink;
+      margin-bottom: 50px;
+    }
+  }
+  &__tag{
+    background-color: $pink;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: $light;
+    line-height: 1;
+    border-radius: 20px;
+    padding: 13px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    @media screen and (min-width: $w-desktop) {
+      padding: 11px 20px;
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 30px;
+    }
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__h{
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $pink;
+    margin-bottom: 23px;
+    font-family: 'TrajanPro3', serif;
+    display: inline-block;
+    line-height: 1.2;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+  &__txt{
+    font-size: 20px;
+    color: $gray72;
+    margin-bottom: 37px;
+    line-height: 1.2;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+  &__date{
+    font-size: 20px;
+    color: $gray99;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+  &__more{
+    color: $pink;
+    font-size: 20px;
+    text-decoration: underline;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__pagination{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+.news-filtr{
+  &__button{
+    width: 100%;
+    max-width: 420px;
+    background-color: $pink;
+    color: $white;
+    font-size: 16px;
+    border-radius: 30px;
+    height: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin: 0 auto 45px;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after{
+        content: '';
+        background-image: url('images/icons/filtr-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+      }
+    }
+    &.open{
+      span:after{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__container{
+    display: none;
+    padding-bottom: 40px;
+    @media screen and (min-width: $w-desktop) {
+      display: block !important;
+      padding-bottom: 0;
+    }
+  }
+  &__ttl{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      color: $pink;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: $semi-bold;
+      margin-bottom: 10px;
+    }
+  }
+  &__item{
+    color: $gray72;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+    @media screen and (min-width: $w-desktop) {
+      text-transform: none;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+  &__bl{
+    margin-bottom: 0;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 50px;
+      text-align: left;
+    }
+  }
+  &__checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    &+label{
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      @media screen and (min-width: $w-desktop) {
+        padding: 0 0 0 35px;
+        justify-content: flex-start;
+      }
+      &:before{
+        @media screen and (min-width: $w-desktop) {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+          background: $white;
+          transition: .2s;
+          flex: 0 0 auto;
+          margin-right: 20px;
+          border: 1px solid $pink;
+          text-align: center;
+          box-sizing: border-box;
+          font-size: 13px;
+          line-height: 1;
+          margin-top: 3px;
+        }
+      }
+    }
+    &:checked + label:before{
+      @media screen and (min-width: $w-desktop) {
+        content: '✔';
+        background: $pink;
+        color: $white;
+      }
+    }
+  }
+  &__checkbox-label{
+    color: $gray72;
+    font-size: 16px;
+    span{
+      display: inline-block;
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
+  }
+}
