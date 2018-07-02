@@ -238,3 +238,210 @@
     }
   }
 }
+.news-detail{
+  padding-bottom: 80px;
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 95px;
+    max-width: 700px;
+  }
+  &__h{
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $pink;
+    margin-bottom: 23px;
+    font-family: 'TrajanPro3', serif;
+    display: inline-block;
+    line-height: 1.2;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    @include bg-img(cover);
+    position: relative;
+    margin-bottom: 32px;
+    @media screen and (min-width: $w-desktop) {
+      height: 400px;
+      box-shadow: $shadow-pink;
+      margin-bottom: 42px;
+    }
+  }
+  &__tag{
+    background-color: $pink;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: $light;
+    line-height: 1;
+    border-radius: 20px;
+    padding: 13px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    @media screen and (min-width: $w-desktop) {
+      padding: 11px 20px;
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 30px;
+    }
+  }
+  &__content{
+    margin-bottom: 75px;
+    line-height: 1.23;
+    @media screen and (min-width: $w-desktop) {
+      line-height: 1.4;
+    }
+    p{
+      padding: 0;
+      margin: 0 0 24px;
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: $w-desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__footer-c1{
+    width: 50%;
+    flex: 0 0 auto;
+    margin-bottom: 55px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      width: 140px;
+      margin-right: 17px;
+    }
+  }
+  &__footer-c2{
+    width: 50%;
+    flex: 0 0 auto;
+    margin-bottom: 55px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      width: 180px;
+      order: 1;
+    }
+  }
+  &__footer-c3{
+    width: 100%;
+    flex: 0 0 auto;
+    @media screen and (min-width: $w-desktop) {
+      flex: 1 1 auto;
+      width: auto;
+    }
+  }
+  &__date{
+    font-size: 20px;
+    color: $gray99;
+    margin-bottom: 11px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  }
+  &__share-ttl{
+    font-size: 20px;
+    color: $gray99;
+    margin-bottom: 30px;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+  }
+  &__share-list{
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $w-desktop) {
+      justify-content: flex-start;
+    }
+  }
+  &__btn-request{
+    background-color: $pink;
+    color: $white;
+    line-height: 60px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 210px;
+    float: right;
+    @media screen and (min-width: $w-desktop) {
+      line-height: 50px;
+      border-radius: 25px;
+      max-width: none;
+      float: none;
+    }
+  }
+}
+.detail-slider{
+  overflow: hidden;
+  margin-bottom: 32px;
+  margin-top: 10px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 40px;
+    margin-top: 45px;
+  }
+  &__swiper{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+  &__item{
+    display: block;
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    @include bg-img(cover);
+    position: relative;
+    @media screen and (min-width: $w-desktop) {
+      height: 400px;
+      box-shadow: $shadow-pink;
+    }
+  }
+  &__nav{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__next,
+  &__prev{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background-image: url('images/slider-arr.png');
+    width: 97px;
+    height: 12px;
+    cursor: pointer;
+    background-position-y: -12px;
+    background-position-x: 0;
+    &:focus{
+      outline: none;
+    }
+    &.swiper-button-disabled{
+      background-position-y: 0;
+    }
+  }
+  &__prev{
+    margin-right: 10px;
+  }
+  &__next{
+    transform: rotate(180deg);
+    margin-left: 10px;
+  }
+}

@@ -72,6 +72,8 @@ $(document).ready(function() {
             slidesPerView: 5,
             spaceBetween: 0,
             watchOverflow: true,
+            observer: true,
+            observeParents: true,
             navigation: {
                 nextEl: '.next'+index,
                 prevEl: '.prev'+index
@@ -106,12 +108,22 @@ $(document).ready(function() {
         }
     });
 
-    //слайдер картинок на детальной
+    //слайдер картинок на детальной каталога
     var detailSlider = new Swiper('.catalog-detail-gallery', {
         slidesPerView: 'auto',
         spaceBetween: 5,
         preventClicks: false,
         preventClicksPropagation: false
+    });
+
+    //слайдер картинок на детальной новостей
+    var detailNews = new Swiper('.detail-slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.detail-slider__next',
+            prevEl: '.detail-slider__prev'
+        }
     });
 
     //выбор размеров

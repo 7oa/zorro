@@ -1,0 +1,40 @@
+.ya-share2{
+  &__list{
+    @include uldev();
+    display: flex;
+  }
+  &__icon{
+    @include bg-img(contain);
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 0 16px;
+    @media screen and (min-width: $w-desktop) {
+      width: 20px;
+      height: 20px;
+      margin-left: 0;
+    }
+  }
+  &__item{
+    &_service{
+      &_facebook{
+        .ya-share2__icon{
+          background-image: url('images/icons/share_facebook.svg');
+        }
+      }
+      &_vkontakte{
+        .ya-share2__icon{
+          background-image: url('images/icons/share_vk.svg');
+        }
+      }
+      &_odnoklassniki{
+        .ya-share2__icon{
+          background-image: url('images/icons/share_ok.svg');
+        }
+      }
+    }
+  }
+  &__title{
+    display: none;
+  }
+}
