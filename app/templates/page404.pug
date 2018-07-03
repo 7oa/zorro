@@ -1,0 +1,25 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = '404';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page
+			.container
+				.page404
+					._c1
+						._img(style="background-image:url('images/page404.png')")
+					._c2
+						._h Страница не найдена
+						._txt
+							p К сожалению, такой страницы нет, или она находится в разработке.
+							p Попробуйте проверить правильность искомого адреса или просто перейдите на главную страницу и удивитесь разнообразию нашего ассортимента!
+						._btns
+							._to-main
+								a._btn-to-main(href="/") На главную
+							._to-news
+								a._link-to-news(href="/") Перейти к новостям

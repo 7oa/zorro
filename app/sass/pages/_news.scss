@@ -345,6 +345,7 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       margin-bottom: 12px;
+      margin-left: 2px;
     }
   }
   &__share-ttl{
@@ -363,6 +364,12 @@
     justify-content: center;
     @media screen and (min-width: $w-desktop) {
       justify-content: flex-start;
+      margin-left: 4px;
+    }
+  }
+  &__btn{
+    @media screen and (min-width: $w-desktop) {
+      margin-top: 4px;
     }
   }
   &__btn-request{
@@ -381,6 +388,7 @@
       border-radius: 25px;
       max-width: none;
       float: none;
+      font-size: 13px;
     }
   }
 }
