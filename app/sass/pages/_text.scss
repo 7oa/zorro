@@ -1,0 +1,55 @@
+.simple-page{
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @media screen and (min-width: $w-desktop) {
+    width: 720px;
+    margin: 0 auto;
+  }
+  &__h{
+    color: $pink;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'TrajanPro3', serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 42px;
+    }
+  }
+  &__text{
+    font-size: 20px;
+    color: $gray72;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    p{
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    h3{
+      color: $gray22;
+      font-size: 22px;
+      @media screen and (min-width: $w-desktop) {
+        font-size: 18px;
+      }
+    }
+    ol{
+      padding-left: 20px;
+    }
+    ul{
+      padding-left: 20px;
+    }
+    li{
+      margin-bottom: 25px;
+      padding-left: 10px;
+    }
+    a{
+      color: $pink;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -100,5 +100,8 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
     }
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
