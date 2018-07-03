@@ -1,0 +1,494 @@
+.lk-page{
+  &__header{
+    padding-top: 40px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $gray-ec;
+      padding-bottom: 19px;
+      margin-bottom: 45px;
+      padding-top: 60px;
+    }
+  }
+  &__avatar-w{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    @media screen and (min-width: $w-desktop) {
+      margin: 0 20px 0 0;
+      position: unset;
+    }
+  }
+  &__avatar{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+  &__noavatar{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/icons/userpic.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: $pink5;
+    background-size: 50px
+  }
+  &__sx{
+    width: 25px;
+    height: 25px;
+    display: block;
+    @include bg-img(contain);
+    position: absolute;
+    left: 110px;
+    top: 25px;
+    @media screen and (min-width: $w-desktop) {
+      right: -39px;
+      left: auto;
+      top: 13px;
+    }
+    &_male{
+      background-image: url('images/icons/filter_him.svg');
+      transform: rotate(45deg);
+    }
+    &_female{
+      background-image: url('images/icons/filter_her.svg');
+      transform: rotate(210deg);
+    }
+  }
+  &__name{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    color: $gray72;
+    font-family: 'TrajanPro3', serif;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+    }
+  }
+  &__email{
+    text-align: center;
+    font-size: 20px;
+    color: $gray72;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+  &__person{
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      margin-bottom: 0;
+      position: relative;
+    }
+  }
+  &__person-inf{
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 14px;
+    }
+  }
+  &__body{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 80px;
+    }
+  }
+  &__row1{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__c1{
+    @media screen and (min-width: $w-desktop) {
+      width: 620px;
+      flex: 0 0 auto;
+      padding-top: 8px;
+    }
+  }
+  &__c2{
+    padding-top: 10px;
+    @media screen and (min-width: $w-desktop) {
+      width: 460px;
+      flex: 0 0 auto;
+      padding-top: 0;
+    }
+  }
+  &__menu-wrapper{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__menu{
+    @include uldev();
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+    }
+  }
+  &__menu-li{
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 53px;
+    }
+    &:last-of-type{
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__menu-link{
+    color: $gray72;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: $semi-bold;
+    transition: .5s;
+    &.active,
+    &:hover{
+      color: $pink;
+    }
+  }
+  &__exit{
+    @media screen and (min-width: $w-desktop) {
+      margin-left: 80px;
+    }
+  }
+  &__exit-btn{
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: $semi-bold;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      background-color: $white;
+      border: 2px solid $pink;
+      color: $pink;
+      width: 177px;
+      font-size: 13px;
+      line-height: 46px;
+      border-radius: 25px;
+      margin: 0;
+    }
+  }
+  &__info{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+    }
+  }
+  &__info-ttl{
+    color: $pink;
+    font-size: 20px;
+    margin-bottom: 45px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+  }
+  &__info-txt{
+    font-size: 20px;
+    color: $gray72;
+    margin-bottom: 50px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    p{
+      margin-top: 0;
+      margin-bottom: 25px;
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__fields{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 20px;
+    }
+  }
+  &__bl{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__row{
+    border: 1px solid $pink4;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    &_w50{
+      @media screen and (min-width: $w-desktop) {
+        width: 49%;
+      }
+    }
+    &_w25{
+      width: 49%;
+      @media screen and (min-width: $w-desktop) {
+        width: 24%;
+      }
+    }
+  }
+  &__label{
+    background-color: $white;
+    color: $gray99;
+    font-size: 16px;
+    font-weight: $light;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 0 8px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__input{
+    line-height: 64px;
+    width: 100%;
+    border: none;
+    //background-color: pink;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: $gray72;
+    font-weight: $semi-bold;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 54px;
+    }
+    &:focus{
+      color: $pink;
+    }
+  }
+  &__form-btns{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      width: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+  }
+  &__submit{
+    width: 100%;
+    max-width: 420px;
+    line-height: 56px;
+    background-color: $white;
+    border: 2px solid $pink;
+    border-radius: 30px;
+    color: $pink;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: $semi-bold;
+    margin: 0 auto 30px;
+    cursor: pointer;
+    display: block;
+    @media screen and (min-width: $w-desktop) {
+      width: 180px;
+      font-size: 13px;
+      line-height: 46px;
+      border-radius: 25px;
+      margin: 0;
+      order: 1;
+    }
+  }
+  &__change-pass{
+    color: $pink;
+    font-size: 20px;
+    text-decoration: underline;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.mailing{
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 36px;
+  }
+  &__h{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    color: $gray72;
+    font-family: 'TrajanPro3', serif;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 22px;
+    }
+  }
+  &__txt{
+    font-size: 20px;
+    color: $gray72;
+    text-align: center;
+    margin-bottom: 35px;
+    line-height: 1.2;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      width: 670px;
+      margin: 0 auto 35px;
+    }
+    p{
+      margin-top: 0;
+      margin-bottom: 25px;
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 17px;
+      }
+    }
+  }
+  &__drop-ttl{
+    color: $pink;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: $semi-bold;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+  }
+  &__drop-list{
+
+    @media screen and (min-width: $w-tablet) {
+      column-count: 2;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: center;
+      column-count: 0;
+    }
+
+  }
+  &__drop-item{
+    margin-bottom: 45px;
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 35px;
+    }
+    &:last-of-type{
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__btn{
+    width: 100%;
+    max-width: 420px;
+    line-height: 56px;
+    background-color: $white;
+    border: 2px solid $pink;
+    border-radius: 30px;
+    color: $pink;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: $semi-bold;
+    margin: 0 auto 30px;
+    cursor: pointer;
+    display: block;
+    @media screen and (min-width: $w-desktop) {
+      width: 180px;
+      font-size: 13px;
+      line-height: 46px;
+      border-radius: 25px;
+      margin-bottom: 0;
+    }
+  }
+  &__btns{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      position: relative;
+      width: 180px;
+      margin: 0 auto;
+    }
+  }
+  &__link{
+    color: $pink;
+    text-decoration: underline;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      position: absolute;
+      left: 210px;
+      top: 13px;
+      width: 200px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    &+label{
+      position: relative;
+      cursor: pointer;
+      padding: 0 0 0 35px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        background: $white;
+        transition: .2s;
+        flex: 0 0 auto;
+        margin-right: 20px;
+        border: 1px solid $pink;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 3px;
+      }
+    }
+    &:checked + label:before{
+      content: '';
+      background: $pink;
+      color: $white;
+      background-image: url('images/icons/check.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__checkbox-label{
+    color: $gray72;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+}
+.line2{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $gray-ec;
+  }
+}

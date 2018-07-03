@@ -313,6 +313,8 @@ $(document).ready(function() {
             .next().slideToggle();
     });
 
+
+
 });
 //скроем строку поиска при клике вне элемента
 $(document).mouseup(function (e){

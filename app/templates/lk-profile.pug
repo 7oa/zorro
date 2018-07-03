@@ -1,0 +1,114 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Личный кабинет';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page
+			.container
+				.lk-page
+					._header
+						._person
+							._avatar-w
+								._avatar(style="background-image: url('https://skuchno.net/uploads/posts/2016-08/1470990273_beautiful_girls_06.jpg');")
+									//если нет аватара - вставляем .lk-page__noavatar
+									._noavatar
+								._sx.-male
+								// <div class="lk-page__sx lk-page__sx_female"></div>
+							._person-inf
+								._name Alexander Petrekeev
+								._email a.petrekeev@gmail.com
+						._menu-wrapper
+							ul._menu
+								li._menu-li
+									a._menu-link.active(href="#") Профиль
+								li._menu-li
+									a._menu-link(href="#") Заказы
+								li._menu-li
+									a._menu-link(href="#") Избранное
+							._exit
+								a._exit-btn(href="#") Выйти
+					._body
+						form._form
+							._row1
+								._c1
+									._fields
+										._bl
+											._row
+												._label Фамилия
+												input._input(type="text")
+											._row.-w50
+												._label Имя
+												input._input(type="text")
+											._row.-w50
+												._label Отчество
+												input._input(type="text")
+										._bl
+											._row
+												._label Город
+												input._input(type="text")
+											._row
+												._label Улица
+												input._input(type="text")
+											._row.-w25
+												._label Дом
+												input._input(type="text")
+											._row.-w25
+												._label Квартира
+												input._input(type="text")
+											._row.-w50
+												._label Телефон
+												input._input(type="tel")
+								._c2
+									._info
+										._info-ttl Уважаемый Александр Игоревич!
+										._info-txt
+											p Просим обратить Ваше внимание на то, что сделанные Вами заказы будут доставляться на указанный адрес.
+											p Отнеситесь к заполнению адреса ответственно и перепроверьте его корректность.
+							._row2
+								._form-btns
+									input._submit(type="submit" value="сохранить")
+									a._change-pass(href="#") Изменить пароль профиля
+			.line2
+			.container
+				.mailing
+					._h почтовая рассылка
+					._txt
+						p При подключении потчтовой рассылки раз в неделю Вам на указанный при регистрации<br>личного кабинета электронный адрес будет приходить только самая важная<br>и интересующая вас информация.
+
+						p Почтовую рассылку можно отключить в любой момент в личном кабинете<br>в разделе «Профиль»
+
+					._drop(style="display:none")
+						._drop-ttl Укажите интересующие вас темы
+						._drop-list
+							._drop-item
+								input._checkbox(type="checkbox" id="m1" checked)
+								label._checkbox-label(for="m1") Новые товары
+							._drop-item
+								input._checkbox(type="checkbox" id="m2")
+								label._checkbox-label(for="m2") Скидки
+							._drop-item
+								input._checkbox(type="checkbox" id="m3")
+								label._checkbox-label(for="m3") Акции
+							._drop-item
+								input._checkbox(type="checkbox" id="m4")
+								label._checkbox-label(for="m4") Статьи
+							._drop-item
+								input._checkbox(type="checkbox" id="m5" checked)
+								label._checkbox-label(for="m5") Новости
+							._drop-item
+								input._checkbox(type="checkbox" id="m6")
+								label._checkbox-label(for="m6") Выбрать все темы
+						._btns
+							button._btn(type="button") Сохранить
+							a._link(href="#") Отменить
+					._disconnect(style="display:none")
+						._btns
+							button._btn(type="button") Отключить
+							a._link(href="#") Изменить темы рассылки
+					._connect
+						button._btn(type="button") Подключить

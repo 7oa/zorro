@@ -345,10 +345,13 @@
       }
     }
     &:checked + label:before {
-      content: '✔';
+      content: '';
       color: $pink;
       background-color: $white;
       border-color: $white;
+      background-image: url('images/icons/check.png');
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
   &__checkbox-label{
