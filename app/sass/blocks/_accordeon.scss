@@ -1,0 +1,24 @@
+.accordeon{
+  &__ttl{
+    color: $pink;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:after{
+      content: '';
+      background-image: url('images/icons/filtr-more.svg');
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      margin-left: 5px;
+    }
+    &.open:after{
+      transform: rotate(180deg);
+    }
+  }
+  &__content{
+    display: none;
+  }
+}

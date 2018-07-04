@@ -212,7 +212,8 @@ $(document).ready(function() {
     //меню каталог
     $('.js-catalog-menu').click(function(){
         if (!isDesktop) {
-            $(this).next().slideToggle();
+            $(this).toggleClass('open')
+                .next().slideToggle();
         }
     });
 
@@ -324,6 +325,12 @@ $(document).ready(function() {
         $(this).hide();
         $('.js-change-pass-reset').show();
         return false;
+    });
+
+    //аккордеон
+    $('.js-accordeon').click(function(){
+        $(this).toggleClass('open')
+            .next().slideToggle();
     });
 
 

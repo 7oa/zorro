@@ -18,9 +18,12 @@
     @media screen and (min-width: $w-desktop) {
       text-transform: none;
     }
-    &.active,
     &:hover{
+      color: $pink2;
+    }
+    &.active{
       color: $pink;
+      font-weight: $semi-bold;
     }
   }
 }
@@ -36,16 +39,28 @@
   &__h {
     cursor: pointer;
     display: inline-block;
-    background-image: url('images/icons/expand-more.svg');
-    background-repeat: no-repeat;
-    padding-right: 25px;
-    background-position-x: right;
-    background-position-y: 0;
-    background-size: 25px;
     @media screen and (min-width: $w-desktop) {
       cursor: text;
-      background-image: none;
-      padding-right: 0;
+    }
+    span{
+      display: flex;
+      align-items: flex-start;
+      &:after{
+        content: '';
+        background-image: url('images/icons/expand-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 5px;
+        @media screen and (min-width: $w-desktop) {
+          display: none;
+        }
+      }
+    }
+    &.open span:after{
+      transform: rotate(180deg);
     }
   }
   &__mobile{

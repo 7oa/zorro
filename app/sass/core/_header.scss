@@ -74,6 +74,7 @@
   background-image: url('images/pinkzorro_logo-white.svg');
   width: 70px;
   height: 70px;
+  display: block;
 }
 .header-mobile-icons{
   display: flex;
@@ -268,6 +269,7 @@
     width: 183px;
   }
   &__icon{
+    display: block;
     width: 25px;
     height: 25px;
     @media screen and (min-width: $w-desktop) {

@@ -4,9 +4,6 @@
     margin-bottom: 50px;
   }
 }
-.news-filtr{
-
-}
 .news{
   padding-bottom: 80px;
   @media screen and (min-width: $w-desktop) {
@@ -235,6 +232,7 @@
     font-size: 16px;
     span{
       display: inline-block;
+      margin-left: 5px;
       @media screen and (min-width: $w-desktop) {
         display: none;
       }
