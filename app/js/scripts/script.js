@@ -333,6 +333,12 @@ $(document).ready(function() {
             .next().slideToggle();
     });
 
+    //лк заказ
+    $('.js-show-order').click(function(){
+        $(this).toggleClass('open')
+            .next().slideToggle();
+    });
+
 
 });
 //скроем строку поиска при клике вне элемента

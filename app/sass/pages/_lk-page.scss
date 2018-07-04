@@ -6,9 +6,8 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid $gray-ec;
-      padding-bottom: 19px;
       margin-bottom: 45px;
-      padding-top: 60px;
+      padding: 60px 10px 19px;
     }
   }
   &__avatar-w{
@@ -97,6 +96,7 @@
   &__body{
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 80px;
+      padding: 0 10px;
     }
   }
   &__row1{
@@ -527,6 +527,12 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
       line-height: 50px;
+    }
+  }
+  &__orders{
+    padding-top: 45px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 70px;
     }
   }
 }

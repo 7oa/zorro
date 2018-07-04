@@ -1,0 +1,207 @@
+.orders{
+  &__list{
+    @media screen and (min-width: $w-desktop) {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+  }
+  &__item{
+    margin-bottom: 75px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 95px;
+    }
+    &._disabled{
+      .orders__val{
+        color: $gray99 !important;
+      }
+    }
+  }
+  &__prev{
+    margin-bottom: 70px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      margin-bottom: 30px;
+      padding: 0 10px;
+    }
+  }
+  &__label{
+    font-size: 20px;
+    font-weight: $semi-bold;
+    color: $gray72;
+    margin-right: 5px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      font-weight: $light;
+      margin-bottom: 5px;
+    }
+    &_num{
+      font-size: 24px;
+      font-family: 'TrajanPro3', serif;
+      text-transform: uppercase;
+      font-weight: $regular;
+      display: inline-block;
+      @media screen and (min-width: $w-desktop) {
+        font-family: 'ProximaNova', sans-serif;
+        font-size: 14px;
+        text-transform: none;
+        display: block;
+      }
+    }
+  }
+  &__val{
+    font-size: 20px;
+    color: $gray72;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      font-weight: $semi-bold;
+    }
+    &_num{
+      font-size: 24px;
+      font-family: 'TrajanPro3', serif;
+      text-transform: uppercase;
+      display: inline-block;
+      @media screen and (min-width: $w-desktop) {
+        font-family: 'ProximaNova', sans-serif;
+        font-size: 18px;
+        text-transform: none;
+        display: block;
+      }
+    }
+    &.c-orange{
+      color: $orange;
+    }
+    &.c-green{
+      color: $green;
+    }
+    &.c-pink{
+      color: $pink;
+    }
+  }
+  &__num{
+    border-top: 1px solid $gray-ec;
+    position: relative;
+    margin-bottom: 42px;
+    @media screen and (min-width: $w-desktop) {
+      position: unset;
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+  &__num-cnt{
+    position: absolute;
+    top: -14px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    width: 240px;
+    margin: 0 auto;
+    @media screen and (min-width: $w-desktop) {
+      position: unset;
+      top: auto;
+      display: block;
+      width: 175px;
+      margin: 0;
+    }
+  }
+  &__cols{
+    @media screen and (min-width: $w-tablet) {
+      column-count: 2;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__col{
+    margin-bottom: 23px;
+    display: flex;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      display: block;
+      flex: 0 0 auto;
+    }
+    &:nth-child(1){
+      @media screen and (min-width: $w-desktop) {
+        width: 130px;
+      }
+    }
+    &:nth-child(2){
+      @media screen and (min-width: $w-desktop) {
+        width: 165px;
+      }
+    }
+    &:nth-child(3){
+      @media screen and (min-width: $w-desktop) {
+        width: 170px;
+      }
+    }
+    &:nth-child(4){
+      @media screen and (min-width: $w-desktop) {
+        width: 155px;
+      }
+    }
+    &:nth-child(5){
+      margin-bottom: 73px;
+      @media screen and (min-width: $w-tablet) {
+        margin-bottom: 23px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        width: 200px;
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(6){
+      @media screen and (min-width: $w-desktop) {
+        flex: 1 1 auto;
+        text-align: right;
+      }
+    }
+  }
+  &__link-more{
+    border-top: 1px solid $gray-ec;
+    position: relative;
+    margin-bottom: 10px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 20px;
+    }
+    span{
+      position: absolute;
+      top: -14px;
+      right: 0;
+      left: 0;
+      width: 240px;
+      text-align: center;
+      margin: 0 auto;
+      background-color: $white;
+      text-decoration: underline;
+      color: $pink;
+      font-size: 20px;
+      line-height: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (min-width: $w-desktop) {
+        font-size: 16px;
+        width: 215px;
+      }
+      &:after{
+        content: '';
+        background-image: url('images/icons/filtr-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+      }
+    }
+    &.open span:after{
+      transform: rotate(180deg);
+    }
+  }
+  &__more{
+    display: none;
+  }
+}

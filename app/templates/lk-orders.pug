@@ -36,18 +36,5 @@ block content
 								._exit
 									a._exit-btn(href="#") Выйти
 					._body
-						._favor-w
-							._favor-ttl.h Избранное
-							._favor-list
-								- for(var i=0;i<4;i++)
-									._favor-item
-										include blocks/_card-sale
-									._favor-item
-										include blocks/_card
-									._favor-item
-										include blocks/_card-hit
-							._favor-footer
-								._favor-show
-									include blocks/_show-counter
-								._favor-pagination
-									include blocks/_pagination
+						._orders
+							include blocks/_orders
