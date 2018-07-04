@@ -313,6 +313,18 @@ $(document).ready(function() {
             .next().slideToggle();
     });
 
+    //лк меню
+    $('.js-lk-menu').click(function(){
+        $(this).toggleClass('open')
+            .next().slideToggle();
+    });
+    //лк изменить пароль
+    $('.js-change-pass').click(function(){
+        $('.js-change-pass-form').slideToggle();
+        $(this).hide();
+        $('.js-change-pass-reset').show();
+        return false;
+    });
 
 
 });

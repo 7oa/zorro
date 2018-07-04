@@ -23,15 +23,18 @@ block content
 								._name Alexander Petrekeev
 								._email a.petrekeev@gmail.com
 						._menu-wrapper
-							ul._menu
-								li._menu-li
-									a._menu-link.active(href="#") Профиль
-								li._menu-li
-									a._menu-link(href="#") Заказы
-								li._menu-li
-									a._menu-link(href="#") Избранное
-							._exit
-								a._exit-btn(href="#") Выйти
+							._menu-ttl.js-lk-menu
+								span Профиль
+							._menu-content
+								ul._menu
+									li._menu-li
+										a._menu-link.active(href="#") Профиль
+									li._menu-li
+										a._menu-link(href="#") Заказы
+									li._menu-li
+										a._menu-link(href="#") Избранное
+								._exit
+									a._exit-btn(href="#") Выйти
 					._body
 						form._form
 							._row1
@@ -48,9 +51,14 @@ block content
 												._label Отчество
 												input._input(type="text")
 										._bl
-											._row
+											._row.-dd
 												._label Город
 												input._input(type="text")
+												._dd.open
+													._dd-list
+														._dd-item г. Архангельск, Архангельская обл.
+														._dd-item с/c Архангельский, Сокольский р-н, Вологодская обл.
+														._dd-item с/c Архангельский, Архангельский р-н, Башкортостан респ.
 											._row
 												._label Улица
 												input._input(type="text")
@@ -70,9 +78,18 @@ block content
 											p Просим обратить Ваше внимание на то, что сделанные Вами заказы будут доставляться на указанный адрес.
 											p Отнеситесь к заполнению адреса ответственно и перепроверьте его корректность.
 							._row2
+								._change-pass-form.js-change-pass-form
+									._bl
+										._row
+											._label Введите старый пароль
+											input._input(type="password")
+										._row
+											._label Введите новый пароль
+											input._input(type="password")
 								._form-btns
 									input._submit(type="submit" value="сохранить")
-									a._change-pass(href="#") Изменить пароль профиля
+									a._change-pass.js-change-pass(href="#") Изменить пароль профиля
+									a._change-pass.-reset.js-change-pass-reset(href="#") Отменить изменения
 			.line2
 			.container
 				.mailing

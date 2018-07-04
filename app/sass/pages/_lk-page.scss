@@ -122,9 +122,24 @@
     }
   }
   &__menu-wrapper{
+    margin-bottom: 35px;
     @media screen and (min-width: $w-desktop) {
-      display: flex;
+      margin-bottom: 0;
+    }
+  }
+  &__menu-ttl{
+    cursor: pointer;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+  &__menu-content{
+    display: none;
+    padding: 40px 0;
+    @media screen and (min-width: $w-desktop) {
+      display: flex !important;
       align-items: center;
+      padding: 0;
     }
   }
   &__menu{
@@ -133,9 +148,43 @@
       display: flex;
     }
   }
+  &__menu-ttl{
+    background-color: $pink;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 60px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    margin: 0 auto;
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after{
+        content: '';
+        background-image: url('images/icons/filtr-more.svg');
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+      }
+    }
+    &.open span:after{
+      transform: rotate(180deg);
+    }
+  }
   &__menu-li{
+    margin-bottom: 25px;
+    text-align: center;
     @media screen and (min-width: $w-desktop) {
       margin-right: 53px;
+      margin-bottom: 0;
+      text-align: left;
     }
     &:last-of-type{
       @media screen and (min-width: $w-desktop) {
@@ -146,17 +195,26 @@
   &__menu-link{
     color: $gray72;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: $semi-bold;
     transition: .5s;
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      font-size: 13px;
+    }
     &.active,
     &:hover{
-      color: $pink;
+      @media screen and (min-width: $w-desktop) {
+        color: $pink;
+      }
     }
   }
   &__exit{
+    text-align: center;
     @media screen and (min-width: $w-desktop) {
       margin-left: 80px;
+      text-align: left;
     }
   }
   &__exit-btn{
@@ -164,6 +222,7 @@
     font-size: 16px;
     text-align: center;
     font-weight: $semi-bold;
+    color: $gray72;
     @media screen and (min-width: $w-desktop) {
       display: block;
       background-color: $white;
@@ -238,6 +297,16 @@
         width: 24%;
       }
     }
+    &_dd{
+      position: relative;
+      input{
+        position: relative;
+        z-index: 2;
+      }
+      .lk-page__label{
+        z-index: 3;
+      }
+    }
   }
   &__label{
     background-color: $white;
@@ -269,6 +338,36 @@
     }
     &:focus{
       color: $pink;
+    }
+  }
+  &__dd{
+    display: none;
+    position: absolute;
+    top: 47px;
+    right: -1px;
+    left: -1px;
+    background-color: rgba(242,89,169,.8);
+    border-radius: 0 0 10px 10px;
+    padding: 40px 20px 20px;
+    z-index: 1;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 25px;
+    }
+    &.open{
+      display: block;
+    }
+  }
+  &__dd-item{
+    color: $white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 25px;
+      font-weight: $semi-bold;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
     }
   }
   &__form-btns{
@@ -315,6 +414,16 @@
     }
     &:hover{
       text-decoration: none;
+    }
+    &_reset{
+      display: none;
+    }
+  }
+  &__change-pass-form{
+    display: none;
+    padding: 20px 0;
+    @media screen and (min-width: $w-desktop) {
+      width: 620px;
     }
   }
 }
