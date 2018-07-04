@@ -1,0 +1,53 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Личный кабинет';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page
+			.container
+				.lk-page
+					._header
+						._person
+							._avatar-w
+								._avatar(style="background-image: url('https://skuchno.net/uploads/posts/2016-08/1470990273_beautiful_girls_06.jpg');")
+									//если нет аватара - вставляем .lk-page__noavatar
+									._noavatar
+								._sx.-male
+								// <div class="lk-page__sx lk-page__sx_female"></div>
+							._person-inf
+								._name Alexander Petrekeev
+								._email a.petrekeev@gmail.com
+						._menu-wrapper
+							._menu-ttl.js-lk-menu
+								span Избранное
+							._menu-content
+								ul._menu
+									li._menu-li
+										a._menu-link(href="#") Профиль
+									li._menu-li
+										a._menu-link(href="#") Заказы
+									li._menu-li
+										a._menu-link.active(href="#") Избранное
+								._exit
+									a._exit-btn(href="#") Выйти
+					._body
+						._favor-w
+							._favor-ttl.h Избранное
+							._favor-list
+								- for(var i=0;i<4;i++)
+									._favor-item
+										include blocks/_card-sale
+									._favor-item
+										include blocks/_card
+									._favor-item
+										include blocks/_card-hit
+							._favor-footer
+								._favor-show
+									include blocks/_show-counter
+								._favor-pagination
+									include blocks/_pagination

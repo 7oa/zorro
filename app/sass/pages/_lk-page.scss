@@ -426,6 +426,109 @@
       width: 620px;
     }
   }
+  &__favor-w{
+    padding-top: 25px;
+    padding-bottom: 75px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 30px;
+      padding-bottom: 55px;
+    }
+  }
+  &__favor-empty-ttl{
+    margin-bottom: 20px;
+  }
+  &__favor-empty-txt{
+    font-size: 20px;
+    text-align: center;
+    color: $gray72;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+  &__favor-empty{
+    padding-top: 40px;
+    padding-bottom: 75px;
+    @media screen and (min-width: $w-desktop) {
+      width: 660px;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 55px;
+    }
+  }
+  &__favor-ttl{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+  &__favor-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 0;
+      justify-content: flex-start;
+    }
+  }
+  &__favor-item{
+    margin-bottom: 20px;
+    width: 100%;
+    @media screen and (min-width: 655px) {
+      width: auto;
+    }
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 40px;
+      width: 50%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 33.33%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 20%;
+    }
+  }
+  &__favor-footer{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__favor-show{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__favor-like-img{
+    width: 24px;
+    height: 20px;
+    margin: 0 auto 40px;
+  }
+  &__favor-to-catalog{
+    text-align: center;
+  }
+  &__favor-to-catalog-link{
+    display: inline-block;
+    border: none;
+    background-color: $pink;
+    color: $white;
+    line-height: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    padding: 0 70px;
+    border-radius: 30px;
+    cursor: pointer;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 50px;
+    }
+  }
 }
 .mailing{
   padding-top: 75px;
