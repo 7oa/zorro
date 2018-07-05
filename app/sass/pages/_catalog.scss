@@ -89,11 +89,12 @@
         height: 25px;
         background-repeat: no-repeat;
         margin-left: 5px;
+        transition: .5s;
       }
     }
     &.open{
       span:after{
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
   }

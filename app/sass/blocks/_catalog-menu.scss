@@ -54,13 +54,14 @@
         background-repeat: no-repeat;
         background-position: center;
         margin-left: 5px;
+        transition: .5s;
         @media screen and (min-width: $w-desktop) {
           display: none;
         }
       }
     }
     &.open span:after{
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
   }
   &__mobile{

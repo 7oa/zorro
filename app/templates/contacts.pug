@@ -1,0 +1,73 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Контакты';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.contacts.page
+			._container.container
+				._h.h Контакты
+				._rows
+					._l
+						._sm-ttl Немного о нас
+						._about-txt
+							p Мы - это интернет-магазин, где вы сможете найти секс игрушки, способные сделать вашу сексуальную жизнь более яркой и разнообразной! Проводите эксперименты и не бойтесь своих самых смелых желаний. Вы найдете великолепные игрушки от самых известных мировых производителей, как для мужчин, так и для женщин.
+
+							p Великолепная подборка высококачественных вибраторов, массажеров, страпонов, помп, кукол, наручников, насадок и плеток. Невероятный ассортимент для ценителей секса.
+					._r
+						._sm-ttl Остались вопросы?
+						form._form
+							._fields
+								._row.-w50
+									._label Имя
+									input._input(type="text")
+								._row.-w50
+									._label E-mail *
+									input._input(type="email")
+								._row
+									._label Текст сообщения
+									textarea._textarea
+							._bottom
+								._confirm
+									._checkbox-wrapper
+										input._checkbox(type="checkbox" id="confirm" checked)
+										label._checkbox-label(for="confirm")
+											span Согласен (-на) с политикой <a href="#">конфиденциальности компании</a>
+								._btn-wrap
+									input._submit(type="submit" value="Отправить")
+			._line
+			._container.container
+				._rows-address
+					._c50
+						._city-name Архангельск
+						._address
+							._address-l.
+								ТЦ Гранд Плаза, Троицкий проспект, 20
+							._address-r.
+								<span>Ежедневно</span>
+								11:00 – 21:00
+						._address
+							._address-l.-som
+								a._on-map.js-onmap(href="#" data-center="64.54474399237616,40.53689086012528") Показать на карте
+							._address-r.-som
+								a(href="tel:89095545999") +7 (909) 554–59–99
+					._c50
+						._city-name Северодвинск
+						._address
+							._address-l.
+								Карла Маркса, 14
+							._address-r.
+								<span>Ежедневно</span>
+								11:00 – 21:00
+						._address
+							._address-l.-som
+								a._on-map.js-onmap(href="#" data-center="64.54225574861084,40.56746536441798") Показать на карте
+							._address-r.-som
+								a(href="tel:89600065776") +7 (960) 006–57–76
+			._map
+				#map
+				include blocks/_map

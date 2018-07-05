@@ -5,17 +5,51 @@
       margin-left: -10px;
     }
   }
+  &__val{
+    font-size: 20px;
+    color: $gray72;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      font-weight: $semi-bold;
+    }
+    &_num{
+      font-size: 24px;
+      font-family: 'TrajanPro3', serif;
+      text-transform: uppercase;
+      display: inline-block;
+      @media screen and (min-width: $w-desktop) {
+        font-family: 'ProximaNova', sans-serif;
+        font-size: 18px;
+        text-transform: none;
+        display: block;
+      }
+    }
+    &.c-orange{
+      color: $orange;
+    }
+    &.c-green{
+      color: $green;
+    }
+    &.c-pink{
+      color: $pink;
+    }
+  }
   &__item{
     margin-bottom: 75px;
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 95px;
     }
-    &._disabled{
-      .orders__val{
-        color: $gray99 !important;
+    &_disabled{
+      .orders__val,
+      .orders__label{
+        color: $gray99;
+      }
+      .orders__col:nth-child(5) .c-pink{
+        color: $pink;
       }
     }
   }
+
   &__prev{
     margin-bottom: 70px;
     @media screen and (min-width: $w-desktop) {
@@ -48,35 +82,7 @@
       }
     }
   }
-  &__val{
-    font-size: 20px;
-    color: $gray72;
-    @media screen and (min-width: $w-desktop) {
-      font-size: 18px;
-      font-weight: $semi-bold;
-    }
-    &_num{
-      font-size: 24px;
-      font-family: 'TrajanPro3', serif;
-      text-transform: uppercase;
-      display: inline-block;
-      @media screen and (min-width: $w-desktop) {
-        font-family: 'ProximaNova', sans-serif;
-        font-size: 18px;
-        text-transform: none;
-        display: block;
-      }
-    }
-    &.c-orange{
-      color: $orange;
-    }
-    &.c-green{
-      color: $green;
-    }
-    &.c-pink{
-      color: $pink;
-    }
-  }
+
   &__num{
     border-top: 1px solid $gray-ec;
     position: relative;
@@ -112,6 +118,7 @@
     @media screen and (min-width: $w-desktop) {
       display: flex;
       justify-content: space-between;
+      flex: 1 1 auto;
     }
   }
   &__col{
@@ -195,10 +202,11 @@
         height: 25px;
         background-repeat: no-repeat;
         margin-left: 5px;
+        transition: .5s;
       }
     }
     &.open span:after{
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
   }
   &__more{

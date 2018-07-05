@@ -9,9 +9,15 @@ script.
         var placemark = new ymaps.Placemark([64.54225574861084,40.56746536441798], {
             balloonContent: '163 000, Росcия, г.Архангельск, ул.Тимме, д.3',
         }, {
-            iconImageHref: 'images/balloon.png',
-            iconImageSize: [182, 182],
-            iconImageOffset: [-118,-110]
+            iconImageHref: 'images/pinkzorro_logo_mask.svg',
+            iconImageSize: [45, 45],
+            iconImageOffset: [-45,-45]
         });
         map.geoObjects.add(placemark);
     }
+    /*$('.js-onmap').click(function(){
+        var center = $(this).data('center');
+        console.log(center);
+        map.setCenter(center);
+        return
+    });*/
