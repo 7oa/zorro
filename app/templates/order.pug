@@ -1,0 +1,146 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Оформление заказа';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page
+			.container
+				.order
+					form._form
+						._h.h Оформление заказа
+						._step1
+							._step-ttl
+								._step-count шаг 1 /3
+								._step-name проверка корректности заказа
+							._step-prev
+								._items-count
+									._prev-label Всего товаров:
+									._prev-val 12
+								._items-sum
+									._prev-label Общая сумма:
+									._prev-val.c-pink 34 500 руб.
+							._list
+								.prev-line
+									._h
+									._list.prev-slider
+										._swiper.swiper-wrapper
+											- for(var i=0;i<8;i++)
+												._item.swiper-slide
+													include blocks/_card-basket
+									._nav
+										._prev
+										._next
+							._contacts
+								._contacts-form
+									._fields
+										._row
+											._label E-mail
+											input._input(type="email")
+										._row
+											._label Телефон
+											input._input(type="tel")
+								._contacts-label
+									p На указанный E-mail будет отправлена копия заказа, доступная для печати.
+									p Телефон необходим для согласования зазказа или звонка курьера при доставке
+						._step2
+							._step-ttl
+								._step-count шаг 2 /3
+								._step-name выберите удобный вам тип доставки
+
+							._tag-selected.js-description-tag
+								span Самовывоз
+							._tag-list
+								._tag.js-tag.selected(data-tag="d1") Самовывоз
+								._tag.js-tag(data-tag="d2") Почта россии
+								._tag.js-tag(data-tag="d3") Курьер
+							._tag-description
+								._tag-content#d1
+									._delivery-row1
+										._delivery-form
+											._fields
+												._bl
+													._row
+														._label ФИО получателя
+														input._input(type="text")
+										._delivery-inf
+											._pickup-inf Выбрав удобный для самовывоза адрес и отправив заявку, Ваш заказ начнет собираться. Готовность заказа вы можете посмотреть в личном кабинете, в разделе «Заказы»
+									._pickup-ttl выберите удобный для самовывоза адрес
+
+									._rows-address
+										._rows-address-l
+											._city-name
+												input._radio(type="radio" id="pickCity1" name="pickCity" checked)
+												label._radio-label(for="pickCity1") Архангельск
+											._address
+												._address-l.
+													ТЦ Гранд Плаза, Троицкий проспект, 20
+												._address-r.
+													<span>Ежедневно</span>
+													11:00 – 21:00
+											._address
+												._address-l.-som
+													a._on-map.js-onmap(href="#" data-center="64.5343275573642,40.526317500000005") Показать на карте
+												._address-r.-som
+													a(href="tel:89095545999") +7 (909) 554–59–99
+										._rows-address-r
+											._city-name
+												input._radio(type="radio" id="pickCity2" name="pickCity")
+												label._radio-label(for="pickCity2") Северодвинск
+											._address
+												._address-l.
+													Карла Маркса, 14
+												._address-r.
+													<span>Ежедневно</span>
+													11:00 – 21:00
+											._address
+												._address-l.-som
+													a._on-map.js-onmap(href="#" data-center="64.56032655730118,39.802652499999986") Показать на карте
+												._address-r.-som
+													a(href="tel:89600065776") +7 (960) 006–57–76
+								._tag-content#d2
+									._delivery-row
+										._delivery-form
+											._fields
+												._bl
+													._row
+														._label Город
+														input._input(type="text")
+													._row
+														._label Улица
+														input._input(type="text")
+													._row.-w25
+														._label Дом
+														input._input(type="text")
+													._row.-w25
+														._label Квартира
+														input._input(type="text")
+													._row.-w50
+														._label Индекс
+														input._input(type="text")
+												._bl
+													._row
+														._label ФИО получателя
+														input._input(type="text")
+										._delivery-inf
+											._delivery-sd
+												._delivery-i
+													._delivery-label Сроки доставки:
+													._delivery-val 3 – 5 рабочих дней
+												._delivery-i
+													._delivery-label Стоимость доставки:
+													._delivery-val от 300 руб.
+											._delivery-bottom.
+												Стоимость и сроки доставки являются средние и служат для ориентирования. Цена и срок доставки могут измениться в зависимости от веса посылки, места доставки и пр.
+								._tag-content#d3
+						._step3
+							._step-ttl
+								._step-count шаг 3 /3
+								._step-name выберите удобный тип оплаты
+							._pay
+								button._pay-btn(type="button") Оплатить картой
+								button._pay-btn(type="button") Оплатить наличными
