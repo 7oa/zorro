@@ -116,6 +116,9 @@
     right: 0;
     bottom: 0;
     left: 0;
+    &_basket{
+      bottom: 50px;
+    }
   }
   &__select-props{
     display: none;
@@ -170,6 +173,9 @@
     @media screen and (min-width: $w-desktop) {
       padding: 50px 15px 15px;
     }
+  }
+  &__cnt-link{
+    display: block;
   }
   &__img{
     @include bg-img(contain);

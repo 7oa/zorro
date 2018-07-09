@@ -199,6 +199,13 @@
       margin-bottom: 0;
     }
   }
+  &__confirm-row{
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-desktop) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
   &__checkbox{
     position: absolute;
     z-index: -1;

@@ -10,11 +10,16 @@
                 ._row
                     ._label Пароль
                     input._input(type="password")
+                ._confirm-row
+                    ._checkbox-wrapper
+                        input._checkbox(type="checkbox" id="feedback-confirm" checked)
+                        label._checkbox-label(for="feedback-confirm")
+                            span Согласен (-на) с политикой <a href="#">конфиденциальности компании</a>
             ._bottom
                 ._btn-wrap2
                     input._submit(type="submit" value="Войти")
                 ._forgot
-                    ._forgot-link(href="#") Забыли пароль?
+                    a._forgot-link(href="#" data-izimodal-open="#forgot-pass") Забыли пароль?
         button._close(type="button" data-izimodal-close="").
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
 
