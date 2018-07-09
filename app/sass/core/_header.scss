@@ -37,9 +37,7 @@
     display: none;
   }
   &__menu-btn{
-    position: absolute;
-    top: 47px;
-    left: 0;
+
   }
   &__logo{
     position: absolute;
@@ -49,7 +47,13 @@
     width: 70px;
     margin: 0 auto;
   }
-  &__icons{
+  &__icons-l{
+    position: absolute;
+    top: 47px;
+    left: 0;
+    display: flex;
+  }
+  &__icons-r{
     position: absolute;
     top: 43px;
     right: 0;
@@ -80,11 +84,13 @@
   display: flex;
 }
 .header-search{
+  display: block;
   width: 22px;
   height: 22px;
   margin-left: 25px;
   flex: 0 0 auto;
   cursor: pointer;
+  margin-top: -3px;
   @media screen and (min-width: $w-mobile) {
     margin-left: 65px;
   }
@@ -93,6 +99,7 @@
     width: 18px;
     height: 18px;
     margin-left: 0;
+    margin-top: 0;
   }
   .icon-search-header{
     @media screen and (min-width: $w-desktop) {
@@ -219,10 +226,7 @@
   &__r1{
     border-bottom: 1px solid rgba(255,255,255,0.5);
     padding-top: 30px;
-    padding-bottom: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding-bottom: 30px;
   }
   &__r2{
     border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -299,8 +303,10 @@
 .header-backet{
   width: 22px;
   flex: 0 0 auto;
+  margin-right: 60px;
   @media screen and (min-width: $w-desktop) {
     width: auto;
+    margin-right: 0;
   }
   &__icon{
     width: 22px;
@@ -361,7 +367,7 @@
   }
 }
 .header-fav{
-  width: 22px;
+  width: 26px;
   flex: 0 0 auto;
   @media screen and (min-width: $w-desktop) {
     width: 120px;
@@ -369,10 +375,8 @@
   &__icon{
     width: 26px;
     height: 22px;
-    padding-top: 17px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     @media screen and (min-width: $w-desktop) {
-      padding-top: 0;
       margin-right: 7px;
       width: 20px;
       height: 16px;
@@ -431,13 +435,15 @@
     background-color: $white;
     color: $pink;
     font-size: 16px;
-    line-height: 50px;
-    border-radius: 25px;
+    line-height: 60px;
+    border-radius: 30px;
     text-transform: uppercase;
-    padding: 0 35px;
+    width: 100%;
     font-weight: $semi-bold;
-    margin-bottom: 5px;
+    margin-bottom: 32px;
     @media screen and (min-width: $w-desktop) {
+      width: auto;
+      padding: 0 35px;
       font-size: 13px;
       margin-bottom: 0;
       order: 1;
@@ -448,10 +454,15 @@
   }
   &__reg{
     color: $white;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: underline;
+    text-align: center;
     &:hover{
       text-decoration: none;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      text-align: right;
     }
   }
 }
