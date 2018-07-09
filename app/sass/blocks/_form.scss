@@ -71,10 +71,9 @@
     }
   }
   &__input{
-    line-height: 64px;
+    height: 64px;
     width: 100%;
     border: none;
-    //background-color: pink;
     box-sizing: border-box;
     padding: 0 15px;
     border-radius: 10px;
@@ -82,12 +81,10 @@
   &__textarea{
     height: 130px;
     width: 100%;
-    //background-color: pink;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 15px 15px 0;
     border: none;
     border-radius: 10px;
-    padding-top: 15px;
   }
   &__btn-wrap{
     text-align: center;

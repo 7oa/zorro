@@ -37,9 +37,13 @@ body {
 }
 .content {
   flex: 1 0 auto;
+  background-color: $white;
 }
 a{
   text-decoration: none;
+}
+input{
+  padding: 0;
 }
 button:focus,
 input:focus,

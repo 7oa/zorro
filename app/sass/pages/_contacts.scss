@@ -141,10 +141,9 @@
     }
   }
   &__input{
-    line-height: 64px;
+    height: 64px;
     width: 100%;
     border: none;
-    //background-color: pink;
     box-sizing: border-box;
     padding: 0 15px;
     border-radius: 10px;
@@ -153,7 +152,7 @@
     font-weight: $semi-bold;
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
-      line-height: 54px;
+      height: 54px;
     }
     &:focus{
       color: $pink;
