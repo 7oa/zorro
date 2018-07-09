@@ -35,11 +35,15 @@ $(document).ready(function() {
     });
 
     //покажем строку поиска для десктопа
-    $('.header-search').click(function(){
+    $(document).on('click','.js-search', function(){
         if (isDesktop) {
-            $('.header-search-line').fadeIn();
+            $('.header-search-line').fadeIn()
+            $('.header-search-line__input').focus();
+            return false;
         }
     });
+
+
 
     //слайдер на главной
     var newsSlider = new Swiper('.big-slider', {
