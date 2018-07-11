@@ -56,14 +56,14 @@
   }
   &__r3{
     @media screen and (min-width: $w-desktop) {
-      flex: 1 1 auto;
+      width: 180px;
+      flex: 0 0 auto;
+
     }
   }
   &__r4{
     @media screen and (min-width: $w-desktop) {
-      width: 173px;
-      margin-left: 100px;
-      flex: 0 0 auto;
+      flex: 1 1 auto;
     }
   }
   &__name{
@@ -153,6 +153,7 @@
     @media screen and (min-width: $w-desktop) {
       padding-top: 62px;
       margin-bottom: 0;
+      float: right;
     }
   }
   &__ps{
@@ -225,6 +226,7 @@
   @media screen and (min-width: $w-desktop) {
     font-size: 14px;
     padding-left: 45px;
+    width: auto;
   }
   span{
     text-decoration: underline;

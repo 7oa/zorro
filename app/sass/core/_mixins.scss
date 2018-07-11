@@ -2,6 +2,17 @@
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+@keyframes heartbeat {
+  20% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  40% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
 
 //@include anim(); Плавное появлении при display: none; to display: block;
 @mixin anim() {
@@ -9,6 +20,10 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 0.3s;
+}
+
+@mixin heartbeat(){
+  animation: heartbeat .6s infinite
 }
 
 

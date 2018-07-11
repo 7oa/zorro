@@ -43,11 +43,8 @@
       position: absolute;
       right: 20px;
       top: 18px;
-      background-image: url('images/icons/icon_favorite-white.svg');
-      background-position: right center;
-      background-repeat: no-repeat;
-      padding-right: 30px;
-      background-size: 22px;
+      display: flex;
+      align-items: center;
     }
     span{
       @media screen and (min-width: $w-desktop) {
@@ -56,16 +53,34 @@
         font-size: 16px;
       }
     }
+    &:after{
+      @media screen and (min-width: $w-desktop) {
+        content: '';
+        background-image: url('images/icons/icon_favorite-white.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 22px;
+        width: 22px;
+        height: 20px;
+        display: block;
+        margin-left: 10px;
+      }
+    }
     &:hover{
       span{
         @media screen and (min-width: $w-desktop) {
           text-decoration: none;
         }
       }
+      &:after{
+        @include heartbeat();
+      }
     }
     &.active{
-      @media screen and (min-width: $w-desktop) {
-        background-image: url('images/icons/icon_favorite_fill-white.svg');
+      &:after {
+        @media screen and (min-width: $w-desktop) {
+          background-image: url('images/icons/icon_favorite_fill-white.svg');
+        }
       }
     }
   }

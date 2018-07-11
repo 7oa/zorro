@@ -59,21 +59,24 @@
     height: 410px;
     max-width: 420px;
     margin: 0 auto 17px;
-    @include bg-img(contain);
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     @media screen and (min-width: $w-desktop) {
-      width: 460px;
-      max-width: none;
-      height: 460px;
-      margin: 0 0 10px;
+      margin: 0 auto 10px;
     }
   }
   &__img{
-    max-width: 100%;
-    max-height: 100%;
+    /*max-width: 100%;
+    max-height: 100%;*/
+    width: 100%;
+    height: 410px;
+    max-width: 420px;
+    @include bg-img(contain);
+    @media screen and (min-width: $w-desktop) {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+    }
   }
   &__mark{
     background-color: $pink;
@@ -129,6 +132,9 @@
     &.active{
       background-image: url('images/icons/icon_favorite_fill.svg');
     }
+    &:hover{
+      @include heartbeat();
+    }
   }
   &__small-img-list{
     overflow: hidden;
@@ -147,8 +153,13 @@
     cursor: pointer;
     transition: .5s;
     box-sizing: border-box;
-    &.active{
+    &.swiper-slide-active{
       border-color: $pink;
+    }
+  }
+  &__swiper-wrapper{
+    @media screen and (min-width: $w-desktop) {
+      margin-left: calc(-40% - 5px);
     }
   }
   &__select-size{
@@ -426,9 +437,25 @@
   }
 }
 .zoomLens{
-  border-radius: 10px;
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    border-radius: 10px;
+    z-index: 2;
+  }
 }
 .zoomWindow{
-  box-shadow: $shadow-pink;
-  border-radius: 10px;
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    box-shadow: $shadow-pink;
+    border-radius: 10px;
+  }
+}
+.zoomContainer{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    z-index: 2;
+  }
 }
