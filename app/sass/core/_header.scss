@@ -183,6 +183,7 @@
     font-size: 16px;
     color: $pink;
     font-weight: $regular;
+    transition: .5s;
     @media screen and (min-width: $w-desktop) {
       font-size: 13px;
     }
@@ -204,16 +205,25 @@
         background-image: url('images/icons/filter_him.svg');
         transform: rotate(30deg);
       }
+      &:hover:before{
+        animation: him .9s infinite linear;
+      }
     }
     &_her{
       &:before{
         background-image: url('images/icons/filter_her.svg');
         transform: rotate(210deg);
       }
+      &:hover:before{
+        animation: her .9s infinite linear;
+      }
     }
     &_they{
       &:before{
         background-image: url('images/icons/filter_they.svg');
+      }
+      &:hover:before{
+        animation: they .9s infinite linear;
       }
     }
     &.active,
@@ -222,7 +232,8 @@
         border-color: $pink;
       }
       .header-filtr__link{
-        font-weight: $semi-bold;
+        //font-weight: $semi-bold;
+        text-shadow: $text-shadow;
       }
     }
   }

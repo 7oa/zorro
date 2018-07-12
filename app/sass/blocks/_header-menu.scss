@@ -82,7 +82,8 @@
       font-size: 13px;
     }
     &.active{
-      font-weight: $semi-bold;
+      //font-weight: $semi-bold;
+      text-shadow: $text-shadow;
       @media screen and (min-width: $w-desktop) {
         color: $pink;
       }
@@ -90,6 +91,7 @@
     &:hover{
       @media screen and (min-width: $w-desktop) {
         color: $pink;
+        text-shadow: $text-shadow;
       }
     }
   }

@@ -4,13 +4,52 @@
 }
 @keyframes heartbeat {
   20% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
-
   40% {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
+  }
+}
+@keyframes him {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+}
+@keyframes her {
+  0% {
+    transform: rotate(210deg);
+  }
+  25% {
+    transform: rotate(190deg);
+  }
+  50% {
+    transform: rotate(210deg);
+  }
+  75% {
+    transform: rotate(230deg);
+  }
+}
+@keyframes they {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
   }
 }
 
