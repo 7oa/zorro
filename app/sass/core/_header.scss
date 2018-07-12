@@ -206,7 +206,7 @@
         transform: rotate(30deg);
       }
       &:hover:before{
-        animation: him .9s infinite linear;
+        @include filt-anim(him);
       }
     }
     &_her{
@@ -215,7 +215,7 @@
         transform: rotate(210deg);
       }
       &:hover:before{
-        animation: her .9s infinite linear;
+        @include filt-anim(her);
       }
     }
     &_they{
@@ -223,7 +223,7 @@
         background-image: url('images/icons/filter_they.svg');
       }
       &:hover:before{
-        animation: they .9s infinite linear;
+        @include filt-anim(they);
       }
     }
     &.active,

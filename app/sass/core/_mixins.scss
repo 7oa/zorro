@@ -58,11 +58,15 @@
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
-  animation-duration: 0.3s;
+  animation-duration: .5s;
 }
 
 @mixin heartbeat(){
-  animation: heartbeat .6s infinite
+  animation: heartbeat .6s infinite;
+}
+
+@mixin filt-anim($tag){
+  animation: $tag .9s infinite linear;
 }
 
 
