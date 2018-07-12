@@ -4,6 +4,7 @@
 //= plugins/_iziModal.min.js
 //= plugins/_jquery-ui.min.js
 //= plugins/_jquery.elevateZoom-3.0.8.min.js
+//= plugins/_jquery.maskedinput.min.js
 
 //Scripts
 //= scripts/script.js
