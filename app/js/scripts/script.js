@@ -94,11 +94,6 @@ $(document).ready(function() {
                         slidesPerView: 1,
                         centeredSlides: true
                     }
-                },
-                on: {
-                    resize: function () {
-                        this.update();
-                    }
                 }
             });
             prevSliders.push(slider);
