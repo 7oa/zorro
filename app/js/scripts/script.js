@@ -97,7 +97,7 @@ $(document).ready(function() {
                 },
                 on: {
                     resize: function () {
-                        prevSliders.update();
+                        this.update();
                     }
                 }
             });
@@ -168,8 +168,8 @@ $(document).ready(function() {
             .next('.js-props').fadeIn();
     });
     $('.card').mouseleave(function(){
-        $(this).children('.js-hover').css('display', '');
-        $(this).children('.js-props').css('display', '');
+        $(this).find('.js-hover').css('display', '');
+        $(this).find('.js-props').css('display', '');
     });
 
     //popup куки
@@ -378,7 +378,7 @@ $(document).ready(function() {
     });
 
     //маска
-    $("#phone-mask").mask("+7 (999) 999-99-99", {placeholder: "+7 (___) ___-__-__" });
+    $(".phone-mask").mask("+7 (999) 999-99-99", {placeholder: "+7 (___) ___-__-__" });
 
 });
 //скроем строку поиска при клике вне элемента
