@@ -165,8 +165,11 @@
   &__select-size{
     margin-bottom: 70px;
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 115px;
+      //margin-bottom: 115px;
     }
+  }
+  &__select-size-item{
+    margin-bottom: 20px;
   }
   &__select-size-label{
     opacity: .5;

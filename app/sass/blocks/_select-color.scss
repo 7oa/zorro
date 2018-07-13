@@ -1,22 +1,23 @@
-.select-size{
+.select-color{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media screen and (min-width: $w-desktop) {
+    justify-content: flex-start;
+  }
   &__item{
-    display: block;
-    width: 65px;
     line-height: 50px;
     border-radius: 25px;
     background-color: $pink5;
     font-size: 20px;
     text-align: center;
     color: $gray72;
-    text-transform: uppercase;
     transition: .5s;
-    margin: 0 3px;
-    @media screen and (min-width: $w-mobile) {
-      width: 85px;
-    }
+    margin: 0 3px 5px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
     @media screen and (min-width: $w-desktop) {
-      width: 65px;
       line-height: 40px;
       border-radius: 20px;
       font-size: 16px;
@@ -29,6 +30,15 @@
     &.disabled{
       background-color: $gray-ec;
       color: $gray72;
+    }
+    span.color {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 3px;
+      flex: 0 0 auto;
     }
   }
 }

@@ -66,6 +66,7 @@
     top: -10px;
     left: 10px;
     padding: 0 8px;
+    z-index: 2;
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
     }
@@ -77,6 +78,7 @@
     box-sizing: border-box;
     padding: 0 15px;
     border-radius: 10px;
+    background-color: transparent;
   }
   &__textarea{
     height: 130px;
@@ -85,6 +87,7 @@
     padding: 15px 15px 0;
     border: none;
     border-radius: 10px;
+    background-color: transparent;
   }
   &__btn-wrap{
     text-align: center;
