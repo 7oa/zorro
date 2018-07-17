@@ -159,7 +159,7 @@
   }
   &__swiper-wrapper{
     @media screen and (min-width: $w-desktop) {
-      margin-left: calc(-40% - 5px);
+      //margin-left: calc(-40% - 5px);
     }
   }
   &__select-size{

@@ -122,7 +122,9 @@ $(document).ready(function() {
     if($('.catalog-detail-gallery1').length>0){
         var galleryTop = new Swiper('.catalog-detail-gallery1', {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 5,
+            loop: true,
+            loopedSlides: 4,
             on: {
                 slideChange: function(){
                     var zoomImg = $(".js-small-img:nth-child(" + (this.activeIndex + 1) + ")").data("zoom-image");
@@ -138,6 +140,8 @@ $(document).ready(function() {
             spaceBetween: 5,
             centeredSlides: true,
             slideToClickedSlide: true,
+            loop: true,
+            loopedSlides: 4,
             touchRatio: 0.2
         });
         galleryTop.controller.control = galleryThumbs;
