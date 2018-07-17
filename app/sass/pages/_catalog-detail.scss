@@ -157,16 +157,8 @@
       border-color: $pink;
     }
   }
-  &__swiper-wrapper{
-    @media screen and (min-width: $w-desktop) {
-      //margin-left: calc(-40% - 5px);
-    }
-  }
   &__select-size{
     margin-bottom: 70px;
-    @media screen and (min-width: $w-desktop) {
-      //margin-bottom: 115px;
-    }
   }
   &__select-size-item{
     margin-bottom: 20px;

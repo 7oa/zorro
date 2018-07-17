@@ -3,6 +3,9 @@ var isDesktop = window.matchMedia('(min-width: 1200px)').matches;
 $(window).on('load resize', function(){
     isDesktop = window.matchMedia('(min-width: 1200px)').matches;
 });
+/*$(window).on('resize', function(){
+    window.setTimeout('location.reload()', 500);
+});*/
 $(document).ready(function() {
     //toggle мобильное меню
     $('.js-menu').click(function () {
@@ -93,6 +96,11 @@ $(document).ready(function() {
                     320: {
                         slidesPerView: 1,
                         centeredSlides: true
+                    }
+                },
+                on: {
+                    resize: function(){
+                        this.update();
                     }
                 }
             });
