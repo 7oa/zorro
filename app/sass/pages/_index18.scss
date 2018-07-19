@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+}
+.wrapper{
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  @media screen and (min-width: $w-desktop) {
+
+  }
+}
+.plus18{
+  text-align: center;
+  padding: 0 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 50px;
+    max-width: 620px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    max-width: none;
+    width: 700px;
+    height: 281px;
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: $shadow-pink;
+    padding: 50px 100px 40px;
+    box-sizing: border-box;
+  }
+  &__ttl{
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: $gray72;
+    font-family: 'TrajanPro3', serif;
+  }
+  &__prev{
+    font-size: 20px;
+    line-height: 1.2;
+    font-family: 'ProximaNova', sans-serif;
+    color: $gray72;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    a{
+      color: $pink;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__btns{
+    font-family: 'ProximaNova', sans-serif;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__btn{
+    &_yes{
+      background-color: $pink;
+      display: block;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 60px;
+      border-radius: 30px;
+      width: 210px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 auto 20px;
+      @media screen and (min-width: $w-desktop) {
+        margin: 0;
+        font-size: 14px;
+        line-height: 50px;
+        border-radius: 25px;
+        width: 176px;
+        margin-right: 25px;
+      }
+    }
+    &_no{
+      font-size: 20px;
+      color: $pink;
+      text-decoration: underline;
+      @media screen and (min-width: $w-desktop) {
+        line-height: 50px;
+        font-size: 16px;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
