@@ -39,9 +39,12 @@
     margin-bottom: 45px;
     a{
       color: $pink;
-      text-decoration: underline;
+      border-bottom: 1px solid $pink;
+      line-height: 1;
+      display: inline-block;
       &:hover{
         text-decoration: none;
+        border-color: transparent;
       }
     }
   }
@@ -181,13 +184,15 @@
   }
   &__forgot-link{
     color: $pink;
-    text-decoration: underline;
     font-size: 20px;
+    border-bottom: 1px solid $pink;
+    line-height: 1;
+    display: inline-block;
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
     }
     &:hover{
-      text-decoration: none;
+      border-color: transparent;
     }
   }
   &__confirm{
@@ -253,9 +258,11 @@
     }
     a{
       color: $pink;
-      text-decoration: underline;
+      border-bottom: 1px solid $pink;
+      line-height: 1;
+      display: inline-block;
       &:hover{
-        text-decoration: none;
+        border-color: transparent;
       }
     }
   }
