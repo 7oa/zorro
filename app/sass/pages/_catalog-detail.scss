@@ -88,6 +88,7 @@
     left: 19px;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 2;
     &_sale{
       background-image: url('images/icons/category_discount.svg');
       background-size: 18px;
