@@ -234,7 +234,8 @@
 }
 .footer-ss{
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 290px;
   width: 100%;
   margin: 0 auto;

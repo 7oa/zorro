@@ -188,6 +188,7 @@
     border-bottom: 1px solid $pink;
     line-height: 1;
     display: inline-block;
+    cursor: pointer;
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
     }

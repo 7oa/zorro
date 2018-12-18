@@ -25,14 +25,26 @@
   }
   &__form-label{
     position: absolute;
-    top: -10px;
+    bottom: 75%;
     left: 10px;
+    right: 10px;
     background-color: $white;
-    display: inline-block;
+    //display: inline-block;
     padding: 0 10px;
     color: $gray99;
     font-size: 16px;
     font-weight: $light;
+    line-height: 1;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $w-mobile) {
+      height: auto;
+      display: inline-block;
+      top: -8px;
+      bottom: auto;
+      right: auto;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
     }

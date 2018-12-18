@@ -6,7 +6,10 @@
     justify-content: flex-start;
   }
   &__item{
+    display: block;
+    width: 65px;
     line-height: 50px;
+    height: 50px;
     border-radius: 25px;
     background-color: $pink5;
     font-size: 20px;
@@ -14,31 +17,38 @@
     color: $gray72;
     transition: .5s;
     margin: 0 3px 5px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: $w-mobile) {
+      width: 85px;
+    }
     @media screen and (min-width: $w-desktop) {
+      width: 65px;
       line-height: 40px;
+      height: 40px;
       border-radius: 20px;
       font-size: 16px;
     }
-    &.selected,
-    &:hover{
+    &.selected{
       background-color: $pink;
       color: $white;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $pink;
+        color: $white;
+      }
     }
     &.disabled{
       background-color: $gray-ec;
       color: $gray72;
     }
     span.color {
-      display: inline-block;
+      display: block;
       width: 16px;
       height: 16px;
-      margin-right: 8px;
+      //margin-right: 8px;
+      margin: 10px auto;
       border: 1px solid rgba(255,255,255,.6);
       border-radius: 3px;
-      flex: 0 0 auto;
     }
   }
 }

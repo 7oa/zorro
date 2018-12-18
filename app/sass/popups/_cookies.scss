@@ -1,5 +1,12 @@
 .cookies{
   background-color: $pink;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  display: none;
   &__wrapper{
     padding-top: 30px;
     padding-bottom: 40px;

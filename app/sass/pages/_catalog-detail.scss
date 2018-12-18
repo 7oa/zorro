@@ -119,6 +119,7 @@
     top: 19px;
     width: 22px;
     height: 22px;
+    z-index: 2;
     @media screen and (min-width: $w-desktop) {
       display: none;
     }
@@ -207,9 +208,16 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
     @media screen and (min-width: $w-desktop) {
       justify-content: flex-end;
     }
+  }
+  &__mess{
+    flex: 1 1 auto;
+    width: 100%;
+    color: red;
+    padding-bottom: 20px;
   }
   &__price{
     width: 50%;
@@ -269,7 +277,7 @@
       width: 100%;
       max-width: none;
       display: flex !important;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
   &__tag{
@@ -291,6 +299,7 @@
       font-weight: $semi-bold;
       background-color: $white;
       transition: .5s;
+      margin-right: 5px;
     }
     &:last-of-type{
       margin-bottom: 0;
@@ -366,8 +375,16 @@
     border-radius: 10px;
     overflow: hidden;
     line-height: 0;
-    video{
+    height: 300px;
+    @media screen and (min-width: $w-tablet) {
+      height: 400px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 467px;
+    }
+    iframe{
       width: 100%;
+      height: 100%;
     }
   }
 }

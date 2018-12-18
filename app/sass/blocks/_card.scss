@@ -33,6 +33,7 @@
       background-color: rgba(242, 89, 169, .8);
       @include anim();
       color: $white;
+      border-radius: 10px;
     }
   }
   &__hover2{
@@ -57,11 +58,12 @@
       @media screen and (min-width: $w-desktop) {
         content: '';
         background-image: url('images/icons/icon_favorite-white.svg');
-        background-position: right center;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size: 22px;
+        background-size: contain;
+        //background-size: 22px;
         width: 22px;
-        height: 20px;
+        height: 22px;
         display: block;
         margin-left: 10px;
       }
@@ -157,6 +159,7 @@
   }
   &__sp-list{}
   &__sp-item{
+    cursor: pointer;
     @media screen and (min-width: $w-desktop) {
       display: block;
       width: 65px;
@@ -182,6 +185,9 @@
         color: $white;
       }
     }
+  }
+  &__sp-item-color{
+    width: 20px;
   }
   &__cnt{
     padding: 60px 30px 20px;
@@ -263,7 +269,7 @@
     width: 70px;
     height: 70px;
     background-color: $pink;
-    border-radius: 0 0 100% 0;
+    border-radius: 10px 0 100% 0;
     background-repeat: no-repeat;
     &_sale{
       background-image: url('images/icons/category_discount.svg');
@@ -291,8 +297,12 @@
     background-image: url('images/icons/icon_favorite.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     &.active{
       background-image: url('images/icons/icon_favorite_fill.svg');
+    }
+    &:hover{
+      @include heartbeat();
     }
   }
   &__basket{

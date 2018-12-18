@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Устанавливаем пакеты: <br> npm i <br> Строим продакшн: <br> gulp build <br> Запускаем сервер: <br> gulp",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery-ajax-transport-xdomainrequest": "^1.0.4",
+    "suggestions-jquery": "^18.8.0",
+    "url-parse": "^1.4.3"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.8.11",

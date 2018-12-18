@@ -21,10 +21,15 @@
       border-radius: 20px;
       font-size: 16px;
     }
-    &.selected,
-    &:hover{
+    &.selected{
       background-color: $pink;
       color: $white;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $pink;
+        color: $white;
+      }
     }
     &.disabled{
       background-color: $gray-ec;

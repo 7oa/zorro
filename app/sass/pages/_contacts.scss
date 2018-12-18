@@ -371,7 +371,17 @@
       margin: 0 auto;
     }
   }
-
+}
+.delivery-map{
+  width: 100%;
+  height: 300px;
+  @media screen and (min-width: $w-desktop) {
+    height: 400px;
+    margin: 0 auto;
+  }
+  &.close{
+    display: none;
+  }
 }
 #map{
   width: 100%;

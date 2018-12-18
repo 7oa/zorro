@@ -165,6 +165,23 @@
     @include uldev();
     display: flex;
     justify-content: space-between;
+    position: relative;
+    hr{
+      display: none;
+      @media screen and (min-width: $w-desktop) {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        background-color: $pink;
+        width: 0;
+        display: block;
+        transition: .5s;
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
+    }
   }
   &__opt{
     border-top: 3px solid transparent;
@@ -172,7 +189,7 @@
     padding: 24px 0;
     @media screen and (min-width: $w-desktop) {
       border-top: none;
-      border-bottom: 3px solid transparent;
+      //border-bottom: 3px solid transparent;
     }
     @media screen and (min-width: $w-desktop) {
       padding: 32px 0;
@@ -205,8 +222,10 @@
         background-image: url('images/icons/filter_him.svg');
         transform: rotate(30deg);
       }
-      &:hover:before{
-        @include filt-anim(him);
+      &:hover{
+        &:before{
+          @include filt-anim(him);
+        }
       }
     }
     &_her{
@@ -236,6 +255,42 @@
         text-shadow: $text-shadow;
       }
     }
+  }
+}
+.header-filtr__item_him.active ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 30px;
+    width: 70px;
+  }
+}
+.header-filtr__item_her.active ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 180px;
+    width: 60px;
+  }
+}
+.header-filtr__item_they.active ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 322px;
+    width: 60px;
+  }
+}
+.header-filtr__item_him:hover ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 30px;
+    width: 70px;
+  }
+}
+.header-filtr__item_her:hover ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 180px;
+    width: 60px;
+  }
+}
+.header-filtr__item_they:hover ~ hr{
+  @media screen and (min-width: $w-desktop) {
+    left: 322px;
+    width: 60px;
   }
 }
 .dd-panel{
@@ -319,13 +374,8 @@
 .header-backet{
   width: 22px;
   flex: 0 0 auto;
-  margin-right: 30px;
-  @media screen and (min-width: $w-mobile) {
-    margin-right: 60px;
-  }
   @media screen and (min-width: $w-desktop) {
     width: auto;
-    margin-right: 0;
   }
   &__icon{
     width: 22px;
@@ -358,13 +408,12 @@
       font-size: 12px;
       line-height: 1;
       text-align: left;
-      padding-left: 28px;
+      padding-left: 25px;
     }
     span{
       display: none;
       @media screen and (min-width: $w-desktop) {
         display: inline-block;
-        margin-left: 3px;
       }
     }
   }
@@ -388,7 +437,12 @@
 .header-fav{
   width: 26px;
   flex: 0 0 auto;
+  margin-right: 30px;
+  @media screen and (min-width: $w-mobile) {
+    margin-right: 60px;
+  }
   @media screen and (min-width: $w-desktop) {
+    margin-right: 0;
     width: 120px;
   }
   &__icon{
@@ -422,7 +476,6 @@
       display: none;
       @media screen and (min-width: $w-desktop) {
         display: inline-block;
-        margin-left: 3px;
       }
     }
   }
@@ -474,7 +527,6 @@
   &__reg{
     color: $white;
     font-size: 20px;
-    border-bottom: 1px solid $white;
     line-height: 1;
     display: inline-block;
     text-align: center;
@@ -484,6 +536,7 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       text-align: right;
+      border-bottom: 1px solid $white;
     }
   }
 }
@@ -720,7 +773,7 @@
   z-index: 7;
   display: none;
   @media screen and (min-width: $w-desktop) {
-    top: 220px;
+    top: 213px;
   }
   &__full-footer{
     background-color: $pink;
@@ -741,13 +794,15 @@
   }
   &__promo{
     margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 0;
       width: 620px;
     }
   }
   &__promo-input{
-    width: 100%;
     background-color: $pink2;
     color: $white;
     border: none;
@@ -756,6 +811,7 @@
     line-height: 66px;
     padding: 0 15px;
     box-sizing: border-box;
+    flex: 1 1 auto;
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       height: 55px;
@@ -765,6 +821,28 @@
     &::placeholder{
       color: $white;
       opacity: .7;
+    }
+    &.error{
+      box-shadow: 0px 0px 8px 0px rgba(255, 0, 0, 0.75);
+      color: red;
+    }
+  }
+  &__promo-input-btn{
+    background-color: $white;
+    color: $pink;
+    font-size: 20px;
+    line-height: 66px;
+    border-radius: 12px;
+    padding: 0 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 55px;
     }
   }
   &__fin{
