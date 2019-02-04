@@ -1,0 +1,86 @@
+.basket-popup{
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  z-index: 11;
+  transition: top .5s;
+  &__wind{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    @media screen and (min-width: $w-desktop) {
+      background-color: $pink;
+      width: 320px;
+      border-radius: 10px;
+      float: right;
+    }
+    &:after{
+      @media screen and (min-width: $w-desktop) {
+        content: '';
+        position: absolute;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #f259a9;
+        border-right: 10px solid #f259a9;
+        top: -20px;
+        right: 20px;
+      }
+    }
+  }
+  &__ttl{
+    font-size: 24px;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    font-family: 'TrajanPro3', serif;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__text{
+    font-size: 20px;
+    color: $white;
+    text-align: center;
+    width: 210px;
+    margin: 0 auto;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+    a{
+      text-decoration: underline;
+      color: $white;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__close{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    @media screen and (min-width: $w-mobile) {
+      right: 30px;
+    }
+    @media screen and (min-width: $w-tablet) {
+      right: 50px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 16px;
+      height: 16px;
+      right: 18px;
+      top: 18px;
+    }
+    .modal-close{
+      fill: $pink2
+    }
+  }
+}
+.fixed{
+  .basket-popup{
+    top: 63px;
+  }
+}

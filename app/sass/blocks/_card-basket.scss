@@ -1,0 +1,139 @@
+.card-basket{
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray-ec;
+  padding-bottom: 20px;
+  position: relative;
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+  }
+  &__img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    @include bg-img(contain);
+    align-self: center;
+    margin: 0 auto 10px;
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+  }
+  &__txt{
+    @media screen and (min-width: $w-tablet) {
+      flex: 1 1 auto;
+    }
+  }
+  &__basket{
+    text-align: right;
+    @media screen and (min-width: $w-tablet) {
+      width: 150px;
+      margin-left: 20px;
+      flex: 0 0 auto;
+      align-self: flex-end;
+    }
+  }
+  &__ttl{
+    font-size: 16px;
+    line-height: 1;
+    font-weight: $semi-bold;
+    color: $gray22;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__prev{
+    color: $gray99;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: $light;
+  }
+  &__bottom{
+    margin-bottom: 10px;
+  }
+  &__price-old{
+    font-size: 12px;
+    font-weight: $light;
+    text-decoration: line-through;
+    color: $gray99;
+    display: inline-block;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__price{
+    color: $gray72;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    display: inline-block;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
+  }
+  &__sum{
+    color: $pink;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
+  }
+  &__count-wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  &__count{
+    font-size: 16px;
+    font-weight: $light;
+    color: $gray99;
+    padding: 0 10px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__count2{
+    font-size: 16px;
+    font-weight: $light;
+    color: $gray99;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+  &__plus,
+  &__minus{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: $pink5;
+    color: $pink;
+    font-size: 16px;
+    font-weight: $light;
+    line-height: 23px;
+    @media screen and (min-width: $w-desktop) {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &.disabled{
+      background-color: $gray-ec;
+      color: $gray99;
+    }
+  }
+  &__remove{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    @media screen and (min-width: $w-tablet) {
+      left: 0;
+      right: auto;
+    }
+  }
+}

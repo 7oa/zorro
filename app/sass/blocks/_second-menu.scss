@@ -1,0 +1,33 @@
+.second-menu{
+  text-align: center;
+  &__list{
+    @include uldev();
+  }
+  &__item{
+    padding: 15px 0;
+    &:hover{
+      .menu-drop-wrapper{
+        @media screen and (min-width: $w-desktop) {
+          visibility: visible;
+          opacity: 1;
+          transition-delay: .2s;
+        }
+      }
+    }
+  }
+  &__link{
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .5s;
+    //border-bottom: 1px solid $white;
+    &.active{
+      //font-weight: $semi-bold;
+      text-shadow: $text-shadow;
+      border-bottom: none;
+    }
+    span{
+      border-bottom: 1px dashed $white;
+    }
+  }
+}
