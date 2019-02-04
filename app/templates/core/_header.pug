@@ -15,15 +15,6 @@ header.header
                     a.header-mobile-logo(href="/")
                 ._icons-r
                     .header-mobile-icons
-                        a.header-backet.js-header-popup(href="#" data-open="basket")
-                            ._ttl
-                                ._icon.
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.87 64.65">
-                                        <path class="icon-backet" d="M16.77,18a15.16,15.16,0,0,1,30.32,0"/>
-                                        <path class="icon-backet-2" d="M5.67,59H58.2V18.74h0V15.93h0v0A2.81,2.81,0,0,1,61,13.07h.07a2.83,2.83,0,0,1,2.78,2.83V61.82A2.83,2.83,0,0,1,61,64.65H2.83A2.83,2.83,0,0,1,0,61.82V15.9H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0V15.4H0v-.07h0l0-.07h0l0-.07h0l0-.13h0l0-.07h0l0-.06h0l0-.06h0l0-.06h0l.09-.19h0l0-.06h0l0-.06h0a2.85,2.85,0,0,1,.19-.28h0a2.89,2.89,0,0,1,.22-.26h0l.1-.1h0l.26-.22h0l.28-.19h0l.06,0h0l.06,0h0l.19-.09h0l.06,0h0l.06,0h0l.06,0h0l.07,0H2l.13,0h0l.07,0h0l.07,0h.57a2.84,2.84,0,0,1,2.81,3.2v9.48h0V59Z"/>
-                                    </svg>
-                                ._label Корзина
-                            ._counter <span>Товаров:</span> 3
                         a.header-fav.js-header-popup(href="#" data-open="favorites")
                             ._ttl
                                 ._icon.
@@ -32,7 +23,15 @@ header.header
                                     </svg>
                                 ._label Избранное
                             ._counter <span>Товаров:</span> 12
-
+                        a.header-backet.js-header-popup(href="#")
+                            ._ttl
+                                ._icon.
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.87 64.65">
+                                        <path class="icon-backet" d="M16.77,18a15.16,15.16,0,0,1,30.32,0"/>
+                                        <path class="icon-backet-2" d="M5.67,59H58.2V18.74h0V15.93h0v0A2.81,2.81,0,0,1,61,13.07h.07a2.83,2.83,0,0,1,2.78,2.83V61.82A2.83,2.83,0,0,1,61,64.65H2.83A2.83,2.83,0,0,1,0,61.82V15.9H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0v-.07H0V15.4H0v-.07h0l0-.07h0l0-.07h0l0-.13h0l0-.07h0l0-.06h0l0-.06h0l0-.06h0l.09-.19h0l0-.06h0l0-.06h0a2.85,2.85,0,0,1,.19-.28h0a2.89,2.89,0,0,1,.22-.26h0l.1-.1h0l.26-.22h0l.28-.19h0l.06,0h0l.06,0h0l.19-.09h0l.06,0h0l.06,0h0l.06,0h0l.07,0H2l.13,0h0l.07,0h0l.07,0h.57a2.84,2.84,0,0,1,2.81,3.2v9.48h0V59Z"/>
+                                    </svg>
+                                ._label Корзина
+                            ._counter <span>Товаров:</span> 3
             .header-desktop-r1
                 ._call
                 ._auth
@@ -60,10 +59,15 @@ header.header
         .container2
             .header-line3
                 ._menu
+                    ._logo
+                        a.fix-logo(href="/")
                     .header-menu-desktop
                 ._r
                     .header-tren-desktop
                     .header-search-desktop
+                    .header-line3__el
+                        .header-line3__fav
+                        .header-line3__backet
                 ._search-line
                     .header-search-line
                         ._wrapper
@@ -75,12 +79,14 @@ header.header
                                 ._list
                                     - for(i=0;i<3;i++)
                                         a._item(href="#")
+                                            ._img(style="background-image:url('https://picsum.photos/40')")
                                             ._l
                                                 ._ttl Очищающие средства для секс-игрушек
                                                 ._model Satisfyer Partner Plus. Electronic edition. Purplemodel, FX-180
                                             ._r
                                                 ._price 483 руб.
                                         a._item(href="#")
+                                            ._img(style="background-image:url('https://picsum.photos/40')")
                                             ._l
                                                 ._ttl Вибромассажёр
                                                 ._model Satisfyer G-Sport Rabbit
@@ -88,9 +94,62 @@ header.header
                                                 ._price 33 483 руб.
                                 ._count
                                     a._count-link(href="#") Результатов поиска: 173
+                .basket-popup
+                    ._wind
+                        ._ttl Отлично!
+                        ._text Выбранный товар был добавлен в корзину!
+                        button._close(type="button").
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.38 60.38"><path class="modal-close" d="M.83,4.84a2.83,2.83,0,0,1,4-4L30.19,26.18,55.54.83a2.83,2.83,0,0,1,4,4L34.2,30.19,59.55,55.54a2.83,2.83,0,1,1-4,4L30.19,34.2,4.84,59.55a2.83,2.83,0,0,1-4-4L26.18,30.19.83,4.84Z"/></svg>
     ._dd.js-dd
         .container
             .dd-panel
+                ._r2
+                    .header-menu
+                        ul._list
+                            li._item
+                                a._link.-haschild(href="#")
+                                    span Секс-игрушки
+                                .menu-drop-wrapper
+                                    .container
+                                        .menu-drop
+                                            ul._list
+                                                - for(i=0;i<3;i++)
+                                                    li._item
+                                                        a._link(href="#") Плетки и стеки
+                                                    li._item
+                                                        a._link(href="#") Наручники и фиксация
+                                                    li._item
+                                                        a._link(href="#") Ошейники и поводки
+                                                    li._item
+                                                        a._link(href="#") Кляпы
+                            li._item
+                                a._link.-haschild(href="#")
+                                    span интимная косметика
+                                .menu-drop-wrapper
+                                    .container
+                                        .menu-drop
+                                            ul._list
+                                                - for(i=0;i<3;i++)
+                                                    li._item
+                                                        a._link(href="#") Плетки и стеки
+                                                    li._item
+                                                        a._link(href="#") Наручники и фиксация
+                                                    li._item
+                                                        a._link(href="#") Ошейники и поводки
+                                                    li._item
+                                                        a._link(href="#") Кляпы
+                            li._item
+                                a._link(href="#")
+                                    span белье
+                            li._item
+                                a._link.active(href="#")
+                                    span бдсм и фетиш
+                            li._item
+                                a._link(href="#")
+                                    span sale
+                    .header-tren
+                        a._link(href="#")
+                            span Тренинги
                 ._r1
                     .header-reg
                         .header-enter
@@ -103,48 +162,21 @@ header.header
                             ._inf
                                 ._label Вы вошли как
                                 a._name(href="#") Фдучфтвук Зуекулуум
-
-                ._r2
-                    .header-menu
+                ._r4
+                    .second-menu
                         ul._list
                             li._item
-                                a._link(href="#") Секс-игрушки
-                                .menu-drop-wrapper
-                                    .container
-                                        .menu-drop
-                                            ul._list
-                                                - for(i=0;i<3;i++)
-                                                    li._item
-                                                        a._link(href="#") Плетки и стеки
-                                                    li._item
-                                                        a._link(href="#") Наручники и фиксация
-                                                    li._item
-                                                        a._link(href="#") Ошейники и поводки
-                                                    li._item
-                                                        a._link(href="#") Кляпы
+                                a._link(href="#")
+                                    span Новости и статьи
                             li._item
-                                a._link(href="#") интимная косметика
-                                .menu-drop-wrapper
-                                    .container
-                                        .menu-drop
-                                            ul._list
-                                                - for(i=0;i<3;i++)
-                                                    li._item
-                                                        a._link(href="#") Плетки и стеки
-                                                    li._item
-                                                        a._link(href="#") Наручники и фиксация
-                                                    li._item
-                                                        a._link(href="#") Ошейники и поводки
-                                                    li._item
-                                                        a._link(href="#") Кляпы
+                                a._link(href="#")
+                                    span Доставка и оплата
                             li._item
-                                a._link(href="#") белье
+                                a._link(href="#")
+                                    span Возврат и обмен
                             li._item
-                                a._link.active(href="#") бдсм и фетиш
-                            li._item
-                                a._link(href="#") sale
-                    .header-tren
-                        a._link(href="#") Тренинги
+                                a._link(href="#")
+                                    span Контакты
                 ._r3
                     .header-call
                         ._l

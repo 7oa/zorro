@@ -4,12 +4,23 @@
   }
   &__h{
     margin-bottom: 35px;
+    display: block;
+    //text-decoration: underline;
+    //text-underline-position: under;
+    @media screen and (min-width: $w-desktop) {
+      //text-decoration: none;
+    }
+    &>*{
+      border-bottom: 1px dashed $gray72;
+      display: inline;
+      @media screen and (min-width: $w-desktop) {
+        border-bottom: none;
+      }
+    }
   }
   &__list{
-    margin-bottom: 35px;
     @media screen and (min-width: $w-desktop) {
       display: flex;
-      margin-bottom: 0;
     }
   }
   &__item{
@@ -103,7 +114,9 @@
   }
   &__all{
     text-align: center;
+    display: none;
     @media screen and (min-width: $w-desktop) {
+      display: block;
       position: absolute;
       top: 5px;
       right: 10px;

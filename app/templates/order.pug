@@ -25,16 +25,9 @@ block content
 									._prev-label Общая сумма:
 									._prev-val.c-pink 34 500 руб.
 							._list
-								.prev-line
-									._h
-									._list.prev-slider
-										._swiper.swiper-wrapper
-											- for(var i=0;i<8;i++)
-												._item.swiper-slide
-													include blocks/_card-basket
-									._nav
-										._prev
-										._next
+								.basket-cards-list
+									- for(var i=0;i<8;i++)
+										include blocks/_card-basket2
 							._contacts
 								._contacts-form
 									._fields

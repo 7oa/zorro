@@ -1,16 +1,24 @@
 .menu-drop-wrapper{
   display: none;
+  background-color: rgba(255,255,255,0.95);
+  margin: 0 -10px;
+  @media screen and (min-width: $w-mobile) {
+    margin: 0 -30px;
+  }
+  @media screen and (min-width: $w-tablet) {
+    margin: 0 -50px;
+  }
   @media screen and (min-width: $w-desktop) {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transition: .5s;
+    transition: .2s;
     position: absolute;
     right: 0;
     left: 0;
     top: 60px;
     background-color: rgba(255,255,255,0.95);
-    height: 301px;
+    //height: 301px;
     box-sizing: border-box;
     margin-left: calc((100vw - 1217px) / -2);
     margin-right: calc((100vw - 1217px) / -2);
@@ -19,22 +27,24 @@
 }
 .menu-drop{
   &__list{
+    @include uldev();
+    padding: 10px 0;
     @media screen and (min-width: $w-desktop) {
-      @include uldev();
       column-count: 3;
       column-width: 240px;
       column-gap: 0;
-      margin-top: 28px;
       max-width: 720px;
     }
   }
   &__item{
+    padding: 7px 0;
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 22px;
-      padding-right: 10px;
+      padding: 10px 10px 10px 0;
     }
   }
   &__link{
+    color: $gray72;
+    font-size: 16px;
     @media screen and (min-width: $w-desktop) {
       color: $gray72;
       font-size: 16px;
@@ -59,7 +69,7 @@
     }
   }
   &__item{
-    padding: 22px 0;
+    padding: 10px 0;
     @media screen and (min-width: $w-desktop) {
       padding: 19px 0;
       margin-right: 47px;
@@ -69,7 +79,7 @@
         @media screen and (min-width: $w-desktop) {
           visibility: visible;
           opacity: 1;
-          transition-delay: .3s;
+          transition-delay: .2s;
         }
       }
     }
@@ -83,6 +93,37 @@
       color: $gray72;
       font-size: 13px;
     }
+    span{
+      border-bottom: 1px dashed $white;
+      @media screen and (min-width: $w-desktop) {
+        border-bottom: none;
+      }
+    }
+    &_haschild{
+      margin-left: 25px;
+      @media screen and (min-width: $w-desktop) {
+        margin-left: 0;
+      }
+      &:after{
+        content: '';
+        background-image: url(images/icons/filtr-more.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        transition: .5s;
+        top: 6px;
+        position: relative;
+        @media screen and (min-width: $w-desktop) {
+          display: none;
+        }
+      }
+      &.open{
+        &:after{
+          transform: rotate(-180deg);
+        }
+      }
+    }
     &.active{
       //font-weight: $semi-bold;
       text-shadow: $text-shadow;
@@ -90,6 +131,7 @@
         color: $pink;
       }
     }
+
     &:hover{
       @media screen and (min-width: $w-desktop) {
         color: $pink;

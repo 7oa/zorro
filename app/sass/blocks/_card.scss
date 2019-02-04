@@ -1,20 +1,23 @@
 .card{
   width: 100%;
   max-width: 290px;
-  height: 506px;
+  height: 330px;
   background-color: $white;
   border-radius: 10px;
-  box-shadow: $shadow-pink;
+  box-shadow: $shadow-pink2;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto;
   @media screen and (min-width: $w-mobile) {
-    width: 290px;
+    //width: 290px;
+  }
+  @media screen and (min-width: $w-tablet) {
+    height: 370px;
   }
   @media screen and (min-width: $w-desktop) {
     width: 220px;
-    height: 399px;
+    height: 340px;
   }
   &_basket{
     height: 556px;
@@ -190,10 +193,7 @@
     width: 20px;
   }
   &__cnt{
-    padding: 60px 30px 20px;
-    @media screen and (min-width: $w-desktop) {
-      padding: 50px 15px 15px;
-    }
+    padding: 10px;
   }
   &__cnt-link{
     display: block;
@@ -202,51 +202,64 @@
     @include bg-img(contain);
     width: 100%;
     height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
     @media screen and (min-width: $w-desktop) {
       height: 150px;
-      margin-bottom: 20px;
     }
   }
   &__txt{
     border-top: 1px solid $gray-ec;
-    padding-top: 18px;
+    padding-top: 10px;
     margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      padding-top: 18px;
+    }
   }
   &__prev{
-    color: $gray99;
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: $light;
-    margin-bottom: 10px;
-    height: 40px;
-    overflow: hidden;
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      color: $gray99;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: $light;
+      height: 40px;
+      overflow: hidden;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
-      height: 30px;
-      margin-bottom: 17px;
+      height: 50px;
     }
   }
   &__ttl{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.2;
     font-weight: $semi-bold;
     color: $gray22;
-    height: 80px;
+    height: 40px;
     overflow: hidden;
+    @media screen and (min-width: $w-tablet) {
+      height: 38px;
+      margin-bottom: 10px;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
-      height: 56px;
+      height: 36px;
       line-height: 1;
+      margin-bottom: 17px;
     }
   }
   &__bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    text-align: right;
+    @media screen and (min-width: $w-tablet) {
+      text-align: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
   &__price-old{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: $light;
     text-decoration: line-through;
     color: $gray99;
@@ -256,7 +269,7 @@
   }
   &__price{
     color: $pink;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: $semi-bold;
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
@@ -266,38 +279,69 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-color: $pink;
     border-radius: 10px 0 100% 0;
     background-repeat: no-repeat;
+    @media screen and (min-width: $w-tablet) {
+      width: 70px;
+      height: 70px;
+    }
     &_sale{
-      background-image: url('images/icons/category_discount.svg');
+      color: $white;
+      /*background-image: url('images/icons/category_discount.svg');
       background-size: 18px;
-      background-position: 20px 20px;
+      background-position: 20px 20px;*/
+      span{
+        display: block;
+        font-size: 14px;
+        top: 11px;
+        left: 4px;
+        position: relative;
+        font-weight: 600;
+        @media screen and (min-width: $w-tablet) {
+          font-size: 20px;
+          top: 15px;
+          left: 7px;
+        }
+      }
     }
     &_hit{
       background-image: url('images/icons/category_hit.svg');
-      background-size: 20px;
-      background-position: 19px 17px;
+      background-size: 16px;
+      background-position: 14px 11px;
+      @media screen and (min-width: $w-tablet) {
+        background-size: 20px;
+        background-position: 19px 17px;
+      }
     }
     &_new{
       background-image: url('images/icons/category_new_2.svg');
-      background-size: 23px;
-      background-position: 17px 19px;
+      background-size: 20px;
+      background-position: 11px 11px;
+      @media screen and (min-width: $w-tablet) {
+        background-size: 23px;
+        background-position: 17px 19px;
+      }
     }
   }
   &__fav{
     display: block;
     position: absolute;
-    right: 20px;
-    top: 18px;
+    top: 7px;
+    right: 7px;
     width: 22px;
     height: 22px;
     background-image: url('images/icons/icon_favorite.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    @media screen and (min-width: $w-tablet) {
+      top: 18px;
+      right: 20px;
+      height: 22px;
+    }
     &.active{
       background-image: url('images/icons/icon_favorite_fill.svg');
     }

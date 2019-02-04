@@ -2,6 +2,14 @@ html,
 body {
   height: 100%;
 }
+h1, h2, h3{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -10,6 +18,7 @@ body {
   font-size: 20px;
   line-height: 1.375;
   position: relative;
+  transition: .5s;
   @media screen and (min-width: $w-desktop) {
     font-size: 16px;
   }
@@ -33,6 +42,28 @@ body {
       transition: .5s;
       @include anim();
     }
+  }
+}
+.loaded{
+  position: relative;
+  .wrapper{
+    visibility: hidden;
+    opacity: 0;
+  }
+  &:after{
+    content: '';
+    position: fixed;
+    left: 50%;
+    right: 0;
+    top: 30%;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    background-image: url('images/pinkzorro_logo_mask.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include pulse();
   }
 }
 .content {
@@ -72,7 +103,10 @@ button{
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0 10px;
+  @media screen and (min-width: $w-mobile) {
+    padding: 0 30px;
+  }
   @media screen and (min-width: $w-tablet) {
     padding: 0 50px;
   }
@@ -160,11 +194,18 @@ button{
   justify-content: center;
   align-items: center;
   &__img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 387px;
     background-image: url('images/pinkzorro_logo_mask.svg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 200px;
     @include pulse();
+    @media screen and (min-width: $w-tablet) {
+      height: 427px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 377px;
+    }
   }
 }

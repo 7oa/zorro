@@ -131,11 +131,11 @@ block content
 									._item-dd
 										.filtr-checklist
 											._item
-												input._checkbox(type="checkbox" id="type1")
-												label._checkbox-label(for="type1") Тип1
+												input._radio(type="radio" id="type1" name="radio")
+												label._radio-label(for="type1") Тип1
 											._item
-												input._checkbox(type="checkbox" id="type2")
-												label._checkbox-label(for="type2") Тип2
+												input._radio(type="radio" id="type2" name="radio" checked)
+												label._radio-label(for="type2") Тип2
 								._item
 									._item-body
 										._item-l
@@ -234,6 +234,8 @@ block content
 											include blocks/_card-sale
 										._item
 											include blocks/_card
+										._item
+											include blocks/_card-new
 										._item
 											include blocks/_card-hit
 								._footer

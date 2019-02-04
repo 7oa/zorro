@@ -39,7 +39,7 @@ block content
 			.sale-prev
 				.container3
 					.prev-line
-						._h.h Товары со скидкой
+						a._h.h(href="#") Товары со скидкой
 						._list.prev-slider
 							._swiper.swiper-wrapper
 								- for(var i=0;i<8;i++)
@@ -52,16 +52,26 @@ block content
 							._next
 
 			//end .sale-prev
-			.tags-line-wrapper
-				.container
-					.tags-line
-						a._item(href="#") Секс-игрушки
-						a._item.active(href="#") БДСМ и фетиш
-						a._item(href="#") Интимная косметика
-						a._item(href="#") Белье
-						a._item(href="#") SALE
-						a._item(href="#") Тренинги
-			//end .tags-line-wrapper
+			.pink-banners-wrapper
+				.container3
+					.pink-banners
+						._swiper.swiper-wrapper
+							- for (var i=0;i<3;i++)
+								a._item.swiper-slide(href="#")
+									._cnt
+										._ttl Satisfyer Partner со скидкой 14%
+										._prev.
+											Сделайте приятно близкому человеку!
+											В честь дня Св. Валентина скидка на Satisfyer Partner
+											и чехол из японского бархата в подарок!
+								a._item.swiper-slide(href="#")
+									._cnt
+										._ttl Не упусти момент! Черняя пятница добралась до БДСМ-тематики!
+										._prev.
+											Что может быть лучше латекса и наручников? Только скидки
+											на всю категорию БДСМ! Поспеши, будь плохим мальчиком!
+
+			//end .pink-banners-wrapper
 			.hits-prev
 				.container3
 					.prev-line
@@ -105,7 +115,7 @@ block content
 			.news-prev-wrapper
 				.container
 					.news-prev
-						._h.h Новости и статьи
+						a._h.h(href="#") Новости и статьи
 						._slider.news-prev-slider
 							._list.swiper-wrapper
 								- for (var i=0;i<3;i++)

@@ -6,16 +6,15 @@
   }
 }
 .catalog-page{
-  padding-top: 55px;
+}
+.catalog-container{
+  padding-top: 10px;
   @media screen and (min-width: $w-desktop) {
     padding-top: 0;
   }
 }
-.catalog-container{
-
-}
 .catalog-filter{
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 30px;
   }
@@ -72,7 +71,7 @@
     height: 60px;
     line-height: 60px;
     text-transform: uppercase;
-    margin: 0 auto 45px;
+    margin: 0 auto 15px;
     text-align: center;
     @media screen and (min-width: $w-desktop) {
       display: none;
@@ -341,10 +340,10 @@
   }
   &__item{
     margin-bottom: 20px;
-    width: 100%;
-    @media screen and (min-width: 655px) {
+    width: 49%;
+    /*@media screen and (min-width: 655px) {
       width: auto;
-    }
+    }*/
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 40px;
       width: 50%;
@@ -417,6 +416,73 @@
     }
   }
   &__checkbox-label{
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    span.sm{
+      font-size: 12px;
+    }
+    span.color{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 3px;
+    }
+  }
+  &__radio{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+label{
+      position: relative;
+      padding: 0 0 0 36px;
+      cursor: pointer;
+      color: $white;
+      font-size: 20px;
+      @media screen and (min-width: $w-desktop) {
+        font-size: 16px;
+        padding: 0 0 0 28px;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        transition: .2s;
+        background-color: transparent;
+        border: 1px solid rgba(255,255,255,0.6);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 16px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        transition: .2s;
+        background-color: transparent;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 16px;
+      }
+    }
+    &:checked + label:before {
+      content: '';
+    }
+    &:checked + label:after {
+      display: block;
+      background-color: $white;
+    }
+  }
+  &__radio-label{
     line-height: 18px;
     display: flex;
     align-items: center;

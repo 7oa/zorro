@@ -1,0 +1,22 @@
+.btn{
+  width: 100%;
+  max-width: 180px;
+  line-height: 56px;
+  background-color: $white;
+  border: 2px solid $pink;
+  border-radius: 30px;
+  color: $pink;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: $semi-bold;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 13px;
+    line-height: 46px;
+    border-radius: 25px;
+    margin-bottom: 0;
+  }
+}

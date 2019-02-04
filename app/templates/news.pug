@@ -12,7 +12,7 @@ block content
             .news-slider-wrapper
                 include blocks/_big-slider
             //end .news-slider-wrapper
-            .container
+            .container.container_news
                 .columns
                     .column-l
                         .news-filtr
@@ -38,8 +38,9 @@ block content
                             ._list
                                 - for (i=0;i<2;i++)
                                     ._item
-                                        a._img(href="#" style="background-image:url('https://picsum.photos/1000')")
-                                            ._tag Информационная статья
+                                        a._img(href="#")
+                                            img(src="https://picsum.photos/700/400")
+                                            //._tag Информационная статья
                                         ._prev
                                             a._h(href="#") Конкурс эротической истории
                                             ._txt.

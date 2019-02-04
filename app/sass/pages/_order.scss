@@ -9,11 +9,11 @@
     margin-bottom: 40px;
   }
   &__step-prev{
-    margin-bottom: 3px;
+    margin-bottom: 20px;
     @media screen and (min-width: $w-desktop) {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
   }
   &__items-count{

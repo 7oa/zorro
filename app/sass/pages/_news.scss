@@ -4,6 +4,12 @@
     margin-bottom: 50px;
   }
 }
+.container_news{
+  margin-top: 40px;
+  @media screen and (min-width: $w-desktop) {
+    margin-top: 50px;
+  }
+}
 .news{
   padding-bottom: 80px;
   @media screen and (min-width: $w-desktop) {
@@ -11,38 +17,52 @@
     max-width: 700px;
   }
   &__item{
-    margin-bottom: 68px;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray-ec;
+    &:last-of-type{
+      border-bottom: none;
+    }
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 75px;
+      padding-bottom: 0;
+      border-bottom: none;
     }
   }
   &__img{
     display: block;
     width: 100%;
-    height: 280px;
     border-radius: 10px;
-    @include bg-img(cover);
+    //@include bg-img(contain);
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    text-align: center;
     @media screen and (min-width: $w-desktop) {
-      height: 400px;
-      box-shadow: $shadow-pink;
+      //box-shadow: $shadow-pink;
       margin-bottom: 50px;
+    }
+    img{
+      max-width: 100%;
+      max-height: 280px;
+      border-radius: 10px;
+      @media screen and (min-width: $w-desktop) {
+        max-height: 400px;
+      }
     }
   }
   &__tag{
     background-color: $pink;
     color: $white;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: $light;
     line-height: 1;
     border-radius: 20px;
-    padding: 13px 30px;
+    padding: 10px 20px;
     position: absolute;
     top: 0;
     left: 0;
-    margin: 20px;
+    margin: 10px;
     @media screen and (min-width: $w-desktop) {
       padding: 11px 20px;
       border-radius: 15px;
@@ -56,42 +76,35 @@
   }
   &__h{
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     color: $pink;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
     font-family: 'TrajanPro3', serif;
     display: inline-block;
     line-height: 1.2;
     @media screen and (min-width: $w-desktop) {
       text-align: left;
-      margin-bottom: 20px;
+      font-size: 24px;
     }
   }
   &__txt{
-    font-size: 20px;
+    font-size: 16px;
     color: $gray72;
     margin-bottom: 37px;
     line-height: 1.2;
     @media screen and (min-width: $w-desktop) {
-      font-size: 16px;
       margin-bottom: 30px;
     }
   }
   &__date{
-    font-size: 20px;
+    font-size: 16px;
     color: $gray99;
-    @media screen and (min-width: $w-desktop) {
-      font-size: 16px;
-    }
   }
   &__more{
     color: $pink;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: underline;
-    @media screen and (min-width: $w-desktop) {
-      font-size: 16px;
-    }
     &:hover{
       text-decoration: none;
     }
@@ -263,15 +276,20 @@
   &__img{
     display: block;
     width: 100%;
-    height: 280px;
-    border-radius: 10px;
-    @include bg-img(cover);
+    //@include bg-img(cover);
     position: relative;
     margin-bottom: 32px;
     @media screen and (min-width: $w-desktop) {
-      height: 400px;
-      box-shadow: $shadow-pink;
+      //box-shadow: $shadow-pink;
       margin-bottom: 42px;
+    }
+    img{
+      max-width: 100%;
+      max-height: 280px;
+      border-radius: 10px;
+      @media screen and (min-width: $w-desktop) {
+        max-height: 400px;
+      }
     }
   }
   &__tag{
@@ -297,6 +315,10 @@
   &__content{
     margin-bottom: 75px;
     line-height: 1.23;
+    font-size: 18px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 20px;
+    }
     @media screen and (min-width: $w-desktop) {
       line-height: 1.4;
     }
@@ -403,6 +425,7 @@
     margin-top: 45px;
   }
   &__swiper{
+    margin-bottom: 10px;
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 30px;
     }
@@ -416,15 +439,12 @@
     position: relative;
     @media screen and (min-width: $w-desktop) {
       height: 400px;
-      box-shadow: $shadow-pink;
+      //box-shadow: $shadow-pink;
     }
   }
   &__nav{
-    display: none;
-    @media screen and (min-width: $w-desktop) {
-      display: flex;
-      justify-content: center;
-    }
+    display: flex;
+    justify-content: center;
   }
   &__next,
   &__prev{

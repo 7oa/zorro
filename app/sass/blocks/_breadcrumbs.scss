@@ -4,12 +4,18 @@
     display: inline-block;
     color: $pink;
     text-decoration: underline;
-    margin-right: 11px;
+    margin-right: 0;
     background-image: url('images/icons/chevron_right-pink.svg');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 18px;
-    padding-right: 28px;
+    padding-right: 18px;
+    font-size: 13px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      padding-right: 28px;
+      margin-right: 11px;
+    }
     &:hover{
       text-decoration: none;
     }
